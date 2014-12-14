@@ -10,7 +10,7 @@ public class HelloWorldAction extends ActionSupport {
 	private static final Logger log = Logger.getLogger(HelloWorldAction.class);
 	
 	public String execute(){
-		log.info("Sample log coming from the action class ....");
+		log.info("Sample log coming from the action class ...");
 		return SUCCESS;
 	}
 
