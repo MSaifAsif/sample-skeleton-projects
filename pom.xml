@@ -23,6 +23,7 @@
 	<modules>
 		<module>Struts2HelloWorld</module>
 		<module>UnitTestsCodeCoverage</module>
+		<module>JPA</module>
 	</modules>
 	<dependencies>
 		<dependency>
