@@ -14,7 +14,7 @@ public class SampleOne {
 		}
 	}
 	
-	class InnerSample{
+	static class InnerSample{
 		private int i;
 
 		public InnerSample(int i){
