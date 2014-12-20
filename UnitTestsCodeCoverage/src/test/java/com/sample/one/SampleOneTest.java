@@ -30,11 +30,11 @@ public class SampleOneTest {
 		one.getSum(1, 1);
 	}
 
-	@Test
-	public void testFive(){
-		SampleOne.InnerSample innerSample = new SampleOne.InnerSample(1);
-		innerSample.getSquare();
-	}
+//	@Test
+//	public void testFive(){
+//		SampleOne.InnerSample innerSample = new SampleOne.InnerSample(1);
+//		innerSample.getSquare();
+//	}
 
 
 }
