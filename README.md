@@ -5,6 +5,7 @@ These projects are basic and easy to execute implementations of some of the popu
 
 ## <a name="list-index">List of implementation</a>
 * [struts2 skeleton](#struts2skeleton)
+* [Jacoco Code coverage](#jacococoverage)
 * [How to contribute](#how-to-contrib)
 
 ## <a name="struts2skeleton">Struts2</a> [&#8593;](#list-index)
@@ -12,6 +13,10 @@ A blank runnable web project based on the struts2 MVC architecture. The project 
 
 **How to run:** Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL http://yourhost:port/Struts2HelloWorld/sample/GreetAction
 
+## <a name="jacococoverage">Jacoco code coverage</a> [&#8593;](#list-index)
+A beginner level application implementing the jacoco maven plugin to cover code coverage of the JUNIT test cases within the application
+
+**How to run:** Import the project as a maven project, run `mvn clean test` and jacoco will create a site project inside `{proj.dir}/target/site` with multiple files. Open the index.html in any browser and you can view and browse to the various classes and test cases and get a visual representation of the code coverage of the test cases written
 
 ## <a name="how-to-contrib">How to contribute</a> [&#8593;](#list-index)
 
