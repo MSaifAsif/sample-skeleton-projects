@@ -11,7 +11,7 @@ These projects are basic and easy to execute implementations of some of the popu
 ## <a name="struts2skeleton">Struts2</a> [&#8593;](#list-index)
 A blank runnable web project based on the struts2 MVC architecture. The project comprises of a sample action class that will return success and display the resulting view (jsp file). The project can be run on any application server. Basic configurations including struts and log4j are also added for reference
 
-**How to run:** Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL http://yourhost:port/Struts2HelloWorld/sample/GreetAction
+**How to run:** Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL `http://yourhost:port/Struts2HelloWorld/sample/GreetAction`
 
 ## <a name="jacococoverage">Jacoco code coverage</a> [&#8593;](#list-index)
 A beginner level application implementing the jacoco maven plugin to cover code coverage of the JUNIT test cases within the application
