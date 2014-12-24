@@ -26,5 +26,6 @@ The project is open for contributions from everyone. If you want to contribute t
 * Add documented and tested code
 * Open a pull request to the master branch
 * Once reviewed, the pull request will be merged
+* README.md will contain information of runnable projects ONLY. All other projects are either in dev or testing phase
 
 Its alwasy best to open a issue and discuess its possibility before 
