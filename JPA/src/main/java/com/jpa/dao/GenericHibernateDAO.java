@@ -26,7 +26,7 @@ implements GenericDAO<T, ID> {
 	private Session session;  
 
 	@SuppressWarnings("unchecked")
-	public GenericHibernateDAO() {  
+	public GenericHibernateDAO() {
 		this.persistentClass = (Class<T>) ((ParameterizedType) getClass()  
 				.getGenericSuperclass()).getActualTypeArguments()[0];  
 	}  
