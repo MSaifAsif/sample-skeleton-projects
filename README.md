@@ -6,6 +6,7 @@ These projects are basic and easy to execute implementations of some of the popu
 ## <a name="list-index">List of implementation</a>
 * [struts2 skeleton](#struts2skeleton)
 * [Jacoco Code coverage](#jacococoverage)
+* [JBOSS RESTEasy service](#jboss-rest-service)
 * [How to contribute](#how-to-contrib)
 
 ## <a name="struts2skeleton">Struts2</a> [&#8593;](#list-index)
@@ -17,6 +18,11 @@ A blank runnable web project based on the struts2 MVC architecture. The project 
 A beginner level application implementing the jacoco maven plugin to cover code coverage of the JUNIT test cases within the application
 
 **How to run:** Import the project as a maven project, run `mvn clean test` and jacoco will create a site project inside `{proj.dir}/target/site` with multiple files. Open the index.html in any browser and you can view and browse to the various classes and test cases and get a visual representation of the code coverage of the test cases written
+
+## <a name="jboss-rest-service">JBOSS REASTEasy</a> [&#8593;](#list-index)
+An entry level application implementing the RESTEasy service of JBOSS. 
+
+**How to run:** Import the project as a maven project, build the war file using maven and deploy this war in tomcat or Jboss application server. Once deployement is successful, you can view the service by opening any browser and navigate to the url `http://localhost:8080/RestEasyService/rest/greet/hello/Tenka`
 
 ## <a name="how-to-contrib">How to contribute</a> [&#8593;](#list-index)
 
