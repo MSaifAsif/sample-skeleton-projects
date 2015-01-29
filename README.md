@@ -19,7 +19,7 @@ A beginner level application implementing the jacoco maven plugin to cover code 
 
 **How to run:** Import the project as a maven project, run `mvn clean test` and jacoco will create a site project inside `{proj.dir}/target/site` with multiple files. Open the index.html in any browser and you can view and browse to the various classes and test cases and get a visual representation of the code coverage of the test cases written
 
-## <a name="jboss-rest-service">JBOSS REASTEasy</a> [&#8593;](#list-index)
+## <a name="jboss-rest-service">JBOSS RESTEasy</a> [&#8593;](#list-index)
 An entry level application implementing the RESTEasy service of JBOSS. 
 
 **How to run:** Import the project as a maven project, build the war file using maven and deploy this war in tomcat or Jboss application server. Once deployement is successful, you can view the service by opening any browser and navigate to the url `http://localhost:8080/RestEasyService/rest/greet/hello/Tenka`
