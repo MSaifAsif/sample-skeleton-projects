@@ -25,6 +25,7 @@
 		<module>UnitTestsCodeCoverage</module>
 		<module>JPA</module>
 		<module>RESTEasy</module>
+		<module>JSFHelloWorld</module>
 	</modules>
 	<dependencies>
 		<dependency>
