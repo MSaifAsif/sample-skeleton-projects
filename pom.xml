@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>sample-skeleton-projects</groupId>
 	<artifactId>sample-skeleton-projects</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<build>
 		<pluginManagement>
