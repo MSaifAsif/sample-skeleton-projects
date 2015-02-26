@@ -1,4 +1,4 @@
-sample-skeleton-projects
+Sample Skeleton Projects
 ========================
 
 
