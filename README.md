@@ -10,6 +10,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [struts2 skeleton](#struts2skeleton)
 * [Jacoco Code coverage](#jacococoverage)
 * [JBOSS RESTEasy service](#jboss-rest-service)
+* [JSF skeleton](#jsf-skeleton)
 * [pyUnit](#py-unit)
 * [How to contribute](#how-to-contrib)
 
@@ -18,7 +19,7 @@ These projects are basic and easy to execute implementations of some of the popu
 
 **Description:** A blank runnable web project based on the struts2 MVC architecture. The project comprises of a sample action class that will return success and display the resulting view (jsp file). The project can be run on any application server. Basic configurations including struts and log4j are also added for reference
 
-**How to run:** Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL `http://yourhost:port/Struts2HelloWorld/sample/GreetAction`
+**How to run:** Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL `http://localhost:8080/Struts2HelloWorld/sample/GreetAction`
 
 ## <a name="jacococoverage">JaCoco code coverage</a> [&#8593;](#list-index)
 **Language:** Java
@@ -33,6 +34,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** An entry level application implementing the RESTEasy service of JBOSS. 
 
 **How to run:** Import the project as a maven project, build the war file using maven and deploy this war in tomcat or Jboss application server. Once deployement is successful, you can view the service by opening any browser and navigate to the url `http://localhost:8080/RestEasyService/rest/greet/hello/Tenka`
+
+## <a name="jsf-skeleton">JSF</a> [&#8593;](#list-index)
+**Language:** Java
+
+**Description:** An entry level MVC application built using the JSF framework. 
+
+**How to run:** Import the project as a maven project, build the war file using maven and deploy this war in any JEE application server (Glassfish4 recommended). Once deployement is successful, you can view the landing page by opening any browser and navigate to the url `http://localhost:8080/JSFHelloWorld-0.0.1-SNAPSHOT/welcome_page.xhtml`
 
 ## <a name="py-unit">pyUnit</a> [&#8593;](#list-index)
 **Language:** Python
