@@ -26,6 +26,7 @@
 		<module>JPA</module>
 		<module>RESTEasy</module>
 		<module>JSFHelloWorld</module>
+		<module>Log4j</module>
 	</modules>
 	<dependencies>
 		<dependency>
