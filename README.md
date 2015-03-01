@@ -11,6 +11,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [Jacoco Code coverage](#jacococoverage)
 * [JBOSS RESTEasy service](#jboss-rest-service)
 * [JSF skeleton](#jsf-skeleton)
+* [Log4j logger](#log4j-logger)
 * [pyUnit](#py-unit)
 * [How to contribute](#how-to-contrib)
 
@@ -41,6 +42,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** An entry level MVC application built using the JSF framework. 
 
 **How to run:** Import the project as a maven project, build the war file using maven and deploy this war in any JEE application server (Glassfish4 recommended). Once deployement is successful, you can view the landing page by opening any browser and navigate to the url `http://localhost:8080/JSFHelloWorld-0.0.1-SNAPSHOT/welcome_page.xhtml`
+
+## <a name="log4j-logger">Log4j</a> [&#8593;](#list-index)
+**Language:** Java
+
+**Description:** Basic implementation of how to create configure and use the logging capabilites provided by log4j.
+
+**How to run:** Checkout the project to any directory and on the command prompt type `mvn clean test` and it will execute the test cases and a log will get printed on the console and the same log will be redirected to a log file namely `myApp.log` located at `${project_home}/logs`. The key point to understand is how to use the configuration file that is read by the log4j library. This file is located at `src/main/resources/log4j.properties`
 
 ## <a name="py-unit">pyUnit</a> [&#8593;](#list-index)
 **Language:** Python
