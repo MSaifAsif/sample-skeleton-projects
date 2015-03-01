@@ -1,5 +1,6 @@
-sample-skeleton-projects
+Sample Skeleton Projects
 ========================
+[![Build Status](https://travis-ci.org/MSaifAsif/sample-skeleton-projects.svg?branch=master)](https://travis-ci.org/MSaifAsif/sample-skeleton-projects)
 
 These projects are basic and easy to execute implementations of some of the popularly used frameworks and libraries out in the market and can be used to jump start your coding time by simply forking these projects or using them as reference and then building your application on top of them. The implementations range from advanced MVC frameworks such as Struts to small testing libraries like JUnit or pyUnit. 
 
@@ -19,7 +20,7 @@ These projects are basic and easy to execute implementations of some of the popu
 
 **How to run:** Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL `http://yourhost:port/Struts2HelloWorld/sample/GreetAction`
 
-## <a name="jacococoverage">Jacoco code coverage</a> [&#8593;](#list-index)
+## <a name="jacococoverage">JaCoco code coverage</a> [&#8593;](#list-index)
 **Language:** Java
 
 **Description:** A beginner level application implementing the jacoco maven plugin to cover code coverage of the JUNIT test cases within the application
