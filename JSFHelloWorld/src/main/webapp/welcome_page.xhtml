@@ -6,12 +6,13 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 
 <h:head>
-	<title>JSF 2.0 Hello World</title>
+	<title>Hello World</title>
 </h:head>
 <h:body>
-	<h3>JSF 2.0 Hello World Example - hello.xhtml</h3>
+	<h3>JSF 2.0 Hello World Example</h3>
 	<h:form>
-	Hello
-	</h:form>
+    	   <h:inputText value="#{myHelloBean.greetMessage}"></h:inputText>
+    	   <h:commandButton value="Enter your name" action="welcome_greet"></h:commandButton>
+    	</h:form>
 </h:body>
 </html>

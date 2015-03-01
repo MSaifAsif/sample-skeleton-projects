@@ -10,7 +10,7 @@
 
 	<!-- Welcome page -->
 	<welcome-file-list>
-		<welcome-file>welcome_page.xhtml</welcome-file>
+		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 
 	<!-- JSF mapping -->
@@ -25,4 +25,10 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
+
+	<mime-mapping>
+		<extension>jsp</extension>
+		<mime-type>text/plain</mime-type>
+	</mime-mapping>
+
 </web-app>
