@@ -27,6 +27,7 @@
 		<module>RESTEasy</module>
 		<module>JSFHelloWorld</module>
 		<module>Log4j</module>
+		<module>TapestryHelloWolrd</module>
 	</modules>
 	<dependencies>
 		<dependency>
