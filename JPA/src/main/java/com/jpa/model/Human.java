@@ -23,7 +23,6 @@ public class Human {
 	private int age;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="id")
 	public long getUserID() {
 		return userID;
