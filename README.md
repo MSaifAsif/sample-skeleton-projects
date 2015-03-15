@@ -12,6 +12,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [JBOSS RESTEasy service](#jboss-rest-service)
 * [JSF skeleton](#jsf-skeleton)
 * [Log4j logger](#log4j-logger)
+* [Play skeleton](#play-skeleton)
 * [pyUnit](#py-unit)
 * [How to contribute](#how-to-contrib)
 
@@ -49,6 +50,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** Basic implementation of how to create configure and use the logging capabilites provided by log4j.
 
 **How to run:** Checkout the project to any directory and on the command prompt type `mvn clean test` and it will execute the test cases and a log will get printed on the console and the same log will be redirected to a log file namely `myApp.log` located at `${project_home}/logs`. The key point to understand is how to use the configuration file that is read by the log4j library. This file is located at `src/main/resources/log4j.properties`
+
+## <a name="play-skeleton">Play MVC</a> [&#8593;](#list-index)
+**Language:** Java & Scala
+
+**Description:** Basic implementation of creating an MVC application using the Play framework.
+
+**How to run:** Perhaps the most easy to use/configure MVC framework out there. To run the application, you need to have Play installed and available on the classpath. Once installed, checkout the project, and while standing inside the directory of the `PlayHelloWorld`, run the command `play` and you will enter inside the play terminal. Next, just type in `run` and play will compile and deploy your application on an embedded jetty server and you can view your application using the url `http://localhost:9000` or `http://localhost:9000/HelloWorld` (routes have been set for both URLs)
 
 ## <a name="py-unit">pyUnit</a> [&#8593;](#list-index)
 **Language:** Python
