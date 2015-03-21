@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>sample-skeleton-projects</groupId>
 		<artifactId>sample-skeleton-projects</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1</version>
 	</parent>
 	<artifactId>Log4j</artifactId>
 	<dependencies>

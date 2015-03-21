@@ -42,7 +42,7 @@ These projects are basic and easy to execute implementations of some of the popu
 
 **Description:** An entry level MVC application built using the JSF framework. 
 
-**How to run:** Import the project as a maven project, build the war file using maven and deploy this war in any JEE application server (Glassfish4 recommended). Once deployement is successful, you can view the landing page by opening any browser and navigate to the url `http://localhost:8080/JSFHelloWorld-0.0.1-SNAPSHOT/welcome_page.xhtml`
+**How to run:** Import the project as a maven project, build the war file using maven and deploy this war in any JEE application server (Glassfish4 recommended). Once deployement is successful, you can view the landing page by opening any browser and navigate to the url `http://localhost:8080/JSFHelloWorld-0.0.1/welcome_page.xhtml`
 
 ## <a name="log4j-logger">Log4j</a> [&#8593;](#list-index)
 **Language:** Java
