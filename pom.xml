@@ -28,6 +28,7 @@
 		<module>JSFHelloWorld</module>
 		<module>Log4j</module>
 		<module>TapestryHelloWolrd</module>
+		<module>WebserviceHelloWorld</module>
 	</modules>
 	<dependencies>
 		<dependency>
