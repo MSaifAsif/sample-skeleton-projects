@@ -7,8 +7,8 @@ import javax.jws.WebService;
 public class Calculator {
 	
 	@WebMethod
-	public int sum(){
-		return 1+2;
+	public float sum(float a, float b){
+		return a + b;
 	}
 
 }
