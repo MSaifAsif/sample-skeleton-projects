@@ -13,6 +13,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [JSF skeleton](#jsf-skeleton)
 * [Log4j logger](#log4j-logger)
 * [Play skeleton](#play-skeleton)
+* [Axis2 Webservice](#axis2-ws)
 * [pyUnit](#py-unit)
 * [How to contribute](#how-to-contrib)
 
@@ -57,6 +58,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** Basic implementation of creating an MVC application using the Play framework.
 
 **How to run:** Perhaps the most easy to use/configure MVC framework out there. To run the application, you need to have Play installed and available on the classpath. Once installed, checkout the project, and while standing inside the directory of the `PlayHelloWorld`, run the command `play` and you will enter inside the play terminal. Next, just type in `run` and play will compile and deploy your application on an embedded jetty server and you can view your application using the url `http://localhost:9000` or `http://localhost:9000/HelloWorld` (routes have been set for both URLs)
+
+## <a name="axis2-ws">Axis2 Webservice</a> [&#8593;](#list-index)
+**Language:** Java
+
+**Description:** Basic implementation of creating an XML SOAP web service using Axis2. Note that this is just a web service implementation, to consume the web service, use any web service client like SOAPUI or you can create your own.
+
+**How to run:** To run the project, checkout and deploy the war on tomcat7 application server. The wsdl will be available at the URL `http://localhost:8080/AxisWebserviceHelloWorld/services/CalculatorService?wsdl`. 
 
 ## <a name="py-unit">pyUnit</a> [&#8593;](#list-index)
 **Language:** Python
