@@ -15,7 +15,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [Play skeleton](#play-skeleton)
 * [Axis2 Webservice](#axis2-ws)
 * [pyUnit](#py-unit)
-* [dotNET Webservice](#dotNET-ws)
+* [dotNET Webservice](#dotnet-ws)
 * [How to contribute](#how-to-contrib)
 
 ## <a name="struts2skeleton">Struts2</a> [&#8593;](#list-index)
@@ -74,7 +74,7 @@ These projects are basic and easy to execute implementations of some of the popu
 
 **How to run:** Checkout the project to any directory and on the command prompt type `python cal_test.py` and it will execute the test cases and the result status of all the test cases will be displayed on the terminal
 
-## <a name="#dotNET-ws">.NET WebService</a> [&#8593;](#list-index)
+## <a name="#dotnet-ws">.NET WebService</a> [&#8593;](#list-index)
 **Language:** .NET Framework 4.0
 
 **Description:** Basic implementation of creating a simple SOAP web service using .NET Framework.
