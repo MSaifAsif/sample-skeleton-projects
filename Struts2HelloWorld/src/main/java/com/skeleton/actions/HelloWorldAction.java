@@ -16,6 +16,7 @@ public class HelloWorldAction extends ActionSupport {
 	
 	/**
 	 * The overriden method. Should always return a string
+	 * @return {@link ActionSupport} SUCCESS constant
 	 */
 	public String execute(){
 		log.info("Sample log coming from the action class ...");

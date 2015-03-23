@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>sample-skeleton-projects</groupId>
 	<artifactId>sample-skeleton-projects</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>pom</packaging>
 	<build>
 		<pluginManagement>
@@ -25,6 +25,10 @@
 		<module>UnitTestsCodeCoverage</module>
 		<module>JPA</module>
 		<module>RESTEasy</module>
+		<module>JSFHelloWorld</module>
+		<module>Log4j</module>
+		<module>TapestryHelloWolrd</module>
+		<module>AxisWebserviceHelloWorld</module>
 	</modules>
 	<dependencies>
 		<dependency>

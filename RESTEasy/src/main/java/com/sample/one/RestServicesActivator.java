@@ -5,6 +5,11 @@ import java.util.Set;
 
 import javax.ws.rs.core.Application;
 
+/**
+ * Activator to register our rest service implementations
+ * @author saifasif
+ *
+ */
 public class RestServicesActivator extends Application {
 
 	private Set<Object> singletons = new HashSet<Object>();

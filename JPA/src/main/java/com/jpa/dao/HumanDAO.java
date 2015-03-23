@@ -20,7 +20,6 @@ public class HumanDAO extends GenericHibernateDAO<Human, Serializable> {
 	}
 	
 	public List<Human> getAllusers(){
-		Criteria criteria = HibernateUtil.getSession().createCriteria(Human.class);
 		return findAll();
 	}
 
