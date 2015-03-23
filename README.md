@@ -15,6 +15,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [Play skeleton](#play-skeleton)
 * [Axis2 Webservice](#axis2-ws)
 * [pyUnit](#py-unit)
+* [dotNET Webservice](#dotNET-ws)
 * [How to contribute](#how-to-contrib)
 
 ## <a name="struts2skeleton">Struts2</a> [&#8593;](#list-index)
@@ -72,6 +73,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** Basic implementation of how to create unit tests for python2.7 using the built-in unit test library for the python language. 
 
 **How to run:** Checkout the project to any directory and on the command prompt type `python cal_test.py` and it will execute the test cases and the result status of all the test cases will be displayed on the terminal
+
+## <a name="#dotNET-ws">.NET WebService</a> [&#8593;](#list-index)
+**Language:** .NET Framework 4.0
+
+**Description:** Basic implementation of creating a simple SOAP web service using .NET Framework.
+
+**How to run:** Checkout the project and deploy it. It automatically hosts the web service on a test server hosted on http://tempuri.org. The wsdl will be available at the URL `http://localhost:1672/Service1.asmx?wsdl`.
 
 ## <a name="how-to-contrib">How to contribute</a> [&#8593;](#list-index)
 
