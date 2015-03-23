@@ -1,0 +1,5 @@
+D:\Microsoft Visual Studio 11.0\VC#\VC# Workspace\WebService1\WebService1\bin\WebService1.dll
+D:\Microsoft Visual Studio 11.0\VC#\VC# Workspace\WebService1\WebService1\bin\WebService1.pdb
+D:\Microsoft Visual Studio 11.0\VC#\VC# Workspace\WebService1\WebService1\obj\Debug\WebService1.csprojResolveAssemblyReference.cache
+D:\Microsoft Visual Studio 11.0\VC#\VC# Workspace\WebService1\WebService1\obj\Debug\WebService1.dll
+D:\Microsoft Visual Studio 11.0\VC#\VC# Workspace\WebService1\WebService1\obj\Debug\WebService1.pdb
