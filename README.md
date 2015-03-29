@@ -31,7 +31,7 @@ These projects are basic and easy to execute implementations of some of the popu
 
 **Description:** A blank runnable web project based on the struts (The struts1) MVC architecture. The project comprises of a sample action class that will return success and display the resulting view (jsp file). The project can be run on any application server. Basic configurations including struts and log4j are also added for reference
 
-**How to run:** Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL `http://localhost:8080/StrutsHelloWorld/helloWorld.do`
+**How to run:** Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL `http://localhost:8080/StrutsHelloWorld/helloWorld.action`
 
 ## <a name="jacococoverage">JaCoco code coverage</a> [&#8593;](#list-index)
 **Language:** Java
