@@ -29,6 +29,7 @@
 		<module>Log4j</module>
 		<module>TapestryHelloWolrd</module>
 		<module>AxisWebserviceHelloWorld</module>
+		<module>StrutsHelloWorld</module>
 	</modules>
 	<dependencies>
 		<dependency>
