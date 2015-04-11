@@ -23,4 +23,4 @@ The figure below best explains the flow of how a request is generated, how it fl
 11. A HttpServletResponse is generated.
 12. Response is sent to the user
 
-> sources & references: Javatpoint, Wikipedia
+> sources & reference for image and information: Javatpoint, Wikipedia
