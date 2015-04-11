@@ -7,7 +7,7 @@ Originally known as `WebWork 2`, the `Apache Struts 2` is an open-source web app
 
 The over-all design of the framework is more or less the same as any of the MVC frameworks out in the market. In a nutshell, the Model is usually a java bean or a java business object that contains the business logic of manipulating data that may be recieved from external sources say like e.g retrieved from a database or from some web service etc. The View is the representation of the data usually in the form of a JSP page or an HTML page. The Controller is the actual engine that contains mapping related to passing data between the JSP views and the business logic Models.
 
-The figure below best explains the flow of how a request is generated, how it flows through the framework architecture and how a response is created at the end ()
+The figure below best explains the flow of how a request is generated, how it flows through the framework architecture and how a response is created at the end.
 ![alt tag](http://www.javatpoint.com/images/st/struts2flow.jpg)
 
 1. First and foremost, the user generates a request. This can anything from clicking a button on a website or uploading an image to the webpage etc
