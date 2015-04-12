@@ -15,6 +15,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [Log4j logger](#log4j-logger)
 * [Play skeleton](#play-skeleton)
 * [Axis2 Webservice](#axis2-ws)
+* [EJBs](#ejb-hw)
 * [pyUnit](#py-unit)
 * [dotNET Webservice](#dotnet-ws)
 * [How to contribute](#how-to-contrib)
@@ -74,6 +75,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** Basic implementation of creating an XML SOAP web service using Axis2. Note that this is just a web service implementation, to consume the web service, use any web service client like SOAPUI or you can create your own.
 
 **How to run:** To run the project, checkout and deploy the war on tomcat7 application server. The wsdl will be available at the URL `http://localhost:8080/AxisWebserviceHelloWorld/services/CalculatorService?wsdl`. 
+
+## <a name="ejb-hw">EJBs</a> [&#8593;](#list-index)
+**Language:** Java
+
+**Description:** Basic implementation of how to create, deploy and then retrieve a stateless session bean using the EJBs API via JNDI.
+
+**How to run:** There are two parts on how to execute the project. First we need to build the project with `mvn clean install`. Next, copy the built war file into the deployements folder for the application server (project has been optimized and tested against wildfly8.2). Once deployed, now we need to retrieve this EJB via JNDI. For this, run the main method in the class `com.sample.client.StandAloneClient`. You can see the logs printed in the server logs. 
 
 ## <a name="py-unit">pyUnit</a> [&#8593;](#list-index)
 **Language:** Python
