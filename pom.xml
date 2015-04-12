@@ -30,6 +30,7 @@
 		<module>TapestryHelloWolrd</module>
 		<module>AxisWebserviceHelloWorld</module>
 		<module>StrutsHelloWorld</module>
+		<module>EJBHelloWorld</module>
 	</modules>
 	<dependencies>
 		<dependency>
