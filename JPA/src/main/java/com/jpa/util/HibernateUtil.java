@@ -53,14 +53,5 @@ public class HibernateUtil {
 		return tx;
 		//return getSessionFactory().getCurrentSession().beginTransaction();;
 	}
-	
-
-	/**
-	 * Conveniance method to call by the startup servlet
-	 * 
-	 */
-	public static void initSessionFactory(){
-		buildSessionFactory();
-	}
 
 }
