@@ -16,6 +16,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [Play skeleton](#play-skeleton)
 * [Axis2 Webservice](#axis2-ws)
 * [EJBs](#ejb-hw)
+* [JPA using Hibernate](#jpa-hibernate)
 * [pyUnit](#py-unit)
 * [dotNET Webservice](#dotnet-ws)
 * [How to contribute](#how-to-contrib)
@@ -82,6 +83,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** Basic implementation of how to create, deploy and then retrieve a stateless session bean using the EJBs API via JNDI.
 
 **How to run:** There are two parts on how to execute the project. First we need to build the project with `mvn clean install`. Next, copy the built war file into the deployements folder for the application server (project has been optimized and tested against wildfly8.2). Once deployed, now we need to retrieve this EJB via JNDI. For this, run the main method in the class `com.sample.client.StandAloneClient`. You can see the logs printed in the server logs. 
+
+## <a name="jpa-hibernate">JPA using Hibernate ORM</a> [&#8593;](#list-index)
+**Language:** Java
+
+**Description:** Basic workflow of how to implement the Hibernate implementation of JPA. Hibernate is one of the powerfull, scalable, flexible and most used ORM framework used in the software industry.
+
+**How to run:** Checkout the project and execute the MainRunner class that is located inside the package `com.main`. The application uses HSQLDB(http://hsqldb.org/) for carrying out CRUD operations so no DB is requiered to run the program, although you can direct it to your Database by simply changing the `hibernate.connection.url` in `hibernate.cfg.xml`. This is the configuration file used by hibernate to connect to your DB.  
 
 ## <a name="py-unit">pyUnit</a> [&#8593;](#list-index)
 **Language:** Python
