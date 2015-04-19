@@ -2,10 +2,7 @@ package com.jpa.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 /**
  * A single HUman entity to communicate with the DB
@@ -13,7 +10,6 @@ import javax.persistence.Table;
  *
  */
 @Entity(name="human")
-@Table(name="human")
 public class Human {
 
 	private long userID;
