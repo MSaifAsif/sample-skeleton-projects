@@ -11,6 +11,8 @@ public class MainRunner {
 
 	static final String URL = "http://www.google.com";
 	static final int LONG_TIMEOUT = 1000;
+	static final String hrefLink = "link[href~=.*\\.(ico|png)]";
+	static final String imgMeta = "meta[itemprop=image]";
 
 	public static void main(String[] args) {
 		String faviconImagePath = "";
@@ -20,9 +22,9 @@ public class MainRunner {
 			Document documentObject = conn.get();
 			System.out.println("URL title: " + documentObject.title());
 
-			Element domElement = documentObject.head().select("link[href~=.*\\.(ico|png)]").first();
+			Element domElement = documentObject.head().select(hrefLink).first();
 			if(domElement == null){
-				domElement = documentObject.head().select("meta[itemprop=image]").first();
+				domElement = documentObject.head().select(imgMeta).first();
 				faviconImagePath = domElement.attr("content");
 			}
 			System.out.println("Favicon img: " +faviconImagePath);
