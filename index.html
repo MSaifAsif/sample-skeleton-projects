@@ -54,6 +54,7 @@
 <li><a href="#axis2-ws">Axis2 Webservice</a></li>
 <li><a href="#ejb-hw">EJBs</a></li>
 <li><a href="#jpa-hibernate">JPA using Hibernate</a></li>
+<li><a href="#jsoup-html">JSoup</a></li>
 <li><a href="#py-unit">pyUnit</a></li>
 <li><a href="#dotnet-ws">dotNET Webservice</a></li>
 <li><a href="#how-to-contrib">How to contribute</a></li>
@@ -168,6 +169,17 @@
 <p><strong>Description:</strong> Basic workflow of how to implement the Hibernate implementation of JPA. Hibernate is one of the powerfull, scalable, flexible and most used ORM framework used in the software industry.</p>
 
 <p><strong>How to run:</strong> Checkout the project and execute the MainRunner class that is located inside the package <code>com.main</code>. The application uses HSQLDB(<a href="http://hsqldb.org/">http://hsqldb.org/</a>) for carrying out CRUD operations so no DB is requiered to run the program, although you can direct it to your Database by simply changing the <code>hibernate.connection.url</code> in <code>hibernate.cfg.xml</code>. This is the configuration file used by hibernate to connect to your DB.  </p>
+
+<h2>
+<a id="jsoup-html-parser-" class="anchor" href="#jsoup-html-parser-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="jsoup-html">Jsoup HTML parser</a> <a href="#list-index">↑</a>
+</h2>
+
+<p><strong>Language:</strong> Java</p>
+
+<p><strong>Description:</strong> A dummy implementation of the Jsoup library to parse html documents.</p>
+
+<p><strong>How to run:</strong> Checkout the project and execute the command <code>mvn clean test</code>. Basic parsing have been implemented as Junit cases. Also there is a main method in the class <code>com.sample.one.MainRunner</code> that shows how to parse and retreive information via Jsoup for a particualr Html page on the web</p>
 
 <h2>
 <a id="pyunit-" class="anchor" href="#pyunit-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
