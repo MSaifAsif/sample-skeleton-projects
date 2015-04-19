@@ -16,7 +16,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header">Sample skeleton projects</h1>
+        <h1 class="header">Sample-skeleton-projects</h1>
         <p class="header">A collection of skeleton projects to help start development quickly</p>
 
         <ul>
@@ -35,12 +35,12 @@
 
 <p><a href="https://travis-ci.org/MSaifAsif/sample-skeleton-projects"><img src="https://travis-ci.org/MSaifAsif/sample-skeleton-projects.svg?branch=master" alt="Build Status"></a></p>
 
-<p>These projects are basic and easy to execute implementations of some of the popularly used frameworks and libraries out in the market and can be used as a base for your projects. You can use these skeletons, lets say, as a reference on how to get a particular framework up and running, or even build a fully operational enterpise application on top of them. The frameworks have been tested against bare minimum requirements so for advanced/full features, you may need to add other libraries as well. The implementations range from advanced MVC frameworks such as Struts to small testing libraries like JUnit or pyUnit. </p>
+<p>These projects are basic and easy to execute implementations of some of the popularly used frameworks and libraries out in the market and can be used to jump start your coding time by simply forking these projects or using them as reference and then building your application on top of them. The implementations range from advanced MVC frameworks such as Struts to small testing libraries like JUnit or pyUnit. </p>
 
 <p><strong>Note:</strong> Projects not listed in the index table below are either in development phase or in debug mode and are not be relied on yet.</p>
 
 <h2>
-<a id="list-of-implementation" class="anchor" href="#list-of-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="list-index">List of implementations</a>
+<a id="list-of-implementation" class="anchor" href="#list-of-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="list-index">List of implementation</a>
 </h2>
 
 <ul>
@@ -53,6 +53,7 @@
 <li><a href="#play-skeleton">Play skeleton</a></li>
 <li><a href="#axis2-ws">Axis2 Webservice</a></li>
 <li><a href="#ejb-hw">EJBs</a></li>
+<li><a href="#jpa-hibernate">JPA using Hibernate</a></li>
 <li><a href="#py-unit">pyUnit</a></li>
 <li><a href="#dotnet-ws">dotNET Webservice</a></li>
 <li><a href="#how-to-contrib">How to contribute</a></li>
@@ -156,6 +157,17 @@
 <p><strong>Description:</strong> Basic implementation of how to create, deploy and then retrieve a stateless session bean using the EJBs API via JNDI.</p>
 
 <p><strong>How to run:</strong> There are two parts on how to execute the project. First we need to build the project with <code>mvn clean install</code>. Next, copy the built war file into the deployements folder for the application server (project has been optimized and tested against wildfly8.2). Once deployed, now we need to retrieve this EJB via JNDI. For this, run the main method in the class <code>com.sample.client.StandAloneClient</code>. You can see the logs printed in the server logs. </p>
+
+<h2>
+<a id="jpa-using-hibernate-orm-" class="anchor" href="#jpa-using-hibernate-orm-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a name="jpa-hibernate">JPA using Hibernate ORM</a> <a href="#list-index">↑</a>
+</h2>
+
+<p><strong>Language:</strong> Java</p>
+
+<p><strong>Description:</strong> Basic workflow of how to implement the Hibernate implementation of JPA. Hibernate is one of the powerfull, scalable, flexible and most used ORM framework used in the software industry.</p>
+
+<p><strong>How to run:</strong> Checkout the project and execute the MainRunner class that is located inside the package <code>com.main</code>. The application uses HSQLDB(<a href="http://hsqldb.org/">http://hsqldb.org/</a>) for carrying out CRUD operations so no DB is requiered to run the program, although you can direct it to your Database by simply changing the <code>hibernate.connection.url</code> in <code>hibernate.cfg.xml</code>. This is the configuration file used by hibernate to connect to your DB.  </p>
 
 <h2>
 <a id="pyunit-" class="anchor" href="#pyunit-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
