@@ -31,6 +31,7 @@
 		<module>AxisWebserviceHelloWorld</module>
 		<module>StrutsHelloWorld</module>
 		<module>EJBHelloWorld</module>
+		<module>JsoupHelloWorld</module>
 	</modules>
 	<dependencies>
 		<dependency>
