@@ -32,6 +32,7 @@
 		<module>StrutsHelloWorld</module>
 		<module>EJBHelloWorld</module>
 		<module>JsoupHelloWorld</module>
+		<module>SparkHelloWorld</module>
 	</modules>
 	<dependencies>
 		<dependency>
