@@ -18,6 +18,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [EJBs](#ejb-hw)
 * [JPA using Hibernate](#jpa-hibernate)
 * [JSoup](#jsoup-html)
+* [Spark](#spark-mvc)
 * [pyUnit](#py-unit)
 * [dotNET Webservice](#dotnet-ws)
 * [How to contribute](#how-to-contrib)
@@ -98,6 +99,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** A dummy implementation of the Jsoup library to parse html documents.
 
 **How to run:** Checkout the project and execute the command `mvn clean test`. Basic parsing have been implemented as Junit cases. Also there is a main method in the class `com.sample.one.MainRunner` that shows how to parse and retreive information via Jsoup for a particualr Html page on the web
+
+## <a name="spark-mvc">Spark MVC</a> [&#8593;](#list-index)
+**Language:** Java (JDK8)
+
+**Description:** A skeleton implementation of an MVC application using the Spark framework. Another simple and easy to implement MVC framework that can be used to expose a set of REST calls quick and easy. Comes with an embedded server so no deployment is required.
+
+**How to run:** Checkout the project and execute the command `mvn clean test`. Then simply run the main method located at `com.sampl.main.MainRunner` and the server will load up at `localhost:4567`. Navigate to the URL `localhost:4567/helloWorld` and you will see the logs in the console as well as a sample text being returned from the exposed method
 
 ## <a name="py-unit">pyUnit</a> [&#8593;](#list-index)
 **Language:** Python
