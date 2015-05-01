@@ -33,6 +33,7 @@
 		<module>EJBHelloWorld</module>
 		<module>JsoupHelloWorld</module>
 		<module>SparkHelloWorld</module>
+		<module>Servlet30HelloWorld</module>
 	</modules>
 	<dependencies>
 		<dependency>
