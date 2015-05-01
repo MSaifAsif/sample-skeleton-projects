@@ -19,6 +19,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [JPA using Hibernate](#jpa-hibernate)
 * [JSoup](#jsoup-html)
 * [Spark](#spark-mvc)
+* [Servlet30HelloWorld](#servlet30-mvc)
 * [pyUnit](#py-unit)
 * [dotNET Webservice](#dotnet-ws)
 * [How to contribute](#how-to-contrib)
@@ -106,6 +107,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** A skeleton implementation of an MVC application using the Spark framework. Another simple and easy to implement MVC framework that can be used to expose a set of REST calls quick and easy. Comes with an embedded server so no deployment is required.
 
 **How to run:** Checkout the project and execute the command `mvn clean test`. Then simply run the main method located at `com.sampl.main.MainRunner` and the server will load up at `localhost:4567`. Navigate to the URL `localhost:4567/helloWorld` and you will see the logs in the console as well as a sample text being returned from the exposed method
+
+## <a name="servlet30-mvc">Servlet/JSP</a> [&#8593;](#list-index)
+**Language:** Java
+
+**Description:** Basic implementation of an MVC architecture based on raw Servlets and JSPs. 
+
+**How to run:** Checkout the project and execute the command `mvn clean install`. Deploy the generated war file in any application server (Tomcat 7) and then navigate to the page `http://localhost:8080/Servlet30HelloWorld/helloServlet` and you will be greeted with a message from a compiled JSP.
 
 ## <a name="py-unit">pyUnit</a> [&#8593;](#list-index)
 **Language:** Python
