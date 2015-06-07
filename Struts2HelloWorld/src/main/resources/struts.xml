@@ -5,7 +5,17 @@
 <struts>
 	<constant name="struts.devMode" value="false" />
 	<package name="sample" namespace="/sample" extends="struts-default">
+		<interceptors>
+			<interceptor name="timerInt"
+				class="com.skeleton.interceptors.MyTimerInterceptor">
+			</interceptor>
+			<interceptor-stack name="timingStack">
+				<interceptor-ref name="timerInt" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
 		<action name="GreetAction">
+			<interceptor-ref name="timingStack"></interceptor-ref>
 			<result name="success">pages/hello_world.jsp</result>
 		</action>
 	</package>
