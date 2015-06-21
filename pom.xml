@@ -34,6 +34,7 @@
 		<module>JsoupHelloWorld</module>
 		<module>SparkHelloWorld</module>
 		<module>Servlet30HelloWorld</module>
+		<module>AppletHelloWorld</module>
 	</modules>
 	<dependencies>
 		<dependency>
