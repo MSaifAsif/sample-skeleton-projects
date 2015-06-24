@@ -123,7 +123,7 @@ These projects are basic and easy to execute implementations of some of the popu
 **How to run:** Checkout the project to any directory and on the command prompt type `python cal_test.py` and it will execute the test cases and the result status of all the test cases will be displayed on the terminal
 
 ## <a name="dotnet-ws">.NET WebService</a> [&#8593;](#list-index)
-**Language:** .NET Framework 4.0
+**Language:** .NET Framework 4.0 (Non maven based)
 
 **Description:** Basic implementation of creating a simple SOAP web service using .NET Framework.
 
