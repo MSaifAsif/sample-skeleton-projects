@@ -2,7 +2,7 @@ Sample Skeleton Projects
 ========================
 [![Build Status](https://travis-ci.org/MSaifAsif/sample-skeleton-projects.svg?branch=master)](https://travis-ci.org/MSaifAsif/sample-skeleton-projects)
 
-These projects are basic and easy to execute implementations of some of the popularly used frameworks and libraries out in the market and can be used to jump start your coding time by simply forking these projects or using them as reference and then building your application on top of them. The implementations range from advanced MVC frameworks such as Struts to small testing libraries like JUnit or pyUnit. 
+These projects are basic and easy to execute implementations of some of the popularly used frameworks and libraries out in the market and can be used to jump start your coding time by simply forking these projects or using them as reference and then building your application on top of them. The implementations range from advanced MVC frameworks such as Struts to small testing libraries like JUnit or pyUnit (python). 
 
 **Note:** Projects not listed in the index table below are either in development phase or in debug mode and are not be relied on yet.
 
@@ -123,7 +123,7 @@ These projects are basic and easy to execute implementations of some of the popu
 **How to run:** Checkout the project to any directory and on the command prompt type `python cal_test.py` and it will execute the test cases and the result status of all the test cases will be displayed on the terminal
 
 ## <a name="dotnet-ws">.NET WebService</a> [&#8593;](#list-index)
-**Language:** .NET Framework 4.0
+**Language:** .NET Framework 4.0 (Non maven based)
 
 **Description:** Basic implementation of creating a simple SOAP web service using .NET Framework.
 
@@ -139,4 +139,4 @@ The project is open for contributions from everyone. If you want to contribute t
 * Once reviewed, the pull request will be merged
 * README.md will contain information of runnable projects ONLY. All other projects are either in dev or testing phase
 
-Its always best to open a issue and discuss its possibility before writing up the code. I am always open for suggestions. Feel free to contact/contribute.
+Its always best to open a issue and discuss its possibility before writing up the code. I am always open for suggestions. Feel free to contact me or contribute to the project.
