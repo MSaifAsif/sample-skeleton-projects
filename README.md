@@ -22,7 +22,6 @@ These projects are basic and easy to execute implementations of some of the popu
 * [Servlet30HelloWorld](#servlet30-mvc)
 * [AppletHelloWorld](#applet-hw)
 * [pyUnit](#py-unit)
-* [dotNET Webservice](#dotnet-ws)
 * [How to contribute](#how-to-contrib)
 
 ## <a name="struts2skeleton">Struts2</a> [&#8593;](#list-index)
