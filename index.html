@@ -3,37 +3,40 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <title>Sample-skeleton-projects by MSaifAsif</title>
+    <title>Sample skeleton projects by MSaifAsif</title>
   </head>
 
   <body>
-    <header>
+    <div id="container">
       <div class="inner">
-        <h1>Sample-skeleton-projects</h1>
-        <h2>A collection of skeleton projects to help start development quickly</h2>
-        <a href="https://github.com/MSaifAsif/sample-skeleton-projects" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
+        <header>
+          <h1>Sample skeleton projects</h1>
+          <h2>A collection of skeleton projects to help start development quickly</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/MSaifAsif/sample-skeleton-projects/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/MSaifAsif/sample-skeleton-projects/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/MSaifAsif/sample-skeleton-projects" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
           <h1>
 <a id="sample-skeleton-projects" class="anchor" href="#sample-skeleton-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Skeleton Projects</h1>
 
 <p><a href="https://travis-ci.org/MSaifAsif/sample-skeleton-projects"><img src="https://travis-ci.org/MSaifAsif/sample-skeleton-projects.svg?branch=master" alt="Build Status"></a></p>
 
-<p>These projects are basic and easy to execute implementations of some of the popularly used frameworks and libraries out in the market and can be used to jump start your coding time by simply forking these projects or using them as reference and then building your application on top of them. The implementations range from advanced MVC frameworks such as Struts to small testing libraries like JUnit or pyUnit. </p>
+<p>These projects are basic and easy to execute implementations of some of the popularly used frameworks and libraries out in the market and can be used to jump start your coding time by simply forking these projects or using them as reference and then building your application on top of them. The implementations range from advanced MVC frameworks such as Struts to small testing libraries like JUnit or pyUnit (python). </p>
 
 <p><strong>Note:</strong> Projects not listed in the index table below are either in development phase or in debug mode and are not be relied on yet.</p>
 
@@ -55,14 +58,13 @@
 <li><a href="#jsoup-html">JSoup</a></li>
 <li><a href="#spark-mvc">Spark</a></li>
 <li><a href="#servlet30-mvc">Servlet30HelloWorld</a></li>
+<li><a href="#applet-hw">AppletHelloWorld</a></li>
 <li><a href="#py-unit">pyUnit</a></li>
-<li><a href="#dotnet-ws">dotNET Webservice</a></li>
 <li><a href="#how-to-contrib">How to contribute</a></li>
 </ul>
 
 <h2>
-<a id="struts2-" class="anchor" href="#struts2-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="struts2skeleton">Struts2</a> <a href="#list-index">↑</a>
+<a id="struts2-" class="anchor" href="#struts2-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="struts2skeleton">Struts2</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java</p>
@@ -72,8 +74,7 @@
 <p><strong>How to run:</strong> Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL <code>http://localhost:8080/Struts2HelloWorld/sample/GreetAction</code></p>
 
 <h2>
-<a id="struts-" class="anchor" href="#struts-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="struts1skeleton">Struts</a> <a href="#list-index">↑</a>
+<a id="struts-" class="anchor" href="#struts-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="struts1skeleton">Struts</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java</p>
@@ -83,8 +84,7 @@
 <p><strong>How to run:</strong> Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL <code>http://localhost:8080/StrutsHelloWorld/helloWorld.action</code></p>
 
 <h2>
-<a id="jacoco-code-coverage-" class="anchor" href="#jacoco-code-coverage-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="jacococoverage">JaCoco code coverage</a> <a href="#list-index">↑</a>
+<a id="jacoco-code-coverage-" class="anchor" href="#jacoco-code-coverage-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="jacococoverage">JaCoco code coverage</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java</p>
@@ -94,8 +94,7 @@
 <p><strong>How to run:</strong> Import the project as a maven project, run <code>mvn clean test</code> and jacoco will create a site project inside <code>{proj.dir}/target/site</code> with multiple files. Open the index.html in any browser and you can view and browse to the various classes and test cases and get a visual representation of the code coverage of the test cases written</p>
 
 <h2>
-<a id="jboss-resteasy-" class="anchor" href="#jboss-resteasy-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="jboss-rest-service">JBOSS RESTEasy</a> <a href="#list-index">↑</a>
+<a id="jboss-resteasy-" class="anchor" href="#jboss-resteasy-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="jboss-rest-service">JBOSS RESTEasy</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java</p>
@@ -105,8 +104,7 @@
 <p><strong>How to run:</strong> Import the project as a maven project, build the war file using maven and deploy this war in tomcat or Jboss application server. Once deployement is successful, you can view the service by opening any browser and navigate to the url <code>http://localhost:8080/RestEasyService/rest/greet/hello/Tenka</code></p>
 
 <h2>
-<a id="jsf-" class="anchor" href="#jsf-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="jsf-skeleton">JSF</a> <a href="#list-index">↑</a>
+<a id="jsf-" class="anchor" href="#jsf-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="jsf-skeleton">JSF</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java</p>
@@ -116,8 +114,7 @@
 <p><strong>How to run:</strong> Import the project as a maven project, build the war file using maven and deploy this war in any JEE application server (Glassfish4 recommended). Once deployement is successful, you can view the landing page by opening any browser and navigate to the url <code>http://localhost:8080/JSFHelloWorld-0.0.1/welcome_page.xhtml</code></p>
 
 <h2>
-<a id="log4j-" class="anchor" href="#log4j-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="log4j-logger">Log4j</a> <a href="#list-index">↑</a>
+<a id="log4j-" class="anchor" href="#log4j-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="log4j-logger">Log4j</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java</p>
@@ -127,8 +124,7 @@
 <p><strong>How to run:</strong> Checkout the project to any directory and on the command prompt type <code>mvn clean test</code> and it will execute the test cases and a log will get printed on the console and the same log will be redirected to a log file namely <code>myApp.log</code> located at <code>${project_home}/logs</code>. The key point to understand is how to use the configuration file that is read by the log4j library. This file is located at <code>src/main/resources/log4j.properties</code></p>
 
 <h2>
-<a id="play-mvc-" class="anchor" href="#play-mvc-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="play-skeleton">Play MVC</a> <a href="#list-index">↑</a>
+<a id="play-mvc-" class="anchor" href="#play-mvc-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="play-skeleton">Play MVC</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java &amp; Scala</p>
@@ -138,8 +134,7 @@
 <p><strong>How to run:</strong> Perhaps the most easy to use/configure MVC framework out there. To run the application, you need to have Play installed and available on the classpath. Once installed, checkout the project, and while standing inside the directory of the <code>PlayHelloWorld</code>, run the command <code>play</code> and you will enter inside the play terminal. Next, just type in <code>run</code> and play will compile and deploy your application on an embedded jetty server and you can view your application using the url <code>http://localhost:9000</code> or <code>http://localhost:9000/HelloWorld</code> (routes have been set for both URLs)</p>
 
 <h2>
-<a id="axis2-webservice-" class="anchor" href="#axis2-webservice-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="axis2-ws">Axis2 Webservice</a> <a href="#list-index">↑</a>
+<a id="axis2-webservice-" class="anchor" href="#axis2-webservice-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="axis2-ws">Axis2 Webservice</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java</p>
@@ -149,8 +144,7 @@
 <p><strong>How to run:</strong> To run the project, checkout and deploy the war on tomcat7 application server. The wsdl will be available at the URL <code>http://localhost:8080/AxisWebserviceHelloWorld/services/CalculatorService?wsdl</code>. </p>
 
 <h2>
-<a id="ejbs-" class="anchor" href="#ejbs-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="ejb-hw">EJBs</a> <a href="#list-index">↑</a>
+<a id="ejbs-" class="anchor" href="#ejbs-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="ejb-hw">EJBs</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java</p>
@@ -160,8 +154,7 @@
 <p><strong>How to run:</strong> There are two parts on how to execute the project. First we need to build the project with <code>mvn clean install</code>. Next, copy the built war file into the deployements folder for the application server (project has been optimized and tested against wildfly8.2). Once deployed, now we need to retrieve this EJB via JNDI. For this, run the main method in the class <code>com.sample.client.StandAloneClient</code>. You can see the logs printed in the server logs. </p>
 
 <h2>
-<a id="jpa-using-hibernate-orm-" class="anchor" href="#jpa-using-hibernate-orm-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="jpa-hibernate">JPA using Hibernate ORM</a> <a href="#list-index">↑</a>
+<a id="jpa-using-hibernate-orm-" class="anchor" href="#jpa-using-hibernate-orm-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="jpa-hibernate">JPA using Hibernate ORM</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java</p>
@@ -171,8 +164,7 @@
 <p><strong>How to run:</strong> Checkout the project and execute the MainRunner class that is located inside the package <code>com.main</code>. The application uses HSQLDB(<a href="http://hsqldb.org/">http://hsqldb.org/</a>) for carrying out CRUD operations so no DB is requiered to run the program, although you can direct it to your Database by simply changing the <code>hibernate.connection.url</code> in <code>hibernate.cfg.xml</code>. This is the configuration file used by hibernate to connect to your DB.  </p>
 
 <h2>
-<a id="jsoup-html-parser-" class="anchor" href="#jsoup-html-parser-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="jsoup-html">Jsoup HTML parser</a> <a href="#list-index">↑</a>
+<a id="jsoup-html-parser-" class="anchor" href="#jsoup-html-parser-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="jsoup-html">Jsoup HTML parser</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java</p>
@@ -182,8 +174,7 @@
 <p><strong>How to run:</strong> Checkout the project and execute the command <code>mvn clean test</code>. Basic parsing have been implemented as Junit cases. Also there is a main method in the class <code>com.sample.one.MainRunner</code> that shows how to parse and retreive information via Jsoup for a particualr Html page on the web</p>
 
 <h2>
-<a id="spark-mvc-" class="anchor" href="#spark-mvc-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="spark-mvc">Spark MVC</a> <a href="#list-index">↑</a>
+<a id="spark-mvc-" class="anchor" href="#spark-mvc-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="spark-mvc">Spark MVC</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java (JDK8)</p>
@@ -193,8 +184,7 @@
 <p><strong>How to run:</strong> Checkout the project and execute the command <code>mvn clean test</code>. Then simply run the main method located at <code>com.sampl.main.MainRunner</code> and the server will load up at <code>localhost:4567</code>. Navigate to the URL <code>localhost:4567/helloWorld</code> and you will see the logs in the console as well as a sample text being returned from the exposed method</p>
 
 <h2>
-<a id="servletjsp-" class="anchor" href="#servletjsp-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="servlet30-mvc">Servlet/JSP</a> <a href="#list-index">↑</a>
+<a id="servletjsp-" class="anchor" href="#servletjsp-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="servlet30-mvc">Servlet/JSP</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java</p>
@@ -204,8 +194,17 @@
 <p><strong>How to run:</strong> Checkout the project and execute the command <code>mvn clean install</code>. Deploy the generated war file in any application server (Tomcat 7) and then navigate to the page <code>http://localhost:8080/Servlet30HelloWorld/helloServlet</code> and you will be greeted with a message from a compiled JSP.</p>
 
 <h2>
-<a id="pyunit-" class="anchor" href="#pyunit-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="py-unit">pyUnit</a> <a href="#list-index">↑</a>
+<a id="applets-" class="anchor" href="#applets-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="applet-hw">Applets</a> <a href="#list-index">↑</a>
+</h2>
+
+<p><strong>Language:</strong> Java</p>
+
+<p><strong>Description:</strong> Basic implementation of a java applet. </p>
+
+<p><strong>How to run:</strong> Checkout the project compile the class at the root of the project using the command <code>javac MyFirstApplet.java</code>. Once compiled, execute the command <code>appletviewer myapplet.html</code> and the default applet viewer application shipped with the JDK will load up and execute the applet.</p>
+
+<h2>
+<a id="pyunit-" class="anchor" href="#pyunit-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="py-unit">pyUnit</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Python</p>
@@ -215,19 +214,17 @@
 <p><strong>How to run:</strong> Checkout the project to any directory and on the command prompt type <code>python cal_test.py</code> and it will execute the test cases and the result status of all the test cases will be displayed on the terminal</p>
 
 <h2>
-<a id="net-webservice-" class="anchor" href="#net-webservice-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="dotnet-ws">.NET WebService</a> <a href="#list-index">↑</a>
+<a id="net-webservice-" class="anchor" href="#net-webservice-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="dotnet-ws">.NET WebService</a> <a href="#list-index">↑</a>
 </h2>
 
-<p><strong>Language:</strong> .NET Framework 4.0</p>
+<p><strong>Language:</strong> .NET Framework 4.0 (Non maven based)</p>
 
 <p><strong>Description:</strong> Basic implementation of creating a simple SOAP web service using .NET Framework.</p>
 
 <p><strong>How to run:</strong> Checkout the project and deploy it. It automatically hosts the web service on a test server hosted on <a href="http://tempuri.org">http://tempuri.org</a>. The wsdl will be available at the URL <code>http://localhost:1672/Service1.asmx?wsdl</code>.</p>
 
 <h2>
-<a id="how-to-contribute-" class="anchor" href="#how-to-contribute-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
-<a name="how-to-contrib">How to contribute</a> <a href="#list-index">↑</a>
+<a id="how-to-contribute-" class="anchor" href="#how-to-contribute-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="how-to-contrib">How to contribute</a> <a href="#list-index">↑</a>
 </h2>
 
 <p>The project is open for contributions from everyone. If you want to contribute to the project, the best way is to </p>
@@ -241,26 +238,16 @@
 <li>README.md will contain information of runnable projects ONLY. All other projects are either in dev or testing phase</li>
 </ul>
 
-<p>Its always best to open a issue and discuss its possibility before writing up the code. I am always open for suggestions. Feel free to contact/contribute.</p>
+<p>Its always best to open a issue and discuss its possibility before writing up the code. I am always open for suggestions. Feel free to contact me or contribute to the project.</p>
         </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/MSaifAsif/sample-skeleton-projects/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/MSaifAsif/sample-skeleton-projects/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+        <footer>
+          Sample skeleton projects is maintained by <a href="https://github.com/MSaifAsif">MSaifAsif</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
 
-          <p class="repo-owner"><a href="https://github.com/MSaifAsif/sample-skeleton-projects"></a> is maintained by <a href="https://github.com/MSaifAsif">MSaifAsif</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
+        
       </div>
     </div>
-
-  
   </body>
 </html>
