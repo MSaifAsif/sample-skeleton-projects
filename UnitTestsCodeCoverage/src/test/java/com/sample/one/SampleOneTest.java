@@ -4,6 +4,9 @@ import org.junit.Test;
 
 import com.sample.one.SampleOne.InnerSample;
 
+/**
+ * Test cases for the utility methods
+ */
 public class SampleOneTest {
 
 	@Test

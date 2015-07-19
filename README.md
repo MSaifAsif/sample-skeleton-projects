@@ -20,8 +20,8 @@ These projects are basic and easy to execute implementations of some of the popu
 * [JSoup](#jsoup-html)
 * [Spark](#spark-mvc)
 * [Servlet30HelloWorld](#servlet30-mvc)
+* [AppletHelloWorld](#applet-hw)
 * [pyUnit](#py-unit)
-* [dotNET Webservice](#dotnet-ws)
 * [How to contribute](#how-to-contrib)
 
 ## <a name="struts2skeleton">Struts2</a> [&#8593;](#list-index)
@@ -114,6 +114,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** Basic implementation of an MVC architecture based on raw Servlets and JSPs. 
 
 **How to run:** Checkout the project and execute the command `mvn clean install`. Deploy the generated war file in any application server (Tomcat 7) and then navigate to the page `http://localhost:8080/Servlet30HelloWorld/helloServlet` and you will be greeted with a message from a compiled JSP.
+
+## <a name="applet-hw">Applets</a> [&#8593;](#list-index)
+**Language:** Java
+
+**Description:** Basic implementation of a java applet. 
+
+**How to run:** Checkout the project compile the class at the root of the project using the command `javac MyFirstApplet.java`. Once compiled, execute the command `appletviewer myapplet.html` and the default applet viewer application shipped with the JDK will load up and execute the applet.
 
 ## <a name="py-unit">pyUnit</a> [&#8593;](#list-index)
 **Language:** Python
