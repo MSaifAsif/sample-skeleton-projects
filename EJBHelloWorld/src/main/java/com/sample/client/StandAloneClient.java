@@ -59,7 +59,7 @@ public class StandAloneClient {
 		SampleBean statelessBean = (SampleBean) ctx.lookup("/EJBHelloWorld/SampleStatelessBean!com.sample.beans.SampleBean");
 		statelessBean.addEntity("111");
 		/*
-		 * since another operation is attempted, call to constructore will take place and previous object's state will be lost 
+		 * since another operation is attempted, call to constructor will take place and previous object's state will be lost 
 		 * at this point
 		 */
 		statelessBean.addEntity("222");
