@@ -21,6 +21,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [Spark](#spark-mvc)
 * [Servlet30HelloWorld](#servlet30-mvc)
 * [AppletHelloWorld](#applet-hw)
+* [MapReduceHelloWorld](#mr-hw)
 * [pyUnit](#py-unit)
 * [How to contribute](#how-to-contrib)
 
@@ -121,6 +122,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** Basic implementation of a java applet. 
 
 **How to run:** Checkout the project compile the class at the root of the project using the command `javac MyFirstApplet.java`. Once compiled, execute the command `appletviewer myapplet.html` and the default applet viewer application shipped with the JDK will load up and execute the applet.
+
+## <a name="mr-hw">MapReduceHellowWorld</a> [&#8593;](#list-index)
+**Language:** Java (JDK7)
+
+**Description:** A word count example of how MapReduce works. You need atleast a single node Hadoop cluster already setup before running this example.
+
+**How to run:** Checkout the project and run `mvn clean install` to build the jar. Once jar is built, copy it to the Hadoop cluster and execute the command `hadoop jar MapReduceHelloWorld-0.0.1.jar com.sample.client.ClientRunner /test_data/a_sample_file.csv output`. The result of the word count will be written in the output directory on the configured HDFS.
 
 ## <a name="py-unit">pyUnit</a> [&#8593;](#list-index)
 **Language:** Python
