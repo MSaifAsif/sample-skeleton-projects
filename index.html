@@ -59,6 +59,7 @@
 <li><a href="#spark-mvc">Spark</a></li>
 <li><a href="#servlet30-mvc">Servlet30HelloWorld</a></li>
 <li><a href="#applet-hw">AppletHelloWorld</a></li>
+<li><a href="#mr-hw">MapReduceHelloWorld</a></li>
 <li><a href="#py-unit">pyUnit</a></li>
 <li><a href="#how-to-contrib">How to contribute</a></li>
 </ul>
@@ -202,6 +203,16 @@
 <p><strong>Description:</strong> Basic implementation of a java applet. </p>
 
 <p><strong>How to run:</strong> Checkout the project compile the class at the root of the project using the command <code>javac MyFirstApplet.java</code>. Once compiled, execute the command <code>appletviewer myapplet.html</code> and the default applet viewer application shipped with the JDK will load up and execute the applet.</p>
+
+<h2>
+<a id="mapreducehellowworld-" class="anchor" href="#mapreducehellowworld-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="mr-hw">MapReduceHellowWorld</a> <a href="#list-index">↑</a>
+</h2>
+
+<p><strong>Language:</strong> Java (JDK7)</p>
+
+<p><strong>Description:</strong> A word count example of how MapReduce works. You need atleast a single node Hadoop cluster already setup before running this example.</p>
+
+<p><strong>How to run:</strong> Checkout the project and run <code>mvn clean install</code> to build the jar. Once jar is built, copy it to the Hadoop cluster and execute the command <code>hadoop jar MapReduceHelloWorld-0.0.1.jar com.sample.client.ClientRunner /test_data/a_sample_file.csv output</code>. The result of the word count will be written in the output directory on the configured HDFS.</p>
 
 <h2>
 <a id="pyunit-" class="anchor" href="#pyunit-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="py-unit">pyUnit</a> <a href="#list-index">↑</a>
