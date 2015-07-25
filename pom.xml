@@ -35,6 +35,7 @@
 		<module>SparkHelloWorld</module>
 		<module>Servlet30HelloWorld</module>
 		<module>AppletHelloWorld</module>
+		<module>MapReduceHelloWorld</module>
 	</modules>
 	<dependencies>
 		<dependency>
