@@ -91,7 +91,7 @@ These projects are basic and easy to execute implementations of some of the popu
 ## <a name="jpa-hibernate">JPA using Hibernate ORM</a> [&#8593;](#list-index)
 **Language:** Java
 
-**Description:** Basic workflow of how to implement the Hibernate implementation of JPA. Hibernate is one of the powerfull, scalable, flexible and most used ORM framework used in the software industry.
+**Description:** Basic workflow of how to implement the Hibernate implementation of JPA. Hibernate is one of the powerfull, scalable, flexible and most used ORM framework used in the software industry. To understand the difference between JPA and Hibernate, the best possible description is the statement; "JPA is the dance and Hibernate is the dancer".
 
 **How to run:** Checkout the project and execute the MainRunner class that is located inside the package `com.main`. The application uses HSQLDB(http://hsqldb.org/) for carrying out CRUD operations so no DB is requiered to run the program, although you can direct it to your Database by simply changing the `hibernate.connection.url` in `hibernate.cfg.xml`. This is the configuration file used by hibernate to connect to your DB.  
 
