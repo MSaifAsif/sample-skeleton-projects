@@ -22,6 +22,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [Servlet30HelloWorld](#servlet30-mvc)
 * [AppletHelloWorld](#applet-hw)
 * [MapReduceHelloWorld](#mr-hw)
+* [SpringBootHelloWorld](#springboot-hw)
 * [pyUnit](#py-unit)
 * [How to contribute](#how-to-contrib)
 
@@ -129,6 +130,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** A word count example of how MapReduce works. You need atleast a single node Hadoop cluster already setup before running this example.
 
 **How to run:** Checkout the project and run `mvn clean install` to build the jar. Once jar is built, copy it to the Hadoop cluster and execute the command `hadoop jar MapReduceHelloWorld-0.0.1.jar com.sample.client.ClientRunner /test_data/a_sample_file.csv output`. The result of the word count will be written in the output directory on the configured HDFS.
+
+## <a name="springboot-hw">SpringBoot</a> [&#8593;](#list-index)
+**Language:** Java (JDK8)
+
+**Description:** Basic implementation of an MVC structure and web services using Spring Boot
+
+**How to run:** Checkout the project and run `mvn spring-boot:run` to run the main method. Once ready, open the browser and navigate to the page `http://localhost:8080` and the greeting message will be printed on the screen. For parameter based web service, hit the url `http://localhost:8080/hello?name=John` and the paramter will be passed to the controller and greeting message for John will be printed on the browser.
 
 ## <a name="py-unit">pyUnit</a> [&#8593;](#list-index)
 **Language:** Python
