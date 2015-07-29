@@ -1,8 +1,7 @@
-package com.test;
+package com.test.deletion;
 
 import static org.junit.Assert.fail;
 
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -13,9 +12,9 @@ import com.jpa.dao.HumanDAO;
 import com.jpa.model.Human;
 import com.jpa.util.HibernateUtil;
 
-public class HibernateJPATest {
+public class DeletionTest {
 
-    private static final Logger log = Logger.getLogger(HibernateJPATest.class);
+    private static final Logger log = Logger.getLogger(DeletionTest.class);
 
     @BeforeClass
     public static void init() {
@@ -24,18 +23,7 @@ public class HibernateJPATest {
     }
 
     @Test
-    public void testHSQLcon() {
-        try {
-            final Session session = HibernateUtil.getSessionFactory().openSession();
-            Transaction tx = session.beginTransaction();
-            tx.rollback();
-        } catch (Exception e) {
-            fail(e.getMessage());
-        }
-    }
-
-    @Test
-    public void testInsertFetch() {
+    public void testInsertDelete() {
         try {
             final Session session = HibernateUtil.getSessionFactory().openSession();
             Transaction tx = session.beginTransaction();
@@ -57,10 +45,17 @@ public class HibernateJPATest {
             Human human2 = humanDAO.getAUserByID(0);
             log.info("Got user with name " + human2.getFirstName());
 
+            humanDAO.makeTransient(human2);
+            Human deletedHuman = humanDAO.getAUserByID(0);
+            log.info(deletedHuman);
+
             tx.rollback();
         } catch (Exception e) {
             fail(e.getMessage());
         }
     }
+
+
+
 
 }
