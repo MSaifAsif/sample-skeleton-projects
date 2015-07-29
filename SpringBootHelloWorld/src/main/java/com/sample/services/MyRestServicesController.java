@@ -3,6 +3,7 @@ package com.sample.services;
 import org.apache.log4j.Logger;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -12,9 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @EnableAutoConfiguration
-public class MyRestServices {
+public class MyRestServicesController {
     
-    private static final Logger log = Logger.getLogger(MyRestServices.class);
+    private static final Logger log = Logger.getLogger(MyRestServicesController.class);
     
     /**
      * The first rest service method exposed. Basic level web service method. Only 
@@ -25,7 +26,12 @@ public class MyRestServices {
     @RequestMapping("/")
     public String greet(){
         log.info("Initializing call from greet() message .... ");
-        return "Greetings, from " + MyRestServices.class.getCanonicalName();
+        return "Greetings, from " + MyRestServicesController.class.getCanonicalName();
+    }
+    
+    @RequestMapping("/hello")
+    public String greetName(@RequestParam(value="name") String name){
+        return String.format("Hello world, %s !", name);
     }
 
 }
