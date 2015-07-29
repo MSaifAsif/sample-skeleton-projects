@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Sample skeleton projects by MSaifAsif</title>
+    <meta name="description" content="Sample skeleton projects : A collection of skeleton projects to help start development quickly">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Sample skeleton projects</title>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
 
-        <header>
-          <h1>Sample skeleton projects</h1>
-          <h2>A collection of skeleton projects to help start development quickly</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/MSaifAsif/sample-skeleton-projects">View on GitHub</a>
+
+          <h1 id="project_title">Sample skeleton projects</h1>
+          <h2 id="project_tagline">A collection of skeleton projects to help start development quickly</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/MSaifAsif/sample-skeleton-projects/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/MSaifAsif/sample-skeleton-projects/tarball/master">Download this project as a tar.gz file</a>
+            </section>
         </header>
+    </div>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/MSaifAsif/sample-skeleton-projects/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/MSaifAsif/sample-skeleton-projects/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/MSaifAsif/sample-skeleton-projects" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <h1>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
 <a id="sample-skeleton-projects" class="anchor" href="#sample-skeleton-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Skeleton Projects</h1>
 
 <p><a href="https://travis-ci.org/MSaifAsif/sample-skeleton-projects"><img src="https://travis-ci.org/MSaifAsif/sample-skeleton-projects.svg?branch=master" alt="Build Status"></a></p>
@@ -60,6 +60,7 @@
 <li><a href="#servlet30-mvc">Servlet30HelloWorld</a></li>
 <li><a href="#applet-hw">AppletHelloWorld</a></li>
 <li><a href="#mr-hw">MapReduceHelloWorld</a></li>
+<li><a href="#springboot-hw">SpringBootHelloWorld</a></li>
 <li><a href="#py-unit">pyUnit</a></li>
 <li><a href="#how-to-contrib">How to contribute</a></li>
 </ul>
@@ -160,7 +161,7 @@
 
 <p><strong>Language:</strong> Java</p>
 
-<p><strong>Description:</strong> Basic workflow of how to implement the Hibernate implementation of JPA. Hibernate is one of the powerfull, scalable, flexible and most used ORM framework used in the software industry.</p>
+<p><strong>Description:</strong> Basic workflow of how to implement the Hibernate implementation of JPA. Hibernate is one of the powerfull, scalable, flexible and most used ORM framework used in the software industry. To understand the difference between JPA and Hibernate, the best possible description is the statement; "JPA is the dance and Hibernate is the dancer".</p>
 
 <p><strong>How to run:</strong> Checkout the project and execute the MainRunner class that is located inside the package <code>com.main</code>. The application uses HSQLDB(<a href="http://hsqldb.org/">http://hsqldb.org/</a>) for carrying out CRUD operations so no DB is requiered to run the program, although you can direct it to your Database by simply changing the <code>hibernate.connection.url</code> in <code>hibernate.cfg.xml</code>. This is the configuration file used by hibernate to connect to your DB.  </p>
 
@@ -215,6 +216,16 @@
 <p><strong>How to run:</strong> Checkout the project and run <code>mvn clean install</code> to build the jar. Once jar is built, copy it to the Hadoop cluster and execute the command <code>hadoop jar MapReduceHelloWorld-0.0.1.jar com.sample.client.ClientRunner /test_data/a_sample_file.csv output</code>. The result of the word count will be written in the output directory on the configured HDFS.</p>
 
 <h2>
+<a id="springboot-" class="anchor" href="#springboot-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="springboot-hw">SpringBoot</a> <a href="#list-index">↑</a>
+</h2>
+
+<p><strong>Language:</strong> Java (JDK8)</p>
+
+<p><strong>Description:</strong> Basic implementation of an MVC structure and web services using Spring Boot</p>
+
+<p><strong>How to run:</strong> Checkout the project and run <code>mvn spring-boot:run</code> to run the main method. Once ready, open the browser and navigate to the page <code>http://localhost:8080</code> and the greeting message will be printed on the screen. For parameter based web service, hit the url <code>http://localhost:8080/hello?name=John</code> and the paramter will be passed to the controller and greeting message for John will be printed on the browser.</p>
+
+<h2>
 <a id="pyunit-" class="anchor" href="#pyunit-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="py-unit">pyUnit</a> <a href="#list-index">↑</a>
 </h2>
 
@@ -250,15 +261,18 @@
 </ul>
 
 <p>Its always best to open a issue and discuss its possibility before writing up the code. I am always open for suggestions. Feel free to contact me or contribute to the project.</p>
-        </section>
-
-        <footer>
-          Sample skeleton projects is maintained by <a href="https://github.com/MSaifAsif">MSaifAsif</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+      </section>
     </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Sample skeleton projects maintained by <a href="https://github.com/MSaifAsif">MSaifAsif</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
