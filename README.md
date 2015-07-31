@@ -147,4 +147,6 @@ The project is open for contributions from everyone. If you want to contribute t
 * Once reviewed, the pull request will be merged
 * README.md will contain information of runnable projects ONLY. All other projects are either in dev or testing phase
 
-Its always best to open a issue and discuss its possibility before writing up the code. I am always open for suggestions. Feel free to contact me or contribute to the project.
+Its always best to open a issue and discuss its possibility before writing up the code. I am always open for suggestions. Feel free to contact me or contribute to the project. 
+
+Thanks
