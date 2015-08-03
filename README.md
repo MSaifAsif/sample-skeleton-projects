@@ -23,6 +23,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [AppletHelloWorld](#applet-hw)
 * [MapReduceHelloWorld](#mr-hw)
 * [SpringBootHelloWorld](#springboot-hw)
+* [MongoDBHelloWorld](#mongo-hw)
 * [How to contribute](#how-to-contrib)
 
 ## <a name="struts2skeleton">Struts2</a> [&#8593;](#list-index)
@@ -123,7 +124,7 @@ These projects are basic and easy to execute implementations of some of the popu
 
 **How to run:** Checkout the project compile the class at the root of the project using the command `javac MyFirstApplet.java`. Once compiled, execute the command `appletviewer myapplet.html` and the default applet viewer application shipped with the JDK will load up and execute the applet.
 
-## <a name="mr-hw">MapReduceHellowWorld</a> [&#8593;](#list-index)
+## <a name="mr-hw">MapReduceHelloWorld</a> [&#8593;](#list-index)
 **Language:** Java (JDK7)
 
 **Description:** A word count example of how MapReduce works. You need atleast a single node Hadoop cluster already setup before running this example.
@@ -136,6 +137,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** Basic implementation of an MVC structure and web services using Spring Boot
 
 **How to run:** Checkout the project and run `mvn spring-boot:run` to run the main method. Once ready, open the browser and navigate to the page `http://localhost:8080` and the greeting message will be printed on the screen. For parameter based web service, hit the url `http://localhost:8080/hello?name=John` and the paramter will be passed to the controller and greeting message for John will be printed on the browser.
+
+## <a name="mongo-hw">MongoHelloWorld</a> [&#8593;](#list-index)
+**Language:** Java
+
+**Description:** Basic implementation crud operations on mongo via JAVA
+
+**How to run:** Checkout the project and run `mvn clean test` to run the test cases. Application uses an embedded mongo instance that is initialized on runtime on a random port. All test cases are run on this mongo instance.
 
 ## <a name="how-to-contrib">How to contribute</a> [&#8593;](#list-index)
 
