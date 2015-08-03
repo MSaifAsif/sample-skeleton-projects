@@ -61,6 +61,7 @@
 <li><a href="#applet-hw">AppletHelloWorld</a></li>
 <li><a href="#mr-hw">MapReduceHelloWorld</a></li>
 <li><a href="#springboot-hw">SpringBootHelloWorld</a></li>
+<li><a href="#mongo-hw">MongoDBHelloWorld</a></li>
 <li><a href="#how-to-contrib">How to contribute</a></li>
 </ul>
 
@@ -205,7 +206,7 @@
 <p><strong>How to run:</strong> Checkout the project compile the class at the root of the project using the command <code>javac MyFirstApplet.java</code>. Once compiled, execute the command <code>appletviewer myapplet.html</code> and the default applet viewer application shipped with the JDK will load up and execute the applet.</p>
 
 <h2>
-<a id="mapreducehellowworld-" class="anchor" href="#mapreducehellowworld-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="mr-hw">MapReduceHellowWorld</a> <a href="#list-index">↑</a>
+<a id="mapreducehelloworld-" class="anchor" href="#mapreducehelloworld-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="mr-hw">MapReduceHelloWorld</a> <a href="#list-index">↑</a>
 </h2>
 
 <p><strong>Language:</strong> Java (JDK7)</p>
@@ -225,6 +226,16 @@
 <p><strong>How to run:</strong> Checkout the project and run <code>mvn spring-boot:run</code> to run the main method. Once ready, open the browser and navigate to the page <code>http://localhost:8080</code> and the greeting message will be printed on the screen. For parameter based web service, hit the url <code>http://localhost:8080/hello?name=John</code> and the paramter will be passed to the controller and greeting message for John will be printed on the browser.</p>
 
 <h2>
+<a id="mongohelloworld-" class="anchor" href="#mongohelloworld-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="mongo-hw">MongoHelloWorld</a> <a href="#list-index">↑</a>
+</h2>
+
+<p><strong>Language:</strong> Java</p>
+
+<p><strong>Description:</strong> Basic implementation crud operations on mongo via JAVA</p>
+
+<p><strong>How to run:</strong> Checkout the project and run <code>mvn clean test</code> to run the test cases. Application uses an embedded mongo instance that is initialized on runtime on a random port. All test cases are run on this mongo instance.</p>
+
+<h2>
 <a id="how-to-contribute-" class="anchor" href="#how-to-contribute-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="how-to-contrib">How to contribute</a> <a href="#list-index">↑</a>
 </h2>
 
@@ -239,7 +250,9 @@
 <li>README.md will contain information of runnable projects ONLY. All other projects are either in dev or testing phase</li>
 </ul>
 
-<p>Its always best to open a issue and discuss its possibility before writing up the code. I am always open for suggestions. Feel free to contact me or contribute to the project.</p>
+<p>Its always best to open a issue and discuss its possibility before writing up the code. I am always open for suggestions. Feel free to contact me or contribute to the project. </p>
+
+<p>Thanks</p>
       </section>
     </div>
 
