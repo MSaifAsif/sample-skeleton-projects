@@ -37,6 +37,7 @@
 		<module>AppletHelloWorld</module>
 		<module>MapReduceHelloWorld</module>
 		<module>SpringBootHelloWorld</module>
+		<module>MongoDbHelloWorld</module>
 	</modules>
 	<dependencies>
 		<dependency>
