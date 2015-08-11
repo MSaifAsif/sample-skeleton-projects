@@ -7,8 +7,8 @@ These projects are basic and easy to execute implementations of some of the popu
 **Note:** Projects not listed in the index table below are either in development phase or in debug mode and are not be relied on yet.
 
 ## <a name="list-index">List of implementation</a>
-* [Struts2 skeleton](#struts2skeleton)
-* [Struts1 skeleton](#struts1skeleton)
+* [Struts(2.x) skeleton](#struts2skeleton)
+* [Struts(1.x) skeleton](#struts1skeleton)
 * [Jacoco Code coverage](#jacococoverage)
 * [JBOSS RESTEasy service](#jboss-rest-service)
 * [JSF skeleton](#jsf-skeleton)
@@ -26,14 +26,14 @@ These projects are basic and easy to execute implementations of some of the popu
 * [MongoDBHelloWorld](#mongo-hw)
 * [How to contribute](#how-to-contrib)
 
-## <a name="struts2skeleton">Struts2</a> [&#8593;](#list-index)
+## <a name="struts2skeleton">Struts(2.x)</a> [&#8593;](#list-index)
 **Language:** Java
 
 **Description:** A blank runnable web project based on the struts2 MVC architecture. The project comprises of a sample action class that will return success and display the resulting view (jsp file). The project can be run on any application server. Basic configurations including struts and log4j are also added for reference
 
 **How to run:** Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL `http://localhost:8080/Struts2HelloWorld/sample/GreetAction`
 
-## <a name="struts1skeleton">Struts</a> [&#8593;](#list-index)
+## <a name="struts1skeleton">Struts(1.x)</a> [&#8593;](#list-index)
 **Language:** Java
 
 **Description:** A blank runnable web project based on the struts (The struts1) MVC architecture. The project comprises of a sample action class that will return success and display the resulting view (jsp file). The project can be run on any application server. Basic configurations including struts and log4j are also added for reference
