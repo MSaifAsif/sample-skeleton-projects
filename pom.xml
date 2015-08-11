@@ -28,7 +28,7 @@
 		<module>RESTEasy</module>
 		<module>JSFHelloWorld</module>
 		<module>Log4j</module>
-		<module>TapestryHelloWolrd</module>
+		<module>TapestryHelloWolrd</module> <!-- Debug mode  -->
 		<module>AxisWebserviceHelloWorld</module>
 		<module>StrutsHelloWorld</module>
 		<module>EJBHelloWorld</module>
@@ -39,7 +39,7 @@
 		<module>MapReduceHelloWorld</module>
 		<module>SpringBootHelloWorld</module>
 		<module>MongoDbHelloWorld</module>
-		<module>PortletsHelloWorld</module>
+		<module>PortletsHelloWorld</module> <!-- Debug mode -->
 	</modules>
 	<dependencies>
 		<dependency>
