@@ -7,8 +7,8 @@ These projects are basic and easy to execute implementations of some of the popu
 **Note:** Projects not listed in the index table below are either in development phase or in debug mode and are not be relied on yet.
 
 ## <a name="list-index">List of implementation</a>
-* [struts2 skeleton](#struts2skeleton)
-* [struts1 skeleton](#struts1skeleton)
+* [Struts2 skeleton](#struts2skeleton)
+* [Struts1 skeleton](#struts1skeleton)
 * [Jacoco Code coverage](#jacococoverage)
 * [JBOSS RESTEasy service](#jboss-rest-service)
 * [JSF skeleton](#jsf-skeleton)
