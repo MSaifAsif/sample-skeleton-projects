@@ -609,3 +609,30 @@
 2015-08-14 00:31:13 INFO  InsertionTest:42 - Inserted human into table ..... 
 2015-08-14 00:31:13 INFO  InsertionTest:45 - Fetching inserted user record from DB ...... 
 2015-08-14 00:31:13 INFO  InsertionTest:47 - Got user with name Frank
+2015-08-14 00:31:47 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2015-08-14 00:31:47 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2015-08-14 00:31:47 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-08-14 00:31:47 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-08-14 00:31:47 INFO  Configuration:2073 - HHH000043: Configuring from resource: hibernate.cfg.xml
+2015-08-14 00:31:47 INFO  Configuration:2092 - HHH000040: Configuration resource: hibernate.cfg.xml
+2015-08-14 00:31:47 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2015-08-14 00:31:47 INFO  HibernateUtil:30 - Adding annotated class : com.jpa.model.Human
+2015-08-14 00:31:47 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2015-08-14 00:31:47 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [org.hsqldb.jdbcDriver] at URL [jdbc:hsqldb:file:tmp/dbOne;sql.syntax_mys=true]
+2015-08-14 00:31:47 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=sa, password=****}
+2015-08-14 00:31:47 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2015-08-14 00:31:47 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 1 (min=1)
+2015-08-14 00:31:47 INFO  ENGINE:? - checkpointClose start
+2015-08-14 00:31:47 INFO  ENGINE:? - checkpointClose end
+2015-08-14 00:31:47 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2015-08-14 00:31:48 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-08-14 00:31:48 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-08-14 00:31:48 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-08-14 00:31:48 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-08-14 00:31:48 INFO  DeletionTest:41 - Inserted human into table ..... 
+2015-08-14 00:31:48 INFO  DeletionTest:44 - Fetching inserted user record from DB ...... 
+2015-08-14 00:31:48 INFO  DeletionTest:46 - Got user with name Frank
+2015-08-14 00:31:48 INFO  DeletionTest:50 - 
+2015-08-14 00:31:48 INFO  InsertionTest:42 - Inserted human into table ..... 
+2015-08-14 00:31:48 INFO  InsertionTest:45 - Fetching inserted user record from DB ...... 
+2015-08-14 00:31:48 INFO  InsertionTest:47 - Got user with name Frank
