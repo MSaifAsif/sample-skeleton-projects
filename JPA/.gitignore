@@ -13,3 +13,4 @@
 hs_err_pid*
 /tmp/
 /logs/myApp.log
+/logs/
