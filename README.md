@@ -52,7 +52,7 @@ These projects are basic and easy to execute implementations of some of the popu
 
 **Description:** An entry level application implementing the RESTEasy service of JBOSS. 
 
-**How to run:** Import the project as a maven project, build the war file using maven and deploy this war in tomcat or Jboss application server. Once deployement is successful, you can view the service by opening any browser and navigate to the url `http://localhost:8080/RestEasyService/rest/greet/hello/Tenka`
+**How to run:** Import the project as a maven project, build the war file using maven and deploy this war in tomcat or Jboss application server. Once deployement is successful, you can view the service by opening any browser and navigate to the url `http://localhost:8080/RestEasyService/rest/greet/hello/Tenka`. For running integration tests, you can run the command `mvn verify`. Integration tests will be run using an embedded jetty server that is configured to be part of the maven build cycle.
 
 ## <a name="jsf-skeleton">JSF</a> [&#8593;](#list-index)
 **Language:** Java
