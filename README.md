@@ -1,5 +1,7 @@
 Sample Skeleton Projects
 ========================
+
+[![Join the chat at https://gitter.im/MSaifAsif/sample-skeleton-projects](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MSaifAsif/sample-skeleton-projects?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/MSaifAsif/sample-skeleton-projects.svg?branch=master)](https://travis-ci.org/MSaifAsif/sample-skeleton-projects)
 
 These projects are basic and easy to execute implementations of some of the popularly used frameworks and libraries out in the market and can be used to jump start your coding time by simply forking these projects or using them as reference and then building your application on top of them. The implementations range from advanced MVC frameworks such as Struts to small testing libraries like JUnit or pyUnit (python). 
