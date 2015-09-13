@@ -22,6 +22,13 @@ public class ITRestService {
     private static final String jsonEndPoint = "http://localhost:8080/RESTEasy/rest/greet/get_sample/{caller}";
 
     @Test
+    public void testEndpoint(){
+        Response response = RestAssured.get(greetEndPoint, "Tenka");
+        log.info("Extracting response message ... ");
+        assertNotNull(response.body().asString());
+    }
+
+    @Test
     public void testGetService(){
         Response response = RestAssured.get(greetEndPoint, "Tenka");
         log.info("Extracting response message ... ");
