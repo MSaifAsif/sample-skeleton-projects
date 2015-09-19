@@ -99,9 +99,11 @@ public class MongoDbUtils {
      * @param document
      */
     public void insertDocument(String collectionName, Document document){
+        log.debug("Inserting document:" + document.toJson().toString());
         ArrayList<Document> docList = new ArrayList<>();
         docList.add(document);
         _insertDocuments(collectionName, docList);
+        log.debug("Document inserted:" + document.toJson().toString());
     }
 
 

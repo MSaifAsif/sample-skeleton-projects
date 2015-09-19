@@ -1,5 +1,8 @@
 package com.sample.utils;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 import java.io.IOException;
 import java.util.Random;
 
@@ -50,8 +53,7 @@ public class MongoDbUtilsTest {
 
     @After
     public void sleep() throws InterruptedException{
-        log.debug("--- Cleaning up");
-        Thread.sleep(1500);
+        Thread.sleep(1000);
     }
 
     @Test
@@ -98,4 +100,29 @@ public class MongoDbUtilsTest {
             log.warn("Handling network host exception\n" + e);
         }
     }
+
+    @Test
+    public void testInsertMultiDocument(){
+        MongoDbUtils mdb = new MongoDbUtils(ADMIN_DB_NAME, mongo);
+        for ( int index = 0; index < 15000; index++ ){
+            Document doc = new Document();
+            String key = "key" + index;
+            String val = "val" + index;
+            doc.append(key, val);
+            try{
+                mdb.insertDocument(DUMMY_COLLECTION_NAME, doc);
+            } catch (Exception e){
+                // means we are having trouble connecting to the internet, dont fail the test
+                log.warn("Handling network host exception\n" + e);
+            }
+        }
+
+        // Find if all documents got inserted correctly
+        MongoCollection<Document> m = mdb.getCollectionConn(DUMMY_COLLECTION_NAME);
+        assertNotNull(m);
+        assertEquals(15000, m.count());
+    }
+
+
+
 }
