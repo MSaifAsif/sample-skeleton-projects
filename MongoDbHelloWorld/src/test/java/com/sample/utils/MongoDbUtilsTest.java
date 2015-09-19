@@ -6,6 +6,7 @@ import java.util.Random;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.bson.Document;
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -45,6 +46,12 @@ public class MongoDbUtilsTest {
         mongo = factory.newMongo();
         log.debug("Admin DB name: " + ADMIN_DB_NAME);
         log.debug("COllection name: " +DUMMY_COLLECTION_NAME);
+    }
+
+    @After
+    public void sleep() throws InterruptedException{
+        log.debug("--- Cleaning up");
+        Thread.sleep(1500);
     }
 
     @Test
