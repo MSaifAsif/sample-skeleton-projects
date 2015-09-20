@@ -1,39 +1,23 @@
 package com.sample.main;
-import static spark.Spark.*;
+import com.sample.get.GetRequests;
+import com.sample.post.PostRequests;
 
-import org.apache.log4j.Logger;
-
-import spark.Request;
-import spark.Response;
-import spark.Route;
-
-
+/**
+ * Main runner to deploy the individual services
+ * @author saifasif
+ *
+ */
 public class MainRunner {
 
-	private static final Logger log = Logger.getLogger(MainRunner.class);
+    public static void main(String[] args) {
 
-	public static void main(String[] args) {
+        // Deploy the get requests
+        GetRequests.greet();
+        GetRequests.getQueryParams();
 
-		log.info("INit server ...");
-		
-		get("/helloWorld", new Route() {
-			@Override
-			public Object handle(Request arg0, Response arg1) throws Exception {
-				log.info("Init get .... ");
-				return "This is from the Get method. Hello world";
-			}
-		});
+        // Deploy the post requests
+        PostRequests.postTest();
 
-		post("/post1", (req, res) -> {
-			log.info("Init post ....");
-			return "Getting from post";
-		});
-
-		get("/helloWorld2", (req, res) -> {
-			log.info(req.queryParams());
-			return "";
-		});
-
-	}
+    }
 
 }
