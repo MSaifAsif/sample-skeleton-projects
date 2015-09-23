@@ -1,12 +1,15 @@
-<taglib xsi:schemaLocation="http://java.sun.com/xml/ns/javaee web-jsptaglibrary_2_1.xsd" 
-	xmlns="http://java.sun.com/xml/ns/javaee"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+<taglib xsi:schemaLocation="http://java.sun.com/xml/ns/javaee web-jsptaglibrary_2_1.xsd"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="2.1">
 	<tlib-version>1.0</tlib-version>
 	<jsp-version>2.0</jsp-version>
 	<short-name>My Custom Tag for greetings</short-name>
 	<tag>
 		<name>greet-msg</name>
 		<tag-class>com.sample.tags.GreetingsTag</tag-class>
-		<body-content>empty</body-content>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>username</name>
+		</attribute>
 	</tag>
 </taglib>

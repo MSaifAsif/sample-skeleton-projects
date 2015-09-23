@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%-- The following are custom tags/tld --%>
@@ -14,13 +14,17 @@
 <title>Servlet3.0</title>
 </head>
 <body>
-	<div>
-		This is my first JSP - called at
-		<dt:hello />
-	</div>
-	<mt:greet-msg />
-	<div>
-		<c:import url="/fragments/one.jsp" />
-	</div>
+    <div>
+        This is my first JSP - called at
+        <dt:hello />
+    </div>
+    <div>
+        <mt:greet-msg username="Chris">
+        Greetings
+    </mt:greet-msg>
+    </div>
+    <div>
+        <c:import url="/fragments/one.jsp" />
+    </div>
 </body>
 </html>
