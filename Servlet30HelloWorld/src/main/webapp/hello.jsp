@@ -26,5 +26,9 @@
     <div>
         <c:import url="/fragments/one.jsp" />
     </div>
+    <div align="right">
+        <span> A few context parameters are : </span>
+        <c:import url="/fragments/footer.jsp" />
+    </div>
 </body>
 </html>

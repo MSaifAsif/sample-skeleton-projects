@@ -30,6 +30,7 @@ public class HelloWorldServlet extends HttpServlet {
         for (int i = 0; i < 25; i++){
             listOfDoubles.add(Math.random());
         }
+        log.info("session id " + request.getServletContext().getAttribute("sessionID"));
         request.setAttribute("numberList", listOfDoubles);
         request.getRequestDispatcher("/hello.jsp").forward(request, response);
     }
