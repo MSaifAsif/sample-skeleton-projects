@@ -7,7 +7,16 @@ import javax.servlet.http.HttpServlet;
 import org.apache.log4j.Logger;
 
 import com.sample.utils.ServletConstants;
-
+/**
+ * A startup servlet that will have its init method 
+ * called as soon as the container attempts to load the application
+ * 
+ * The purpose of this servlet is to add a few params to the 
+ * application context
+ * 
+ * @author saifasif
+ *
+ */
 @WebServlet(loadOnStartup=1, value="/startup")
 public class StartupServlet extends HttpServlet {
 
