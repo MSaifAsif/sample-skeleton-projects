@@ -16,7 +16,7 @@
 <body>
     <div>
         This is my first JSP - called at
-        <dt:hello />
+        <dt:date />
     </div>
     <div>
         <mt:greet-msg username="Chris">
