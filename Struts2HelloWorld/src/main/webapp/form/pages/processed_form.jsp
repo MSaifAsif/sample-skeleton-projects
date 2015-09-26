@@ -11,9 +11,11 @@
 <body>
     <div>
         <span>You entered the following information :</span> <br>
-        <s:property value="firstName" />,
-        <s:property value="age" />,
-        <s:property value="gender" />,
+        <s:property value="firstName" />
+        ,
+        <s:property value="age" />
+        ,
+        <s:property value="gender" />
     </div>
 </body>
 </html>
