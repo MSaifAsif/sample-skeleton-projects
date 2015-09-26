@@ -13,11 +13,16 @@ public class ProcessFormAction extends ActionSupport {
     private String firstName;
     private String gender;
     private Integer age;
+    private String theErrorMessage;
 
     public String execute(){
         log.info(getFirstName());
         log.info(getGender());
         log.info(getAge());
+        if (getAge() < 1) {
+            setTheErrorMessage("0 age is not allowed");
+            return ERROR;
+        }
         return SUCCESS;
     }
 
@@ -43,6 +48,14 @@ public class ProcessFormAction extends ActionSupport {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getTheErrorMessage() {
+        return theErrorMessage;
+    }
+
+    public void setTheErrorMessage(String theErrorMessage) {
+        this.theErrorMessage = theErrorMessage;
     }
 
 
