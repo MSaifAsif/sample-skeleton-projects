@@ -3,20 +3,40 @@
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-	<constant name="struts.devMode" value="false" />
-	<package name="sample" namespace="/sample" extends="struts-default">
-		<interceptors>
-			<interceptor name="timerInt"
-				class="com.skeleton.interceptors.MyTimerInterceptor">
-			</interceptor>
-			<interceptor-stack name="timingStack">
-				<interceptor-ref name="timerInt" />
-				<interceptor-ref name="defaultStack" />
-			</interceptor-stack>
-		</interceptors>
-		<action name="GreetAction">
-			<interceptor-ref name="timingStack"></interceptor-ref>
-			<result name="success">pages/hello_world.jsp</result>
-		</action>
-	</package>
+    <constant name="struts.devMode" value="false" />
+    <package name="sample" namespace="/sample" extends="struts-default">
+        <interceptors>
+            <interceptor name="timerInt"
+                class="com.skeleton.interceptors.MyTimerInterceptor">
+            </interceptor>
+            <interceptor-stack name="timingStack">
+                <interceptor-ref name="timerInt" />
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>
+        <action name="GreetAction">
+            <interceptor-ref name="timingStack"></interceptor-ref>
+            <result name="success">pages/hello_world.jsp</result>
+        </action>
+    </package>
+
+    <package name="form-io" namespace="/form" extends="struts-default">
+        <interceptors>
+            <interceptor name="timerInt"
+                class="com.skeleton.interceptors.MyTimerInterceptor">
+            </interceptor>
+            <interceptor-stack name="timingStack">
+                <interceptor-ref name="timerInt" />
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>
+        <action name="GetInputFormAction">
+            <interceptor-ref name="timingStack"></interceptor-ref>
+            <result name="success">pages/input_form.jsp</result>
+        </action>
+        <action name="ProcessFormAction" class="com.skeleton.actions.ProcessFormAction">
+            <interceptor-ref name="timingStack"></interceptor-ref>
+            <result name="success">pages/processed_form.jsp</result>
+        </action>
+    </package>
 </struts>
