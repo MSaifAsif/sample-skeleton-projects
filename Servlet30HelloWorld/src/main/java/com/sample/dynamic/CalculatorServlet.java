@@ -9,6 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
+/**
+ * A dynamic servlet that will be loaded on runtime
+ * @author saifasif
+ *
+ */
 public class CalculatorServlet extends HttpServlet{
     private static final long serialVersionUID = -2237206745594453412L;
     private static final Logger log = Logger.getLogger(CalculatorServlet.class);

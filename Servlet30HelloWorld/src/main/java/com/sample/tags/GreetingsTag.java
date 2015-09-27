@@ -20,14 +20,14 @@ public class GreetingsTag extends SimpleTagSupport{
     StringWriter sw = new StringWriter();
 
     public void doTag() throws JspException, IOException{
-        
+
         // invoke it on the StringWriter
         getJspBody().invoke(sw);
-        
+
         // Get the writer to the JSP
         JspWriter jspWriter = getJspContext().getOut();
         String greetingsMessage = String.valueOf(sw).concat(username).toUpperCase();
-        
+
         jspWriter.println(greetingsMessage);
     }
 

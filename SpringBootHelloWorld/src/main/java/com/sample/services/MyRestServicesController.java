@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @EnableAutoConfiguration
 public class MyRestServicesController {
-    
+
     private static final Logger log = Logger.getLogger(MyRestServicesController.class);
-    
+
     /**
      * The first rest service method exposed. Basic level web service method. Only 
      * returns a sample string in the response and logs message to server as well
@@ -28,7 +28,7 @@ public class MyRestServicesController {
         log.info("Initializing call from greet() message .... ");
         return "Greetings, from " + MyRestServicesController.class.getCanonicalName();
     }
-    
+
     @RequestMapping("/hello")
     public String greetName(@RequestParam(value="name") String name){
         return String.format("Hello world, %s !", name);

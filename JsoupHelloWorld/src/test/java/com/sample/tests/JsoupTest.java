@@ -16,95 +16,95 @@ import org.junit.rules.ExpectedException;
 
 public class JsoupTest {
 
-	private static final Logger log = Logger.getLogger(JsoupTest.class);
-	private static final int LONG_TIMEOUT = 1500;
+    private static final Logger log = Logger.getLogger(JsoupTest.class);
+    private static final int LONG_TIMEOUT = 1500;
 
-	ExpectedException expectedExc = ExpectedException.none();
+    ExpectedException expectedExc = ExpectedException.none();
 
-	@BeforeClass
-	public static void init(){
-		BasicConfigurator.configure();
-	}
-	
-	@Test
-	public void testConnectionOne(){
-		String url = "http://www.google.com";
-		Connection conn = Jsoup.connect(url).timeout(LONG_TIMEOUT);
-		try {
-			Document documentObject = conn.get();
-			log.debug("Fetching title for: " + url);
-			assertEquals("Google", documentObject.title());
-		} catch (IOException e) {
-			if (e instanceof java.net.UnknownHostException){
-				// means we are having trouble connecting to the internet, dont fail the test
-				log.warn("Handling network host exception\n" + e);
-			} else {
-				fail(e.getMessage());				
-			}
-		}
-	}
+    @BeforeClass
+    public static void init(){
+        BasicConfigurator.configure();
+    }
 
-	@Test
-	public void testConnectionTwo(){
-		String url = "http://www.hotmail.com";
-		Connection conn = Jsoup.connect(url).timeout(LONG_TIMEOUT);
-		try {
-			Document documentObject = conn.get();
-			log.debug("Fetching title for: " + url);
-			assertEquals("Sign In", documentObject.title());
-		} catch (IOException e) {
-			if (e instanceof java.net.UnknownHostException){
-				// means we are having trouble connecting to the internet, dont fail the test
-				log.warn("Handling network host exception\n" + e);
-			} else {
-				fail(e.getMessage());				
-			}
-		}
-	}
+    @Test
+    public void testConnectionOne(){
+        String url = "http://www.google.com";
+        Connection conn = Jsoup.connect(url).timeout(LONG_TIMEOUT);
+        try {
+            Document documentObject = conn.get();
+            log.debug("Fetching title for: " + url);
+            assertEquals("Google", documentObject.title());
+        } catch (IOException e) {
+            if (e instanceof java.net.SocketException){
+                // means we are having trouble connecting to the internet, dont fail the test
+                log.warn("Handling network host exception\n" + e);
+            } else {
+                fail(e.getMessage());				
+            }
+        }
+    }
 
-	@Test(expected=java.net.UnknownHostException.class)
-	public void testConnectionThree() throws IOException{
-		String url = "http://www.localhost.com";
-		Connection conn = Jsoup.connect(url).timeout(LONG_TIMEOUT);
-		try {
-			Document documentObject = conn.get();
-			log.debug("Fetching title for: " + url);
-			assertEquals("Google", documentObject.title());
-		} catch (IOException e) {
-			throw e;
-		}
-	}
+    @Test
+    public void testConnectionTwo(){
+        String url = "http://www.hotmail.com";
+        Connection conn = Jsoup.connect(url).timeout(LONG_TIMEOUT);
+        try {
+            Document documentObject = conn.get();
+            log.debug("Fetching title for: " + url);
+            assertEquals("Sign In", documentObject.title());
+        } catch (IOException e) {
+            if (e instanceof java.net.SocketException){
+                // means we are having trouble connecting to the internet, dont fail the test
+                log.warn("Handling network host exception\n" + e);
+            } else {
+                fail(e.getMessage());				
+            }
+        }
+    }
 
-	@Test(expected=java.net.UnknownHostException.class)
-	public void testConnectionFour() throws IOException{
-		String url = "http://www.google2.com";
-		Connection conn = Jsoup.connect(url).timeout(LONG_TIMEOUT);
-		try {
-			Document documentObject = conn.get();
-			log.debug("Fetching title for: " + url);
-			assertEquals("Google", documentObject.title());
-		} catch (IOException e) {
-			throw e;
-		}
-	}
+    @Test(expected=java.net.UnknownHostException.class)
+    public void testConnectionThree() throws IOException{
+        String url = "http://www.localhost.com";
+        Connection conn = Jsoup.connect(url).timeout(LONG_TIMEOUT);
+        try {
+            Document documentObject = conn.get();
+            log.debug("Fetching title for: " + url);
+            assertEquals("Google", documentObject.title());
+        } catch (IOException e) {
+            throw e;
+        }
+    }
 
-	@Test
-	public void testConnectionFive(){
+    @Test(expected=java.net.UnknownHostException.class)
+    public void testConnectionFour() throws IOException{
+        String url = "http://www.google2.com";
+        Connection conn = Jsoup.connect(url).timeout(LONG_TIMEOUT);
+        try {
+            Document documentObject = conn.get();
+            log.debug("Fetching title for: " + url);
+            assertEquals("Google", documentObject.title());
+        } catch (IOException e) {
+            throw e;
+        }
+    }
 
-		String url = "http://www.google.com";
-		Connection conn = Jsoup.connect(url).timeout(LONG_TIMEOUT);
-		try {
-			Document documentObject = conn.get();
-			log.debug("Fetching title for: " + url);
-			assertEquals("Google", documentObject.title());
-		} catch (IOException e) {
-			if (e instanceof java.net.UnknownHostException){
-				// means we are having trouble connecting to the internet, dont fail the test
-				log.warn("Handling network host exception\n" + e);
-			} else {
-				fail(e.getMessage());				
-			}
-		}
-	}
+    @Test
+    public void testConnectionFive(){
+
+        String url = "http://www.google.com";
+        Connection conn = Jsoup.connect(url).timeout(LONG_TIMEOUT);
+        try {
+            Document documentObject = conn.get();
+            log.debug("Fetching title for: " + url);
+            assertEquals("Google", documentObject.title());
+        } catch (IOException e) {
+            if (e instanceof java.net.SocketException){
+                // means we are having trouble connecting to the internet, dont fail the test
+                log.warn("Handling network host exception\n" + e);
+            } else {
+                fail(e.getMessage());				
+            }
+        }
+    }
 
 }
