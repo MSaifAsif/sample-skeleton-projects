@@ -18,24 +18,24 @@ import com.sample.utilities.TransformationUtils;
  */
 @Path("/greet")
 public class GreetRestService extends Application {
-	
-	private static final Logger log = Logger.getLogger(GreetRestService.class);
 
-	/**
-	 * A sample rest method exposed at URL '/greet/hello/{insert_name_here}'
-	 * 
-	 * @param name A sample String text
-	 * @return {@link String} text format string that will be displayed on the page
-	 */
-	@GET
-	@Path("/hello/{name}")
-	@Produces(MediaType.TEXT_PLAIN)
-	public String getGreetings(@PathParam("name") String name){
-		log.info("Service requests... Getting response");
-		return "Greetings " + name + " to Rest service.";
-	}
-	
-	/**
+    private static final Logger log = Logger.getLogger(GreetRestService.class);
+
+    /**
+     * A sample rest method exposed at URL '/greet/hello/{insert_name_here}'
+     * 
+     * @param name A sample String text
+     * @return {@link String} text format string that will be displayed on the page
+     */
+    @GET
+    @Path("/hello/{name}")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getGreetings(@PathParam("name") String name){
+        log.info("Service requests... Getting response");
+        return "Greetings " + name + " to Rest service.";
+    }
+
+    /**
      * A sample rest method exposed at URL '/greet/get_sample/{caller}'
      * 
      * @param name A sample String text

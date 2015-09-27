@@ -16,12 +16,12 @@ import org.apache.struts.action.ActionMapping;
  *
  */
 public class HelloWorldAction extends Action {
-	
-	private static final Logger log = Logger.getLogger(HelloWorldAction.class);
-	
-	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception{
-		log.info("Loading action ... ");
-		return mapping.findForward("success");
-	}
+
+    private static final Logger log = Logger.getLogger(HelloWorldAction.class);
+
+    public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception{
+        log.info("Loading action ... ");
+        return mapping.findForward("success");
+    }
 
 }

@@ -28,7 +28,7 @@ public class ClientRunner extends Configured implements Tool {
 
         // Set the mapper name
         job.setMapperClass(WordCountMapper.class);
-        
+
         // Set the combiner and the reducer classes
         job.setCombinerClass(WordCountReducer.class);
         job.setReducerClass(WordCountReducer.class);

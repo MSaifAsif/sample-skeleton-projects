@@ -8,11 +8,11 @@ import javax.ejb.Remote;
  */
 @Remote
 public interface IBeanOne {
-	
-	/**
-	 * Greet message method
-	 * @param name
-	 */
-	public void greet(String name);
+
+    /**
+     * Greet message method
+     * @param name
+     */
+    public void greet(String name);
 
 }

@@ -15,7 +15,7 @@ import org.apache.log4j.Logger;
 
 @WebFilter(urlPatterns="/*")
 public class MyFilter implements Filter{
-    
+
     private static final Logger log = Logger.getLogger(MyFilter.class);
 
     @Override

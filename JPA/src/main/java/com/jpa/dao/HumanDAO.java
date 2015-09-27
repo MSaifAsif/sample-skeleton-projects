@@ -6,7 +6,11 @@ import java.util.List;
 import org.hibernate.criterion.Restrictions;
 
 import com.jpa.model.Human;
-
+/**
+ * A DAO implementation for the {@link Human} class
+ * @author saifasif
+ *
+ */
 public class HumanDAO extends GenericHibernateDAO<Human, Serializable> {
 
     //private Criteria criteria = HibernateUtil.getSession().createCriteria(Human.class); 

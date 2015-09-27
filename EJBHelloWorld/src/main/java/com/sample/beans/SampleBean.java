@@ -10,9 +10,9 @@ import javax.ejb.Remote;
  */
 @Remote
 public interface SampleBean {
-	
-	void addEntity(String o);
 
-	List<String> getEntity();
+    void addEntity(String o);
+
+    List<String> getEntity();
 
 }
