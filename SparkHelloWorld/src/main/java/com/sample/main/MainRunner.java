@@ -14,6 +14,7 @@ public class MainRunner {
         // Deploy the get requests
         GetRequests.greet();
         GetRequests.getQueryParams();
+        GetRequests.add();
 
         // Deploy the post requests
         PostRequests.postTest();

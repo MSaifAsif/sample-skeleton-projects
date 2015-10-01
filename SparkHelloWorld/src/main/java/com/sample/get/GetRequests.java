@@ -6,6 +6,8 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
+import com.sample.interfaces.SumFunctionalI;
+
 import spark.Request;
 import spark.Response;
 import spark.Route;
@@ -44,6 +46,16 @@ public class GetRequests {
             }
             return result;
         });
+    }
+
+    public static void add(){
+        get("/sumop", (req, res) -> {
+            SumFunctionalI functionalI = (String tokenA, String tokenB) -> {
+                return tokenA + tokenB;
+            };
+            return functionalI.concatStrings("Hello", "World");
+        });
+
     }
 
 }
