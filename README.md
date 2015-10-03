@@ -26,6 +26,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [MapReduceHelloWorld](#mr-hw)
 * [SpringBootHelloWorld](#springboot-hw)
 * [MongoDBHelloWorld](#mongo-hw)
+* [JavaLite](#java-lite)
 * [How to contribute](#how-to-contrib)
 
 ## <a name="struts2skeleton">Struts(2.x)</a> [&#8593;](#list-index)
@@ -146,6 +147,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** Basic implementation crud operations on mongo via JAVA
 
 **How to run:** Checkout the project and run `mvn clean test` to run the test cases. Application uses an embedded mongo instance that is initialized on runtime on a random port. All test cases are run on this mongo instance.
+
+## <a name="java-lite">JavaLite Hello World</a> [&#8593;](#list-index)
+**Language:** Java
+
+**Description:** Basic implementation of the Javalite framework
+
+**How to run:** Checkout the project and run `mvn process-classs` to first execute the instrumentation plugin. Next run `mvn clean test` and the `http` library will run some test cases where basic get and post requests are tested. To execute the `orm` part, first execute the sql script located at `src/main/resources/person_modes.sql` to create the table in a Mysql database. Afterwards, run the class `com.sample.orm.MainRunner` and the ORM will perform basic crud operations.
 
 ## <a name="how-to-contrib">How to contribute</a> [&#8593;](#list-index)
 
