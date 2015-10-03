@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Sample skeleton projects : A collection of skeleton projects to help start development quickly">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-    <title>Sample skeleton projects</title>
+    <title>Sample skeleton projects by MSaifAsif</title>
   </head>
 
   <body>
+    <header>
+      <div class="inner">
+        <h1>Sample skeleton projects</h1>
+        <h2>A collection of skeleton projects to help start development quickly</h2>
+        <a href="https://github.com/MSaifAsif/sample-skeleton-projects" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/MSaifAsif/sample-skeleton-projects">View on GitHub</a>
-
-          <h1 id="project_title">Sample skeleton projects</h1>
-          <h2 id="project_tagline">A collection of skeleton projects to help start development quickly</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/MSaifAsif/sample-skeleton-projects/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/MSaifAsif/sample-skeleton-projects/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
 <a id="sample-skeleton-projects" class="anchor" href="#sample-skeleton-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Skeleton Projects</h1>
 
-<p><a href="https://travis-ci.org/MSaifAsif/sample-skeleton-projects"><img src="https://travis-ci.org/MSaifAsif/sample-skeleton-projects.svg?branch=master" alt="Build Status"></a></p>
+<p><a href="https://gitter.im/MSaifAsif/sample-skeleton-projects?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/MSaifAsif/sample-skeleton-projects"></a>
+<a href="https://travis-ci.org/MSaifAsif/sample-skeleton-projects"><img src="https://travis-ci.org/MSaifAsif/sample-skeleton-projects.svg?branch=master" alt="Build Status"></a></p>
 
 <p>These projects are basic and easy to execute implementations of some of the popularly used frameworks and libraries out in the market and can be used to jump start your coding time by simply forking these projects or using them as reference and then building your application on top of them. The implementations range from advanced MVC frameworks such as Struts to small testing libraries like JUnit or pyUnit (python). </p>
 
@@ -62,6 +60,7 @@
 <li><a href="#mr-hw">MapReduceHelloWorld</a></li>
 <li><a href="#springboot-hw">SpringBootHelloWorld</a></li>
 <li><a href="#mongo-hw">MongoDBHelloWorld</a></li>
+<li><a href="#java-lite">JavaLite</a></li>
 <li><a href="#how-to-contrib">How to contribute</a></li>
 </ul>
 
@@ -236,6 +235,16 @@
 <p><strong>How to run:</strong> Checkout the project and run <code>mvn clean test</code> to run the test cases. Application uses an embedded mongo instance that is initialized on runtime on a random port. All test cases are run on this mongo instance.</p>
 
 <h2>
+<a id="javalite-hello-world-" class="anchor" href="#javalite-hello-world-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="java-lite">JavaLite Hello World</a> <a href="#list-index">↑</a>
+</h2>
+
+<p><strong>Language:</strong> Java</p>
+
+<p><strong>Description:</strong> Basic implementation of the Javalite framework</p>
+
+<p><strong>How to run:</strong> Checkout the project and run <code>mvn process-classs</code> to first execute the instrumentation plugin. Next run <code>mvn clean test</code> and the <code>http</code> library will run some test cases where basic get and post requests are tested. To execute the <code>orm</code> part, first execute the sql script located at <code>src/main/resources/person_modes.sql</code> to create the table in a Mysql database. Afterwards, run the class <code>com.sample.orm.MainRunner</code> and the ORM will perform basic crud operations.</p>
+
+<h2>
 <a id="how-to-contribute-" class="anchor" href="#how-to-contribute-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="how-to-contrib">How to contribute</a> <a href="#list-index">↑</a>
 </h2>
 
@@ -247,22 +256,29 @@
 <li>Add documented and tested code</li>
 <li>Open a pull request to the master branch</li>
 <li>Once reviewed, the pull request will be merged</li>
-<li>README.md will contain information of runnable projects ONLY. All other projects are either in dev or testing phase</li>
+<li>README.md will contain information of runnable projects ONLY. All other projects are either in dev or testing phase and such projects are not to be relied on yet.</li>
 </ul>
 
 <p>Its always best to open a issue and discuss its possibility before writing up the code. I am always open for suggestions. Feel free to contact me or contribute to the project. </p>
-      </section>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/MSaifAsif/sample-skeleton-projects/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/MSaifAsif/sample-skeleton-projects/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/MSaifAsif/sample-skeleton-projects"></a> is maintained by <a href="https://github.com/MSaifAsif">MSaifAsif</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Sample skeleton projects maintained by <a href="https://github.com/MSaifAsif">MSaifAsif</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
+  
   </body>
 </html>
