@@ -10,7 +10,7 @@ import org.junit.Test;
 import com.jpa.util.HibernateUtil;
 
 public class ConnectionTest {
-
+    
     @BeforeClass
     public static void init() {
         // For full DEBUG mode, uncomment the following line
@@ -27,4 +27,5 @@ public class ConnectionTest {
             fail(e.getMessage());
         }
     }
+
 }
