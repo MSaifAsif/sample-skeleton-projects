@@ -104,7 +104,7 @@ public class MongoDbUtilsTest {
     @Test
     public void testInsertMultiDocument(){
         MongoDbUtils mdb = new MongoDbUtils(ADMIN_DB_NAME, mongo);
-        for ( int index = 0; index < 15000; index++ ){
+        for ( int index = 0; index < 15; index++ ){
             Document doc = new Document();
             String key = "key" + index;
             String val = "val" + index;
@@ -120,7 +120,7 @@ public class MongoDbUtilsTest {
         // Find if all documents got inserted correctly
         MongoCollection<Document> m = mdb.getCollectionConn(DUMMY_COLLECTION_NAME);
         assertNotNull(m);
-        assertEquals(15000, m.count());
+        assertEquals(15, m.count());
     }
 
 

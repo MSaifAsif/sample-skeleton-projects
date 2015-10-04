@@ -83,7 +83,7 @@ public class InsertionTest {
 
     @Test
     public void testMultiInsertFetchUniqueTransaction() {
-        for ( int i = 0; i < 150; i++ ){
+        for ( int i = 0; i < 15; i++ ){
             try {
                 final Session session = HibernateUtil.getSessionFactory().openSession();
                 Transaction tx = session.beginTransaction();
