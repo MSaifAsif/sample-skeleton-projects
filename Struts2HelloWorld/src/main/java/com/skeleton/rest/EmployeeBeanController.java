@@ -11,10 +11,16 @@ public class EmployeeBeanController implements ModelDriven<Object> {
     private Object model;
     private static final Logger log = Logger.getLogger(EmployeeBeanController.class);
 
-    private int id;
+    private Integer id;
 
     public HttpHeaders index() {
         model = EmployeeBeanDAO.findAll();
+        return new DefaultHttpHeaders("index").disableCaching();
+    }
+
+    public HttpHeaders show() {
+        log.info("Fetching employee with ID:" + getId());
+        model = EmployeeBeanDAO.findById(String.valueOf(getId()));
         return new DefaultHttpHeaders("index").disableCaching();
     }
 
@@ -23,12 +29,13 @@ public class EmployeeBeanController implements ModelDriven<Object> {
         return model;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
+
 
 }
