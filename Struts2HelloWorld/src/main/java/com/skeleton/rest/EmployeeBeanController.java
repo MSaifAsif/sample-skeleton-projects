@@ -6,21 +6,20 @@ import org.apache.struts2.rest.HttpHeaders;
 
 import com.opensymphony.xwork2.ModelDriven;
 
-public class EmployeeBeanController implements ModelDriven<EmployeeBean> {
+public class EmployeeBeanController implements ModelDriven<Object> {
 
-    private EmployeeBean model;
+    private Object model;
     private static final Logger log = Logger.getLogger(EmployeeBeanController.class);
 
     private int id;
 
     public HttpHeaders index() {
-        log.info("calling index");
-        model = new EmployeeBean(42).getEmployeeById(42);
+        model = EmployeeBeanDAO.findAll();
         return new DefaultHttpHeaders("index").disableCaching();
     }
 
     @Override
-    public EmployeeBean getModel() {
+    public Object getModel() {
         return model;
     }
 
