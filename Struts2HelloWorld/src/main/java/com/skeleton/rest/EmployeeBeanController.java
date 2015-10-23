@@ -47,7 +47,7 @@ public class EmployeeBeanController implements ModelDriven<Object> {
     public HttpHeaders show() {
         log.debug("Fetching employee with ID:" + getId());
         model = EmployeeBeanDAO.findById(String.valueOf(getId()));
-        return new DefaultHttpHeaders("index").disableCaching();
+        return new DefaultHttpHeaders("show").disableCaching();
     }
 
     @Override
