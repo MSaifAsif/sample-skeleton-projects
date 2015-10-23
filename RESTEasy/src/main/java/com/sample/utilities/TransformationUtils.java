@@ -27,7 +27,7 @@ public class TransformationUtils {
      */
     public static MyBean getObj(String caller){
         MyBean myBean = new MyBean();
-        myBean.setEpoch(System.currentTimeMillis());
+        myBean.setEpoch(0);
         myBean.setGender('m');
         myBean.setIndex(1);
         myBean.setName(caller);
