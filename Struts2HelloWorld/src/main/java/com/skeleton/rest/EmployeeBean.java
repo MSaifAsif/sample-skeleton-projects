@@ -2,6 +2,11 @@ package com.skeleton.rest;
 
 import java.io.Serializable;
 
+/**
+ * An employee bean mapped with the {@link EmployeeBeanDAO} class
+ * @author saifasif
+ *
+ */
 public class EmployeeBean implements Serializable {
 
     private static final long serialVersionUID = 176619359775474272L;
