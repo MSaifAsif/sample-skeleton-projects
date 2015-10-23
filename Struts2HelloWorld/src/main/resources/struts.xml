@@ -3,7 +3,16 @@
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-    <constant name="struts.devMode" value="false" />
+    <constant name="struts.devMode" value="true" />
+
+    <constant name="struts.convention.action.suffix" value="Controller"/>
+    <constant name="struts.convention.action.mapAllMatches" value="true"/>
+    <constant name="struts.convention.default.parent.package" value="rest-default"/>
+    <constant name="struts.convention.package.locators" value="rest"/>
+    
+    <constant name="struts.mapper.class" value="org.apache.struts2.dispatcher.mapper.PrefixBasedActionMapper" />
+    <constant name="struts.mapper.prefixMapping" value="/rest:rest,:struts"/>
+    <constant name="struts.action.extension" value="xhtml,,xml,json,action"/>
 
     <package name="sample" namespace="/sample" extends="struts-default">
         <interceptors>
@@ -60,6 +69,14 @@
         <action name="ErrorAction" class="com.skeleton.actions.DefaultErrorAction" method="getErrorMessage">
             <interceptor-ref name="timingStack"></interceptor-ref>
             <result name="success">pages/error_page.jsp</result>
+        </action>
+    </package>
+
+
+    <package name="rest" namespace="/rest" extends="struts-default">
+        <action name="employee/*" class="com.skeleton.rest.EmployeeBeanController">
+            <result name="index">pages/hello_world.jsp</result>
+            <result name="null">pages/hello_world.jsp</result>
         </action>
     </package>
 
