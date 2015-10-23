@@ -6,6 +6,17 @@ import org.apache.struts2.rest.HttpHeaders;
 
 import com.opensymphony.xwork2.ModelDriven;
 
+/**
+ * The REST api class. This will serve as entry point for all rest calls to the {@link EmployeeBean} resource
+ * <br><br>
+ * Sample requests are <br>
+ * <ul>
+ *  <li><code>http://localhost:8080/Struts2HelloWorld/rest/employee.xml</code></li>
+ *  <li><code>http://localhost:8080/Struts2HelloWorld/rest/employee/1.xml</code></li>
+ * </ul>
+ * @author saifasif
+ *
+ */
 public class EmployeeBeanController implements ModelDriven<Object> {
 
     /*
