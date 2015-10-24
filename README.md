@@ -34,7 +34,7 @@ These projects are basic and easy to execute implementations of some of the popu
 
 **Description:** A blank runnable web project based on the struts2 MVC architecture. The project comprises of a sample action class that will return success and display the resulting view (jsp file). The project can be run on any application server. Basic configurations including struts and log4j are also added for reference
 
-**How to run:** Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL `http://localhost:8080/Struts2HelloWorld/sample/GreetAction`
+**How to run:** Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL `http://localhost:8080/Struts2HelloWorld/sample/GreetAction`. Another added feature is the support for the Struts REST plugin to add support for rest based web services. A sample rest controller can be called at the URL `http://localhost:8080/Struts2HelloWorld/rest/employee.xml` which will return a list of all the users in xml format. For JSON based response, the same URL can be used by replacing the extension `.xml` with `.json`
 
 ## <a name="struts1skeleton">Struts(1.x)</a> [&#8593;](#list-index)
 **Language:** Java
