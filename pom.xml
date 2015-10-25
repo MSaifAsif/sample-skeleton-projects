@@ -41,6 +41,7 @@
         <module>MongoDbHelloWorld</module>
         <module>PortletsHelloWorld</module> <!-- Debug mode -->
         <module>JavaLiteHelloWorld</module>
+        <module>WicketHelloWorld</module>
     </modules>
     <dependencies>
         <dependency>

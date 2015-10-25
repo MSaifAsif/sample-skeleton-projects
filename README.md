@@ -27,6 +27,7 @@ These projects are basic and easy to execute implementations of some of the popu
 * [SpringBootHelloWorld](#springboot-hw)
 * [MongoDBHelloWorld](#mongo-hw)
 * [JavaLite](#java-lite)
+* [Wickets skeleton](#wickets-mvc)
 * [How to contribute](#how-to-contrib)
 
 ## <a name="struts2skeleton">Struts(2.x)</a> [&#8593;](#list-index)
@@ -154,6 +155,13 @@ These projects are basic and easy to execute implementations of some of the popu
 **Description:** Basic implementation of the Javalite framework
 
 **How to run:** Checkout the project and run `mvn process-classs` to first execute the instrumentation plugin. Next run `mvn clean test` and the `http` library will run some test cases where basic get and post requests are tested. To execute the `orm` part, first execute the sql script located at `src/main/resources/person_modes.sql` to create the table in a Mysql database. Afterwards, run the class `com.sample.orm.MainRunner` and the ORM will perform basic crud operations.
+
+## <a name="wickets-mvc">Wickets Hello World</a> [&#8593;](#list-index)
+**Language:** Java
+
+**Description:** Basic implementation of the Apache Wickets framework
+
+**How to run:** Checkout the project and run `mvn clean install` create the war file. Next, deploy this war to any application server of your choice and navigate to the url `http://localhost:8080/WicketHelloWorld` and you will see the greetings page rendered.
 
 ## <a name="how-to-contrib">How to contribute</a> [&#8593;](#list-index)
 
