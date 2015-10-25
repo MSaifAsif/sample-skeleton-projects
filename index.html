@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>Sample skeleton projects by MSaifAsif</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <title>Sample skeleton projects by MSaifAsif</title>
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>Sample skeleton projects</h1>
-        <h2>A collection of skeleton projects to help start development quickly</h2>
-        <a href="https://github.com/MSaifAsif/sample-skeleton-projects" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+    <section class="page-header">
+      <h1 class="project-name">Sample skeleton projects</h1>
+      <h2 class="project-tagline">A collection of skeleton projects to help start development quickly</h2>
+      <a href="https://github.com/MSaifAsif/sample-skeleton-projects" class="btn">View on GitHub</a>
+      <a href="https://github.com/MSaifAsif/sample-skeleton-projects/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/MSaifAsif/sample-skeleton-projects/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+    <section class="main-content">
+      <h1>
 <a id="sample-skeleton-projects" class="anchor" href="#sample-skeleton-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Skeleton Projects</h1>
 
 <p><a href="https://gitter.im/MSaifAsif/sample-skeleton-projects?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/MSaifAsif/sample-skeleton-projects"></a>
@@ -61,6 +52,7 @@
 <li><a href="#springboot-hw">SpringBootHelloWorld</a></li>
 <li><a href="#mongo-hw">MongoDBHelloWorld</a></li>
 <li><a href="#java-lite">JavaLite</a></li>
+<li><a href="#wickets-mvc">Wickets skeleton</a></li>
 <li><a href="#how-to-contrib">How to contribute</a></li>
 </ul>
 
@@ -72,7 +64,7 @@
 
 <p><strong>Description:</strong> A blank runnable web project based on the struts2 MVC architecture. The project comprises of a sample action class that will return success and display the resulting view (jsp file). The project can be run on any application server. Basic configurations including struts and log4j are also added for reference</p>
 
-<p><strong>How to run:</strong> Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL <code>http://localhost:8080/Struts2HelloWorld/sample/GreetAction</code></p>
+<p><strong>How to run:</strong> Import the project as a maven project, build the war file using maven and place the war in the tomcat webapps folder. Once deployment is complete by tomcat, the sample MVC can be viewed at the URL <code>http://localhost:8080/Struts2HelloWorld/sample/GreetAction</code>. Another added feature is the support for the Struts REST plugin to add support for rest based web services. A sample rest controller can be called at the URL <code>http://localhost:8080/Struts2HelloWorld/rest/employee.xml</code> which will return a list of all the users in xml format. For JSON based response, the same URL can be used by replacing the extension <code>.xml</code> with <code>.json</code></p>
 
 <h2>
 <a id="struts1x-" class="anchor" href="#struts1x-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="struts1skeleton">Struts(1.x)</a> <a href="#list-index">↑</a>
@@ -245,6 +237,16 @@
 <p><strong>How to run:</strong> Checkout the project and run <code>mvn process-classs</code> to first execute the instrumentation plugin. Next run <code>mvn clean test</code> and the <code>http</code> library will run some test cases where basic get and post requests are tested. To execute the <code>orm</code> part, first execute the sql script located at <code>src/main/resources/person_modes.sql</code> to create the table in a Mysql database. Afterwards, run the class <code>com.sample.orm.MainRunner</code> and the ORM will perform basic crud operations.</p>
 
 <h2>
+<a id="wickets-hello-world-" class="anchor" href="#wickets-hello-world-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="wickets-mvc">Wickets Hello World</a> <a href="#list-index">↑</a>
+</h2>
+
+<p><strong>Language:</strong> Java</p>
+
+<p><strong>Description:</strong> Basic implementation of the Apache Wickets framework</p>
+
+<p><strong>How to run:</strong> Checkout the project and run <code>mvn clean install</code> create the war file. Next, deploy this war to any application server of your choice and navigate to the url <code>http://localhost:8080/WicketHelloWorld</code> and you will see the greetings page rendered.</p>
+
+<h2>
 <a id="how-to-contribute-" class="anchor" href="#how-to-contribute-" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="how-to-contrib">How to contribute</a> <a href="#list-index">↑</a>
 </h2>
 
@@ -260,24 +262,14 @@
 </ul>
 
 <p>Its always best to open a issue and discuss its possibility before writing up the code. I am always open for suggestions. Feel free to contact me or contribute to the project. </p>
-        </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/MSaifAsif/sample-skeleton-projects/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/MSaifAsif/sample-skeleton-projects/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/MSaifAsif/sample-skeleton-projects">Sample skeleton projects</a> is maintained by <a href="https://github.com/MSaifAsif">MSaifAsif</a>.</span>
 
-          <p class="repo-owner"><a href="https://github.com/MSaifAsif/sample-skeleton-projects"></a> is maintained by <a href="https://github.com/MSaifAsif">MSaifAsif</a>.</p>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
+    </section>
 
   
   </body>
