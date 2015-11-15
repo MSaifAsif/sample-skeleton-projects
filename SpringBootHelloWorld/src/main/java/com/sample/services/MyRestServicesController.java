@@ -31,6 +31,7 @@ public class MyRestServicesController {
 
     @RequestMapping("/hello")
     public String greetName(@RequestParam(value="name") String name){
+        log.info("Initializing call from greetName() message with parameter .... ");
         return String.format("Hello world, %s !", name);
     }
 
