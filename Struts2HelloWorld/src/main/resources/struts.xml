@@ -3,9 +3,81 @@
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-	<package name="sample" namespace="/sample" extends="struts-default">
-		<action name="GreetAction">
-			<result name="success">pages/hello_world.jsp</result>
-		</action>
-	</package>
+    <constant name="struts.devMode" value="false" />
+
+    <constant name="struts.convention.action.suffix" value="Controller"/>
+    <constant name="struts.convention.action.mapAllMatches" value="true"/>
+    <constant name="struts.convention.default.parent.package" value="rest-default"/>
+    <constant name="struts.convention.package.locators" value="rest"/>
+    
+    <constant name="struts.mapper.class" value="org.apache.struts2.dispatcher.mapper.PrefixBasedActionMapper" />
+    <constant name="struts.mapper.prefixMapping" value="/rest:rest,:struts"/>
+    <constant name="struts.action.extension" value="xhtml,,xml,json,action"/>
+
+    <package name="sample" namespace="/sample" extends="struts-default">
+        <interceptors>
+            <interceptor name="timerInt"
+                class="com.skeleton.interceptors.MyTimerInterceptor">
+            </interceptor>
+            <interceptor-stack name="timingStack">
+                <interceptor-ref name="timerInt" />
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>
+        <action name="GreetAction">
+            <interceptor-ref name="timingStack"></interceptor-ref>
+            <result name="success">pages/hello_world.jsp</result>
+        </action>
+    </package>
+
+    <package name="form-io" namespace="/form" extends="struts-default">
+        <interceptors>
+            <interceptor name="timerInt"
+                class="com.skeleton.interceptors.MyTimerInterceptor">
+            </interceptor>
+            <interceptor-stack name="timingStack">
+                <interceptor-ref name="timerInt" />
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>
+        <action name="GetInputFormAction">
+            <interceptor-ref name="timingStack"></interceptor-ref>
+            <result name="success">pages/input_form.jsp</result>
+        </action>
+        <action name="ProcessFormAction" class="com.skeleton.actions.ProcessFormAction">
+            <interceptor-ref name="timingStack"></interceptor-ref>
+            <result name="success">pages/processed_form.jsp</result>
+            <result name="error" type="redirectAction">
+                <param name="namespace">/errors</param>
+                <param name="actionName">ErrorAction</param>
+                <param name="parse">true</param>
+                <param name="theError">${theErrorMessage}</param>
+            </result>
+        </action>
+    </package>
+
+    <package name="error" namespace="/errors" extends="struts-default">
+        <interceptors>
+            <interceptor name="timerInt"
+                class="com.skeleton.interceptors.MyTimerInterceptor">
+            </interceptor>
+            <interceptor-stack name="timingStack">
+                <interceptor-ref name="timerInt" />
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>
+        <action name="ErrorAction" class="com.skeleton.actions.DefaultErrorAction" method="getErrorMessage">
+            <interceptor-ref name="timingStack"></interceptor-ref>
+            <result name="success">pages/error_page.jsp</result>
+        </action>
+    </package>
+
+
+    <package name="rest" namespace="/rest" extends="struts-default">
+        <action name="employee/*" class="com.skeleton.rest.EmployeeBeanController">
+            <result name="index">pages/hello_world.jsp</result>
+            <result name="null">pages/hello_world.jsp</result>
+        </action>
+    </package>
+
 </struts>
