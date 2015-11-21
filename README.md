@@ -8,6 +8,8 @@ These projects are basic and easy to execute implementations of some of the popu
 
 **Note:** Projects not listed in the index table below are either in development phase or in debug mode and are not be relied on yet.
 
+In order to use a submodule as an isolated project, use the script `detach.py` to detach it from the parent project. The script will place the project at the home directory of the current user and this project can then be built as a standalone maven project.
+
 ## <a name="list-index">List of implementation</a>
 * [Struts(2.x) skeleton](#struts2skeleton)
 * [Struts(1.x) skeleton](#struts1skeleton)
