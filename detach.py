@@ -23,6 +23,11 @@ linDel = [
     '</parent>'
 ]
 
+if len(sys.argv) < 2 :
+    print "Enter module name ... "
+    print "usage : python detach.py <module_name>"
+    sys.exit(-1)
+
 # Get directory name
 directoryName = sys.argv[1]
 
