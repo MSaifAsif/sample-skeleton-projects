@@ -265,8 +265,7 @@ Full-Width Styles
 }
 
 .subscript-header{
-  font-style: italic;
-  font-family: serif;
+  font-family: sans-serif;
   font-size: 16px
 }
 
