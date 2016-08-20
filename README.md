@@ -167,6 +167,7 @@ These projects are basic and easy to execute implementations of some of the popu
 
 ## <a name="how-to-contrib">How to contribute</a> [&#8593;](#list-index)
 
+
 The project is open for contributions from everyone. If you want to contribute to the project, the best way is to 
 * Check the issues page to see if any pending issue is left and fixable
 * Fork the repo
