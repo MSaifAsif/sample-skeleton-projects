@@ -17,31 +17,34 @@
   ~ under the License.
   --%>
 
-<%@ page import="org.apache.axis2.Constants,
-                 org.apache.axis2.description.AxisOperation" %>
-<%@ page import="org.apache.axis2.description.AxisService" %>
-<%@ page import="org.apache.axis2.description.Parameter" %>
-<%@ page import="org.apache.axis2.engine.AxisConfiguration" %>
-<%@ page import="org.apache.axis2.util.JavaUtils" %>
-<%@ page import="java.util.Collection" %>
-<%@ page import="java.util.Enumeration" %>
-<%@ page import="java.util.HashMap" %>
-<%@ page import="java.util.Hashtable" %>
-<%@ page import="java.util.Iterator" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page
+    import="org.apache.axis2.Constants,
+                 org.apache.axis2.description.AxisOperation"%>
+<%@ page import="org.apache.axis2.description.AxisService"%>
+<%@ page import="org.apache.axis2.description.Parameter"%>
+<%@ page import="org.apache.axis2.engine.AxisConfiguration"%>
+<%@ page import="org.apache.axis2.util.JavaUtils"%>
+<%@ page import="java.util.Collection"%>
+<%@ page import="java.util.Enumeration"%>
+<%@ page import="java.util.HashMap"%>
+<%@ page import="java.util.Hashtable"%>
+<%@ page import="java.util.Iterator"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <html>
-<jsp:include page="include/httpbase.jsp"/>
-<head><title>List Services</title>
-    <link href="axis2-web/css/axis-style.css" rel="stylesheet" type="text/css"/>
+<jsp:include page="include/httpbase.jsp" />
+<head>
+<title>List Services</title>
+<link href="axis2-web/css/axis-style.css" rel="stylesheet"
+    type="text/css" />
 </head>
 
 <body>
-<jsp:include page="include/header.inc" />
-<jsp:include page="include/link-footer.jsp" />
-<h1>Available services</h1>
-<% String prefix = request.getAttribute("frontendHostUrl") + (String)request.getSession().getAttribute(Constants.SERVICE_PATH) + "/";
+    <jsp:include page="include/header.inc" />
+    <jsp:include page="include/link-footer.jsp" />
+    <h1>Available services</h1>
+    <% String prefix = request.getAttribute("frontendHostUrl") + (String)request.getSession().getAttribute(Constants.SERVICE_PATH) + "/";
 %>
-<%
+    <%
     HashMap serviceMap = (HashMap) request.getSession().getAttribute(Constants.SERVICE_MAP);
     request.getSession().setAttribute(Constants.SERVICE_MAP, null);
     Hashtable errornessservice = (Hashtable) request.getSession().getAttribute(Constants.ERROR_SERVICE_MAP);
@@ -57,8 +60,11 @@
             opItr = axisService.getOperations();
             //operationsList = operations.values();
             serviceName = axisService.getName();
-%><h2><font color="blue"><a href="<%=prefix + axisService.getName()%>?wsdl"><%=serviceName%></a></font></h2>
-<%
+%><h2>
+        <font color="blue"><a
+            href="<%=prefix + axisService.getName()%>?wsdl"><%=serviceName%></a></font>
+    </h2>
+    <%
     boolean disableREST = false;
     AxisConfiguration axisConfiguration = axisService.getAxisConfiguration();
 
@@ -73,7 +79,7 @@
     if (!disableREST ) {
 
 %>
-<%
+    <%
     }
 
 
@@ -82,25 +88,36 @@
         serviceDescription = "No description available for this service";
     }
 %>
-<h5>Service Description : <font color="black"><%=serviceDescription%></font></h5>
-<h5>Service EPR : <%=prefix + axisService.getName()%></h5>
-<h5>Service Status : <%=axisService.isActive() ? "Active" : "InActive"%></h5><br>
-<%
+    <h5>
+        Service Description : <font color="black"><%=serviceDescription%></font>
+    </h5>
+    <h5>
+        Service EPR :
+        <%=prefix + axisService.getName()%></h5>
+    <h5>
+        Service Status :
+        <%=axisService.isActive() ? "Active" : "InActive"%></h5>
+    <br>
+    <%
     if (opItr.hasNext()) {
-%><i>Available Operations</i><%
+%><i>Available Operations</i>
+    <%
 } else {
-%><i> There are no Operations specified</i><%
+%><i> There are no Operations specified</i>
+    <%
     }
     opItr = axisService.getOperations();
-%><ul><%
+%><ul>
+        <%
     while (opItr.hasNext()) {
         AxisOperation axisOperation = (AxisOperation) opItr.next();
 %><li><%=axisOperation.getName().getLocalPart()%></li>
-    <%--                <br>Operation EPR : <%=prifix + axisService.getName().getLocalPart() + "/"+ axisOperation.getName().getLocalPart()%>--%>
-    <%
+        <%--                <br>Operation EPR : <%=prifix + axisService.getName().getLocalPart() + "/"+ axisOperation.getName().getLocalPart()%>--%>
+        <%
         }
-    %></ul>
-<%
+    %>
+    </ul>
+    <%
             status = true;
         }
     }
@@ -108,24 +125,31 @@
         if (errornessservice.size() > 0) {
             request.getSession().setAttribute(Constants.IS_FAULTY, Constants.IS_FAULTY);
 %>
-<hr>
+    <hr>
 
-<h3><font color="blue">Faulty Services</font></h3>
-<%
+    <h3>
+        <font color="blue">Faulty Services</font>
+    </h3>
+    <%
     Enumeration faultyservices = errornessservice.keys();
     while (faultyservices.hasMoreElements()) {
         String faultyserviceName = (String) faultyservices.nextElement();
-%><h3><font color="blue"><a href="services/ListFaultyServices?serviceName=<%=faultyserviceName%>">
-    <%=faultyserviceName%></a></font></h3>
-<%
+%><h3>
+        <font color="blue"><a
+            href="services/ListFaultyServices?serviceName=<%=faultyserviceName%>">
+                <%=faultyserviceName%></a></font>
+    </h3>
+    <%
             }
         }
         status = true;
     }
     if (!status) {
-%> No services listed! Try hitting refresh. <%
+%>
+    No services listed! Try hitting refresh.
+    <%
     }
 %>
-<jsp:include page="include/footer.inc" />
+    <jsp:include page="include/footer.inc" />
 </body>
 </html>

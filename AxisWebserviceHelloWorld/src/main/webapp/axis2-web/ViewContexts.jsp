@@ -22,7 +22,7 @@
 <%@ page import="org.apache.axis2.context.ServiceContext"%>
 <%@ page import="org.apache.axis2.context.ServiceGroupContext"%>
 <%@ page import="java.util.Iterator"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 <h1>Running Context Hierarchy</h1>
 <%
@@ -39,26 +39,34 @@
         String groupContextID = serviceGroupIds[i];
         ServiceGroupContext groupContext = configContext.getServiceGroupContext(groupContextID);
         %>
-           <li><%=groupContextID%><font color="blue"><a href="axis2-admin/viewServiceGroupConetxt?TYPE=VIEW&ID=<%=groupContextID%>">
-                    View</a></font>  <font color="red"><a href="axis2-admin/viewServiceGroupConetxt?TYPE=DELETE&ID=<%=groupContextID%>">
-                    Remove</a> </font></li>
-        <%
+    <li><%=groupContextID%><font color="blue"><a
+            href="axis2-admin/viewServiceGroupConetxt?TYPE=VIEW&ID=<%=groupContextID%>">
+                View</a></font> <font color="red"><a
+            href="axis2-admin/viewServiceGroupConetxt?TYPE=DELETE&ID=<%=groupContextID%>">
+                Remove</a> </font></li>
+    <%
         Iterator serviceContextItr = groupContext.getServiceContexts();
-            %><ul><%
+            %><ul>
+        <%
         while (serviceContextItr.hasNext()) {
             ServiceContext serviceContext = (ServiceContext)serviceContextItr.next();
              String serviceConID = serviceContext.getAxisService().getName();
         %>
-            <li><%=serviceConID%><font color="blue"><a href="axis2-admin/viewServiceContext?TYPE=VIEW&ID=<%=serviceConID%>&PID=<%=groupContextID%>">
+        <li><%=serviceConID%><font color="blue"><a
+                href="axis2-admin/viewServiceContext?TYPE=VIEW&ID=<%=serviceConID%>&PID=<%=groupContextID%>">
                     View</a></font></li>
         <%
         }
-                %></ul><hr><%
+                %>
+    </ul>
+    <hr>
+    <%
     }
-    %>  </ul>
-        <%
+    %>
+</ul>
+<%
             } else {%>
-	<p>No running contexts were found on the system.</p>
-            <%}
+<p>No running contexts were found on the system.</p>
+<%}
 %>
 <jsp:include page="include/adminfooter.inc"></jsp:include>

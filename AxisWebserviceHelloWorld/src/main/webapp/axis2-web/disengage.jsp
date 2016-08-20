@@ -16,7 +16,7 @@
   ~ specific language governing permissions and limitations
   ~ under the License.
   --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:include page="include/adminheader.jsp"/>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<jsp:include page="include/adminheader.jsp" />
 <%=request.getSession().getAttribute("status")%>
 <jsp:include page="include/adminfooter.inc" />

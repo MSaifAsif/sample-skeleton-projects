@@ -9,7 +9,9 @@
 <title>Error Page</title>
 </head>
 <body>
-    <span> This is an example of a redirected action with a parameter. You encountered the following error: <s:property value="theError" />
+    <span> This is an example of a redirected action with a
+        parameter. You encountered the following error: <s:property
+            value="theError" />
     </span>
 </body>
 </html>

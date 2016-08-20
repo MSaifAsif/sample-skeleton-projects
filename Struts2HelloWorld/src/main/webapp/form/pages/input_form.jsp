@@ -10,9 +10,13 @@
 </head>
 <body>
     <s:form action="ProcessFormAction">
-        <s:textfield label="First Name" name="firstName" id="firstName" placeholder="Enter name here ... " />
-        <s:select name="gender" label="Gender" list="#{ 'Male':'m', 'Female':'f' }" headerKey="-1" headerValue="Choose" value="Male" />
-        <s:textfield label="Age" name="age" id="age" placeholder="Enter age here ... " />
+        <s:textfield label="First Name" name="firstName" id="firstName"
+            placeholder="Enter name here ... " />
+        <s:select name="gender" label="Gender"
+            list="#{ 'Male':'m', 'Female':'f' }" headerKey="-1"
+            headerValue="Choose" value="Male" />
+        <s:textfield label="Age" name="age" id="age"
+            placeholder="Enter age here ... " />
         <s:submit label="Submit" />
     </s:form>
 </body>

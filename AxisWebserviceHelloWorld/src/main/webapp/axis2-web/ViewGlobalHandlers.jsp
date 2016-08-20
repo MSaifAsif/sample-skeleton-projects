@@ -17,120 +17,121 @@
   ~ under the License.
   --%>
 
-<%@ page import="org.apache.axis2.Constants,
+<%@ page
+    import="org.apache.axis2.Constants,
                  org.apache.axis2.engine.AxisConfiguration,
                  org.apache.axis2.engine.Handler,
                  org.apache.axis2.engine.Phase,
                  java.util.List"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 <h1>View Global Execution Chains</h1>
-   <%
+<%
             AxisConfiguration axisConfig = (AxisConfiguration)request.getSession().
                     getAttribute(Constants.GLOBAL_HANDLERS);
              if(axisConfig != null ){
                  List handlers ;
                  List phases = axisConfig.getInFlowPhases();
                  %>
-                 <h3> In Flow Up To and Including Dispatcher </h3>
-                 <ul>
-                 <%
+<h3>In Flow Up To and Including Dispatcher</h3>
+<ul>
+    <%
                  for (int i = 0; i < phases.size(); i++) {
                      Phase phase = (Phase) phases.get(i);
                      %>
-                     <li>Phase Name :  <%=phase.getPhaseName()%></li>
-                     <ul>
-                     <%
+    <li>Phase Name : <%=phase.getPhaseName()%></li>
+    <ul>
+        <%
                       handlers = phase.getHandlers();
                       for (int j = 0; j < handlers.size(); j++) {
                           Handler handler = (Handler) handlers.get(j);
                           %>
-                          <li>Handler Name : <%=handler.getHandlerDesc().getName()%></li>
-                          <%
+        <li>Handler Name : <%=handler.getHandlerDesc().getName()%></li>
+        <%
                       }
                      %>
-                     </ul>
-                 <%
+    </ul>
+    <%
                  }
                  %>
-                 </ul>
-                 <%
+</ul>
+<%
                  phases = axisConfig.getInFaultFlowPhases();
                  %>
-                 <h3> In Fault Flow </h3>
-                 <ul>
-                 <%
+<h3>In Fault Flow</h3>
+<ul>
+    <%
                  for (int i = 0; i < phases.size(); i++) {
                      Phase phase = (Phase) phases.get(i);
                      %>
-                     <li>Phase Name  : <%=phase.getPhaseName()%></li>
-                     <ul>
-                     <%
+    <li>Phase Name : <%=phase.getPhaseName()%></li>
+    <ul>
+        <%
                       handlers = phase.getHandlers();
                       for (int j = 0; j < handlers.size(); j++) {
                           Handler handler = (Handler) handlers.get(j);
                           %>
-                          <li>Handler Name : <%=handler.getHandlerDesc().getName()%></li>
-                          <%
+        <li>Handler Name : <%=handler.getHandlerDesc().getName()%></li>
+        <%
                       }
                      %>
-                     </ul>
-                 <%
+    </ul>
+    <%
                  }
                  %>
-                 </ul>
-                 <%
+</ul>
+<%
 
                  phases = axisConfig.getOutFlowPhases();
                  %>
-                 <h3> Out Flow </h3>
-                 <ul>
-                 <%
+<h3>Out Flow</h3>
+<ul>
+    <%
                  for (int i = 0; i < phases.size(); i++) {
                      Phase phase = (Phase) phases.get(i);
                      %>
-                     <li>Phase Name : <%=phase.getPhaseName()%></li>
-                     <ul>
-                     <%
+    <li>Phase Name : <%=phase.getPhaseName()%></li>
+    <ul>
+        <%
                       handlers = phase.getHandlers();
                       for (int j = 0; j < handlers.size(); j++) {
                           Handler handler = (Handler) handlers.get(j);
                           %>
-                          <li>Handler Name : <%=handler.getHandlerDesc().getName()%></li>
-                          <%
+        <li>Handler Name : <%=handler.getHandlerDesc().getName()%></li>
+        <%
                       }
                      %>
-                     </ul>
-                 <%
+    </ul>
+    <%
                  }
                  %>
-                 </ul>
-                 <%
+</ul>
+<%
                  phases = axisConfig.getOutFaultFlowPhases();
                  %>
-                 <h3> Out Fault Flow </h3>
-                 <ul>
-                 <%
+<h3>Out Fault Flow</h3>
+<ul>
+    <%
                  for (int i = 0; i < phases.size(); i++) {
                      Phase phase = (Phase) phases.get(i);
                      %>
-                     <li>Phase Name : <%=phase.getPhaseName()%></li>
-                     <ul>
-                     <%
+    <li>Phase Name : <%=phase.getPhaseName()%></li>
+    <ul>
+        <%
                       handlers = phase.getHandlers();
                       for (int j = 0; j < handlers.size(); j++) {
                           Handler handler = (Handler) handlers.get(j);
                           %>
-                          <li>Handler Name : <%=handler.getHandlerDesc().getName()%></li>
-                          <%
+        <li>Handler Name : <%=handler.getHandlerDesc().getName()%></li>
+        <%
                       }
                      %>
-                     </ul>
-                 <%
+    </ul>
+    <%
                  }
                  %>
-                 </ul>
-                 <%
+</ul>
+<%
 
              }
               %>

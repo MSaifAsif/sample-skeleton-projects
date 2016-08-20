@@ -17,29 +17,31 @@
   ~ under the License.
   --%>
 
-<%@ page import="org.apache.axis2.Constants,
+<%@ page
+    import="org.apache.axis2.Constants,
                  org.apache.axis2.description.AxisModule,
                  java.util.Collection,
                  java.util.HashMap,
-                 java.util.Iterator" %>
-<%@ page import="org.apache.axis2.util.Utils" %>
+                 java.util.Iterator"%>
+<%@ page import="org.apache.axis2.util.Utils"%>
 <html>
-<jsp:include page="include/adminheader.jsp"/>
+<jsp:include page="include/adminheader.jsp" />
 <%
     String status = (String) request.getSession().getAttribute(Constants.ENGAGE_STATUS);
 %>
 <h1>Engage Module Globally</h1>
 
-<p>To engage a module on all services across the system, select a module from the combo box below
-    and click on the "Engage" button. Any module that needs to place handlers into the pre-dispatch
-    phase needs to be engaged globally.</p>
+<p>To engage a module on all services across the system, select a
+    module from the combo box below and click on the "Engage" button.
+    Any module that needs to place handlers into the pre-dispatch phase
+    needs to be engaged globally.</p>
 
-<form method="get" name="selectModuleForm" action="axis2-admin/engagingglobally">
+<form method="get" name="selectModuleForm"
+    action="axis2-admin/engagingglobally">
     <table border="0" width="100%" cellspacing="1" cellpadding="1">
         <tr>
             <td width="15%">Select a Module :</td>
-            <td width="75%" align="left">
-                <select name="modules">
+            <td width="75%" align="left"><select name="modules">
                     <%
                         HashMap modules = (HashMap) request.getSession().getAttribute(Constants.MODULE_MAP);
                         request.getSession().setAttribute(Constants.MODULE_MAP,null);
@@ -53,12 +55,11 @@
                     <%
                         }
                     %>
-                </select>
-            </td>
+            </select></td>
         </tr>
-        <tr><td>&nbsp;</td>
-            <td>
-                <input name="submit" type="submit" value=" Engage ">
+        <tr>
+            <td>&nbsp;</td>
+            <td><input name="submit" type="submit" value=" Engage ">
             </td>
         </tr>
     </table>
@@ -66,7 +67,7 @@
 <%
     if (status != null) {
 %>
-<p style="color:blue"><%=Utils.sanitizeWebOutput(status)%></p>
+<p style="color: blue"><%=Utils.sanitizeWebOutput(status)%></p>
 <%
     } %>
-<jsp:include page="include/adminfooter.inc"/>
+<jsp:include page="include/adminfooter.inc" />

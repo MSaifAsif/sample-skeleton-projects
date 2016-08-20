@@ -18,12 +18,13 @@
   --%>
 
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <title>Axis2 Administration </title>
-    <style type="text/css">
-    </style></head>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Axis2 Administration</title>
+<style type="text/css">
+</style>
+</head>
 
-  <body>
-  </body>
+<body>
+</body>
 </html>

@@ -5,11 +5,11 @@
 
 <struts-config>
 
-	<action-mappings>
-		<action path="/helloWorld" type="com.sample.one.HelloWorldAction"
-			name="helloWorldForm">
-			<forward name="success" path="/helloWorld.jsp" />
-		</action>
-	</action-mappings>
+    <action-mappings>
+        <action path="/helloWorld" type="com.sample.one.HelloWorldAction"
+            name="helloWorldForm">
+            <forward name="success" path="/helloWorld.jsp" />
+        </action>
+    </action-mappings>
 
 </struts-config>

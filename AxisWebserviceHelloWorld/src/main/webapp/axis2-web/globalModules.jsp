@@ -1,4 +1,5 @@
- <%--
+
+<%--
   ~ Licensed to the Apache Software Foundation (ASF) under one
   ~ or more contributor license agreements. See the NOTICE file
   ~ distributed with this work for additional information
@@ -15,14 +16,16 @@
   ~ KIND, either express or implied. See the License for the
   ~ specific language governing permissions and limitations
   ~ under the License.
-  --%> <%@ page import="org.apache.axis2.Constants,
+  --%>
+<%@ page
+    import="org.apache.axis2.Constants,
                  org.apache.axis2.description.AxisModule,
                  java.util.Collection,
                  java.util.Iterator"%>
- <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 <h1>Globally Engaged Modules</h1>
-     <%
+<%
          boolean foundModules = false;
          boolean wroteUL = false;
          String modulename = "";
@@ -35,21 +38,24 @@
                  if (!wroteUL) {
                      wroteUL = true;
      %>
-	<ul>
-<%
+<ul>
+    <%
 		}
      %><li><%=modulename%></li>
-     <br> <%
+    <br>
+    <%
              }
 		if (wroteUL){
 %>
-	</ul>
+</ul>
 <%
 		}
          } else{
      %>
-    <h2><font color="blue">There are no modules engaged globally</font></h2> 
-                 <%
+<h2>
+    <font color="blue">There are no modules engaged globally</font>
+</h2>
+<%
          }
                  %>
 <jsp:include page="include/adminfooter.inc"></jsp:include>

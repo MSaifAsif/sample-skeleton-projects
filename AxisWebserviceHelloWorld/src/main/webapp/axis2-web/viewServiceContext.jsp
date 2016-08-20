@@ -17,10 +17,10 @@
   ~ under the License.
   --%>
 
-<%@ page import="org.apache.axis2.context.ServiceContext" %>
-<%@ page import="java.util.Iterator" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:include page="include/adminheader.jsp"/>
+<%@ page import="org.apache.axis2.context.ServiceContext"%>
+<%@ page import="java.util.Iterator"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<jsp:include page="include/adminheader.jsp" />
 <h1>Running Context Hierarchy</h1>
 <%
     ServiceContext serviceContext = (ServiceContext) request.getSession().getAttribute("ServiceContext");
@@ -30,7 +30,8 @@
             if ("VIEW".equals(type)) {
                 Iterator propertyNames = serviceContext.getPropertyNames();
 %>
-<h4>Persistance Properties</h4><ul>
+<h4>Persistance Properties</h4>
+<ul>
     <%
         while (propertyNames.hasNext()) {
             String key = (String) propertyNames.next();
@@ -39,12 +40,15 @@
     <li><%=key%> : <%=property.toString()%></li>
     <%
         }
-    %></ul>
+    %>
+</ul>
 <%
     }
 } else {
-%> <h4>No Service Context Found</h4><%
+%>
+<h4>No Service Context Found</h4>
+<%
         }
     }
 %>
-<jsp:include page="include/adminfooter.inc"/>
+<jsp:include page="include/adminfooter.inc" />

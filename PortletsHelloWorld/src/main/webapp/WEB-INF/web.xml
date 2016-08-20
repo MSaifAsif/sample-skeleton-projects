@@ -22,10 +22,10 @@
             <param-name>portlet-guid</param-name>
             <param-value>com.sample.portlet.MyPortlet</param-value>
         </init-param>
-        
+
         <load-on-startup>1</load-on-startup>
     </servlet>
-    
+
     <servlet-mapping>
         <servlet-name>PortletsHelloWorld</servlet-name>
         <url-pattern>/PortletsHelloWorld/*</url-pattern>

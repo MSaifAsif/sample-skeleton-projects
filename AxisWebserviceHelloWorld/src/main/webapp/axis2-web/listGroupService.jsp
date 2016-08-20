@@ -17,28 +17,29 @@
   ~ under the License.
   --%>
 
-<%@ page import="org.apache.axis2.Constants" %>
-<%@ page import="org.apache.axis2.description.AxisModule" %>
-<%@ page import="org.apache.axis2.description.AxisOperation" %>
-<%@ page import="org.apache.axis2.description.AxisService" %>
-<%@ page import="java.util.Collection" %>
-<%@ page import="java.util.HashMap" %>
-<%@ page import="java.util.Iterator" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="org.apache.axis2.Constants"%>
+<%@ page import="org.apache.axis2.description.AxisModule"%>
+<%@ page import="org.apache.axis2.description.AxisOperation"%>
+<%@ page import="org.apache.axis2.description.AxisService"%>
+<%@ page import="java.util.Collection"%>
+<%@ page import="java.util.HashMap"%>
+<%@ page import="java.util.Iterator"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <html>
 <head>
-  <jsp:include page="include/httpbase.jsp"/>
-  <title>List Services</title>
-  <link href="axis2-web/css/axis-style.css" rel="stylesheet" type="text/css" />
+<jsp:include page="include/httpbase.jsp" />
+<title>List Services</title>
+<link href="axis2-web/css/axis-style.css" rel="stylesheet"
+    type="text/css" />
 </head>
 
 <body>
-<jsp:include page="include/adminheader.jsp"/>
-<h1>Available services</h1>
-<%
+    <jsp:include page="include/adminheader.jsp" />
+    <h1>Available services</h1>
+    <%
   String prefix = request.getAttribute("frontendHostUrl") + (String)request.getSession().getAttribute(Constants.SERVICE_PATH) +"/";
 %>
-<%
+    <%
     HashMap serviceMap = (HashMap) request.getSession().getAttribute(Constants.SERVICE_MAP);
     request.getSession().setAttribute(Constants.SERVICE_MAP,null);
     AxisService axisService = (AxisService) serviceMap.get(request.getParameter("serviceName"));
@@ -49,56 +50,75 @@
         serviceName = axisService.getName();
 %><hr>
 
-<h2><font color="blue"><a href="<%=prefix + axisService.getName()%>?wsdl"><%=serviceName%></a>
-</font></h2>
-<font color="blue">Service EPR :</font><font color="black"><%=prefix + axisService.getName()%></font>
-<h4>Service Description : <font color="black"><%=axisService.getServiceDescription()%></font></h4>
-<i><font color="blue">Service Status : <%=axisService.isActive() ? "Active" : "InActive"%></font></i><br/>
-<%
+    <h2>
+        <font color="blue"><a
+            href="<%=prefix + axisService.getName()%>?wsdl"><%=serviceName%></a>
+        </font>
+    </h2>
+    <font color="blue">Service EPR :</font>
+    <font color="black"><%=prefix + axisService.getName()%></font>
+    <h4>
+        Service Description : <font color="black"><%=axisService.getServiceDescription()%></font>
+    </h4>
+    <i><font color="blue">Service Status : <%=axisService.isActive() ? "Active" : "InActive"%></font></i>
+    <br />
+    <%
   Collection engagedModules = axisService.getEngagedModules();
   String moduleName;
   if (engagedModules.size() > 0) {
 %>
-<i>Engaged Modules for the Axis Service</i><ul>
-  <%
+    <i>Engaged Modules for the Axis Service</i>
+    <ul>
+        <%
     for (Iterator iteratorm = engagedModules.iterator(); iteratorm.hasNext();) {
       AxisModule axisOperation = (AxisModule) iteratorm.next();
       moduleName = axisOperation.getName();
   %><li><%=moduleName%></li>
-  <%
+        <%
     }%>
-</ul>
-<%
+    </ul>
+    <%
   }
   if (operations.hasNext()) {
-%><br><i>Available operations</i><%
+%><br>
+    <i>Available operations</i>
+    <%
 } else {
-%><i> There are no operations specified</i><%
+%><i> There are no operations specified</i>
+    <%
   }
-%><ul><%
+%><ul>
+        <%
   operations = axisService.getOperations();
   while (operations.hasNext()) {
     AxisOperation axisOperation = (AxisOperation) operations.next();
 %><li><%=axisOperation.getName().getLocalPart()%></li>
-  <%
+        <%
     engagedModules = axisOperation.getEngagedModules();
     if (engagedModules.size() > 0) {
   %>
-  <br><i>Engaged Modules for the Operation</i><ul>
-  <%
+        <br>
+        <i>Engaged Modules for the Operation</i>
+        <ul>
+            <%
     for (Iterator iterator2 = engagedModules.iterator(); iterator2.hasNext();) {
       AxisModule moduleDecription = (AxisModule) iterator2.next();
       moduleName = moduleDecription.getName();
-  %><li><%=moduleName%></li><br><%
+  %><li><%=moduleName%></li>
+            <br>
+            <%
   }
-%></ul><%
+%>
+        </ul>
+        <%
     }
 
   }
-%></ul>
-<%
+%>
+    </ul>
+    <%
   }
 %>
-<jsp:include page="include/adminfooter.inc"/>
+    <jsp:include page="include/adminfooter.inc" />
 </body>
 </html>

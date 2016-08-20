@@ -20,7 +20,7 @@
 <%@ page import="org.apache.axis2.context.ConfigurationContext"%>
 <%@ page import="org.apache.axis2.context.ServiceGroupContext"%>
 <%@ page import="java.util.Iterator"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 <h1>Runing Context hierachy</h1>
 <%
@@ -32,24 +32,28 @@
             if ("VIEW".equals(type)) {
               Iterator propertyNames = sgContext.getPropertyNames();
 %>
-             <h4>Persistance properties</h4><ul>
-             <%
+<h4>Persistance properties</h4>
+<ul>
+    <%
                  while (propertyNames.hasNext()) {
                      String key = (String) propertyNames.next();
                      Object property =  sgContext.getProperty(key);
               %>
-                   <li><%=key%> : <%=property.toString()%></li>
-              <%
+    <li><%=key%> : <%=property.toString()%></li>
+    <%
                  }
-                 %></ul>
-                 <%
+                 %>
+</ul>
+<%
             }   else if("DELETE".equals(type)){
                  configCtx.removeServiceGroupContext(sgContext.getId());
                  %>Removed the context<%
             }
         }
     } else {
-%> <h4>No service group context found</h4><%
+%>
+<h4>No service group context found</h4>
+<%
     }
 %>
 <jsp:include page="include/adminfooter.inc"></jsp:include>

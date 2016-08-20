@@ -1,86 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions targetNamespace="http://one.pack.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://one.pack.com" xmlns:intf="http://one.pack.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<!--WSDL created by Apache Axis version: 1.4
-Built on Apr 22, 2006 (06:55:48 PDT)-->
- <wsdl:types>
-  <schema elementFormDefault="qualified" targetNamespace="http://one.pack.com" xmlns="http://www.w3.org/2001/XMLSchema">
-   <element name="sum">
-    <complexType/>
-   </element>
-   <element name="sumResponse">
-    <complexType>
-     <sequence>
-      <element name="sumReturn" type="xsd:int"/>
-     </sequence>
-    </complexType>
-   </element>
-  </schema>
- </wsdl:types>
+<wsdl:definitions targetNamespace="http://one.pack.com"
+    xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://one.pack.com"
+    xmlns:intf="http://one.pack.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!--WSDL created by Apache Axis version: 1.4 Built on Apr 22, 2006 (06:55:48 
+        PDT) -->
+    <wsdl:types>
+        <schema elementFormDefault="qualified" targetNamespace="http://one.pack.com"
+            xmlns="http://www.w3.org/2001/XMLSchema">
+            <element name="sum">
+                <complexType />
+            </element>
+            <element name="sumResponse">
+                <complexType>
+                    <sequence>
+                        <element name="sumReturn" type="xsd:int" />
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
+    </wsdl:types>
 
-   <wsdl:message name="sumResponse">
+    <wsdl:message name="sumResponse">
 
-      <wsdl:part element="impl:sumResponse" name="parameters">
+        <wsdl:part element="impl:sumResponse" name="parameters">
 
-      </wsdl:part>
+        </wsdl:part>
 
-   </wsdl:message>
+    </wsdl:message>
 
-   <wsdl:message name="sumRequest">
+    <wsdl:message name="sumRequest">
 
-      <wsdl:part element="impl:sum" name="parameters">
+        <wsdl:part element="impl:sum" name="parameters">
 
-      </wsdl:part>
+        </wsdl:part>
 
-   </wsdl:message>
+    </wsdl:message>
 
-   <wsdl:portType name="Calculator">
+    <wsdl:portType name="Calculator">
 
-      <wsdl:operation name="sum">
+        <wsdl:operation name="sum">
 
-         <wsdl:input message="impl:sumRequest" name="sumRequest">
+            <wsdl:input message="impl:sumRequest" name="sumRequest">
 
-       </wsdl:input>
+            </wsdl:input>
 
-         <wsdl:output message="impl:sumResponse" name="sumResponse">
+            <wsdl:output message="impl:sumResponse" name="sumResponse">
 
-       </wsdl:output>
+            </wsdl:output>
 
-      </wsdl:operation>
+        </wsdl:operation>
 
-   </wsdl:portType>
+    </wsdl:portType>
 
-   <wsdl:binding name="CalculatorSoapBinding" type="impl:Calculator">
+    <wsdl:binding name="CalculatorSoapBinding" type="impl:Calculator">
 
-      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdlsoap:binding style="document"
+            transport="http://schemas.xmlsoap.org/soap/http" />
 
-      <wsdl:operation name="sum">
+        <wsdl:operation name="sum">
 
-         <wsdlsoap:operation soapAction=""/>
+            <wsdlsoap:operation soapAction="" />
 
-         <wsdl:input name="sumRequest">
+            <wsdl:input name="sumRequest">
 
-            <wsdlsoap:body use="literal"/>
+                <wsdlsoap:body use="literal" />
 
-         </wsdl:input>
+            </wsdl:input>
 
-         <wsdl:output name="sumResponse">
+            <wsdl:output name="sumResponse">
 
-            <wsdlsoap:body use="literal"/>
+                <wsdlsoap:body use="literal" />
 
-         </wsdl:output>
+            </wsdl:output>
 
-      </wsdl:operation>
+        </wsdl:operation>
 
-   </wsdl:binding>
+    </wsdl:binding>
 
-   <wsdl:service name="CalculatorService">
+    <wsdl:service name="CalculatorService">
 
-      <wsdl:port binding="impl:CalculatorSoapBinding" name="Calculator">
+        <wsdl:port binding="impl:CalculatorSoapBinding" name="Calculator">
 
-         <wsdlsoap:address location="http://localhost:8080/AxisWebserviceHelloWorld/services/Calculator"/>
+            <wsdlsoap:address
+                location="http://localhost:8080/AxisWebserviceHelloWorld/services/Calculator" />
 
-      </wsdl:port>
+        </wsdl:port>
 
-   </wsdl:service>
+    </wsdl:service>
 
 </wsdl:definitions>

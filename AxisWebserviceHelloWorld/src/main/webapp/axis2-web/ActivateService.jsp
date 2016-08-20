@@ -17,23 +17,28 @@
   ~ under the License.
   --%>
 
-<%@ page import="org.apache.axis2.Constants,
+<%@ page
+    import="org.apache.axis2.Constants,
                  org.apache.axis2.description.AxisService,
                  java.util.Collection,
                  java.util.HashMap,
                  java.util.Iterator"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 <h1>Turn On Service</h1>
-<form method="get" name="serviceActivate" action="axis2-admin/activateService">
-  <table width="100%"  border="0">
-<tr>
-  <td colspan="2" >
-     <p>The services that are inactive are listed below. Although you can activate the services from this page, once system is restarted the services will be inactive again</p>
-  </td>
-  </tr>
-  <tr>
-  <%
+<form method="get" name="serviceActivate"
+    action="axis2-admin/activateService">
+    <table width="100%" border="0">
+        <tr>
+            <td colspan="2">
+                <p>The services that are inactive are listed below.
+                    Although you can activate the services from this
+                    page, once system is restarted the services will be
+                    inactive again</p>
+            </td>
+        </tr>
+        <tr>
+            <%
 HashMap services = (HashMap)request.getSession().getAttribute(Constants.SERVICE_MAP);
 Collection col = services.values();
 String html = "";
@@ -50,33 +55,32 @@ for (Iterator iterator = col.iterator(); iterator.hasNext();) {
 request.getSession().setAttribute(Constants.SERVICE_MAP,null);
 if (count > 0) {
 %>
-  
-    <td width="20%"> Select Service : </td>
-    <td width="80%">
-       <select name="axisService" class="selectBoxes">
-		<%=html%>
-		</select>
-  </tr>
-  <tr>
-    <td width="20%">Activate Service </td>
-    <td width="80%"><input type="checkbox" name="turnon">
-    </td>
-  </tr>
-  <tr>
-  <td>&nbsp;</td>
-  <td>
-    <input name="submit" type="submit" value=" Activate " >
-   <input name="reset" type="reset" value=" Clear " >
-  </td>
-<%
+
+            <td width="20%">Select Service :</td>
+            <td width="80%"><select name="axisService"
+                class="selectBoxes">
+                    <%=html%>
+            </select>
+        </tr>
+        <tr>
+            <td width="20%">Activate Service</td>
+            <td width="80%"><input type="checkbox" name="turnon">
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input name="submit" type="submit"
+                value=" Activate "> <input name="reset"
+                type="reset" value=" Clear "></td>
+            <%
 } else {
 	%>
-	<td colspan="2">No inactive services present.</td>
-	<%
+            <td colspan="2">No inactive services present.</td>
+            <%
 }
 %>
-  </tr>
+        </tr>
 
-</table>
+    </table>
 </form>
 <jsp:include page="include/adminfooter.inc"></jsp:include>
