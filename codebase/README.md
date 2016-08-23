@@ -1,0 +1,1 @@
+This be the readme for the github pages for Sample Skeleton Projects
