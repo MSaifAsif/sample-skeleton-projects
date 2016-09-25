@@ -8,7 +8,21 @@ These projects are basic and easy to execute implementations of some of the popu
 
 **Note:** Projects not listed in the index table below are either in development phase or in debug mode and are not be relied on yet.
 
-**To detach module:** In order to use a submodule as an isolated project, use the script `detach.py` to detach it from the parent project. The script will place the project at the home directory of the current user and this project can then be built as a standalone maven project. Additional configurations may need to be added to build the detached submodule. Script can be used as `python detach.py <sub_module_name>`
+**To detach module:** In order to use a submodule as an isolated project, use the following command on your terminal 
+
+```bash
+[./~]$ curl -s -L https://raw.githubusercontent.com/MSaifAsif/sample-skeleton-projects/master/detachme.sh | bash -s <module_name> <target_directory>
+```
+and the required parameters as explained below
+
+- module_name : The name of the module to extract, this should exactly match the directory name of original modules in the code base
+- target_directory : Destination directory where to place the extracted out module
+
+So e.g if you need to only work on `JPA` project, the command will look like 
+
+```bash
+curl -s -L https://raw.githubusercontent.com/MSaifAsif/sample-skeleton-projects/master/detachme.sh | bash -s JPA /home/user
+```
 
 ## <a name="list-index">List of implementation</a>
 * [Struts(2.x) skeleton](#struts2skeleton)
