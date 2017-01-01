@@ -1,7 +1,8 @@
 package com.sample.post;
-import static spark.Spark.post;
 
 import org.apache.log4j.Logger;
+
+import static spark.Spark.post;
 
 public class PostRequests {
 
@@ -9,15 +10,12 @@ public class PostRequests {
 
     /**
      * Dummy post request
-     * 
      */
-    public static void postTest(){
+    public static void postTest() {
         post("/post1", (req, res) -> {
             log.info("Init post ....");
             return "Getting from post";
         });
-
-
 
     }
 

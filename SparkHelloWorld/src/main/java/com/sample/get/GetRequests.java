@@ -1,16 +1,11 @@
 package com.sample.get;
 
-import static spark.Spark.get;
+import com.sample.interfaces.SumFunctionalI;
+import org.apache.log4j.Logger;
 
 import java.util.Map;
 
-import org.apache.log4j.Logger;
-
-import com.sample.interfaces.SumFunctionalI;
-
-import spark.Request;
-import spark.Response;
-import spark.Route;
+import static spark.Spark.get;
 
 public class GetRequests {
 
@@ -19,28 +14,22 @@ public class GetRequests {
     /**
      * Sample get request to print a greeting on the browser
      */
-    public static void greet(){
-        get("/helloWorld", new Route() {
-            @Override
-            public Object handle(Request arg0, Response arg1) throws Exception {
-                return "This is from the Get method. Hello world";
-            }
-        });
+    public static void greet() {
+        get("/helloWorld", (arg0, arg1) -> "This is from the Get method. Hello world");
     }
 
     /**
      * Get request to print the query parameters passed
      * Sample request can look like <code>http://localhost:4567/helloWorld2?a=1,2&b=a&a=5</code>
      */
-    public static void getQueryParams(){
+    public static void getQueryParams() {
         String result = "";
         get("/helloWorld2", (req, res) -> {
             Map<String, String[]> queryParamsMap = req.queryMap().toMap();
-            for( String p : queryParamsMap.keySet() ) {
-                String key = p;
+            for (String p : queryParamsMap.keySet()) {
                 String[] vals = queryParamsMap.get(p);
-                for ( String val : vals ) {
-                    log.info(key + "::" + val);
+                for (String val : vals) {
+                    log.info(p + "::" + val);
                 }
 
             }
@@ -48,11 +37,9 @@ public class GetRequests {
         });
     }
 
-    public static void add(){
+    public static void add() {
         get("/sumop", (req, res) -> {
-            SumFunctionalI functionalI = (String tokenA, String tokenB) -> {
-                return tokenA + tokenB;
-            };
+            SumFunctionalI functionalI = (String tokenA, String tokenB) -> tokenA + tokenB;
             return functionalI.concatStrings("Hello", "World");
         });
 
