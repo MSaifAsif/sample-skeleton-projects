@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faceted-project>
-    <<<<<<< HEAD
-    <fixed facet="wst.jsdt.web" />
-    <installed facet="java" version="1.6" />
-    <installed facet="jst.web" version="3.0" />
-    <installed facet="wst.jsdt.web" version="1.0" />
+    <
+    <
+    <
+    <
+    <
+    <
+    < HEAD
+    <fixed facet="wst.jsdt.web"/>
+    <installed facet="java" version="1.6"/>
+    <installed facet="jst.web" version="3.0"/>
+    <installed facet="wst.jsdt.web" version="1.0"/>
     =======
-    <installed facet="java" version="1.7" />
+    <installed facet="java" version="1.7"/>
     >>>>>>> r1remote/impl_jpa
 </faceted-project>

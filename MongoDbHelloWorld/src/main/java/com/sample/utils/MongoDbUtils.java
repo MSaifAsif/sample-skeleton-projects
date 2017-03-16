@@ -15,17 +15,15 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
 /**
- * 
- * A collection of utility function to create, insert, bulk insert documents 
+ * A collection of utility function to create, insert, bulk insert documents
  * into mongo
- * @author saifasif
  *
+ * @author saifasif
  */
 public class MongoDbUtils {
 
-    private static String URI = "mongodb://%s:%s@%s:%s/%s";
     private static final Logger log = Logger.getLogger(MongoDbUtils.class);
-
+    private static String URI = "mongodb://%s:%s@%s:%s/%s";
     private String userName;
     private String passWord;
     private String host;
@@ -36,13 +34,13 @@ public class MongoDbUtils {
     private MongoClient mongoClient;
     private Properties properties = new Properties();
 
-    public MongoDbUtils(String dbName){
+    public MongoDbUtils(String dbName) {
         _loadPropertiesFile();
         this.dbName = dbName;
         _initConnection(dbName);
     }
 
-    public MongoDbUtils(String dbName, MongoClient mongoClient){
+    public MongoDbUtils(String dbName, MongoClient mongoClient) {
         this.dbName = dbName;
         this.mongoClient = mongoClient;
     }
@@ -50,7 +48,7 @@ public class MongoDbUtils {
     /**
      * Load the properties file
      */
-    private void _loadPropertiesFile(){
+    private void _loadPropertiesFile() {
         try {
             properties.load(new FileReader("./src/main/resources/connection.properties"));
         } catch (IOException e) {
@@ -65,6 +63,7 @@ public class MongoDbUtils {
 
     /**
      * Initialize the connection to the DB
+     *
      * @param dbName
      */
     private void _initConnection(String dbName) {
@@ -77,28 +76,30 @@ public class MongoDbUtils {
 
     /**
      * Get the current DB connection
+     *
      * @return {@link MongoDatabase} connection
      */
-    private MongoDatabase _getCurrentDB(){
+    private MongoDatabase _getCurrentDB() {
         return this.mongoClient.getDatabase(this.dbName);
     }
 
     /**
      * Inserts documents into the collection
+     *
      * @param collectionName
      * @param documents
      */
-    private void _insertDocuments(String collectionName, List<Document> documents){
-        getCollectionConn(collectionName).insertMany(documents);        
+    private void _insertDocuments(String collectionName, List<Document> documents) {
+        getCollectionConn(collectionName).insertMany(documents);
     }
 
     /**
      * To insert a single document into the mongo collection
-     * 
+     *
      * @param collectionName
      * @param document
      */
-    public void insertDocument(String collectionName, Document document){
+    public void insertDocument(String collectionName, Document document) {
         log.debug("Inserting document:" + document.toJson().toString());
         ArrayList<Document> docList = new ArrayList<>();
         docList.add(document);
@@ -108,21 +109,21 @@ public class MongoDbUtils {
 
 
     /**
-     * Create a collection 
-     * 
+     * Create a collection
+     *
      * @param collectionName
      */
-    public void createCollection(String collectionName){
+    public void createCollection(String collectionName) {
         _getCurrentDB().createCollection(collectionName);
     }
 
     /**
      * Get the connection to the collection with respect to the current database
-     * 
+     *
      * @param collectionName
      * @return
      */
-    public MongoCollection<Document> getCollectionConn(String collectionName){
+    public MongoCollection<Document> getCollectionConn(String collectionName) {
         return _getCurrentDB().getCollection(collectionName);
     }
 

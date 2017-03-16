@@ -6,10 +6,10 @@ import javax.persistence.Id;
 
 /**
  * A single HUman entity to communicate with the DB
- * @author msaif
  *
+ * @author msaif
  */
-@Entity(name="human")
+@Entity(name = "human")
 public class Human {
 
     private long userID;
@@ -19,42 +19,47 @@ public class Human {
     private int age;
 
     @Id
-    @Column(name="id")
+    @Column(name = "id")
     public long getUserID() {
         return userID;
     }
+
     public void setUserID(long userID) {
         this.userID = userID;
     }
 
-    @Column(name="first_name")
+    @Column(name = "first_name")
     public String getFirstName() {
         return firstName;
     }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    @Column(name="last_name")
+    @Column(name = "last_name")
     public String getLastName() {
         return lastName;
     }
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    @Column(name="gender")
+    @Column(name = "gender")
     public String getGender() {
         return gender;
     }
+
     public void setGender(String gender) {
         this.gender = gender;
     }
 
-    @Column(name="age")
+    @Column(name = "age")
     public int getAge() {
         return age;
     }
+
     public void setAge(int age) {
         this.age = age;
     }

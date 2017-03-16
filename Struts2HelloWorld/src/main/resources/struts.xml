@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
-"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
-"http://struts.apache.org/dtds/struts-2.0.dtd">
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-    <constant name="struts.devMode" value="false" />
+    <constant name="struts.devMode" value="false"/>
 
-    <constant name="struts.convention.action.suffix" value="Controller" />
+    <constant name="struts.convention.action.suffix" value="Controller"/>
     <constant name="struts.convention.action.mapAllMatches"
-        value="true" />
+              value="true"/>
     <constant name="struts.convention.default.parent.package"
-        value="rest-default" />
-    <constant name="struts.convention.package.locators" value="rest" />
+              value="rest-default"/>
+    <constant name="struts.convention.package.locators" value="rest"/>
 
     <constant name="struts.mapper.class"
-        value="org.apache.struts2.dispatcher.mapper.PrefixBasedActionMapper" />
-    <constant name="struts.mapper.prefixMapping" value="/rest:rest,:struts" />
-    <constant name="struts.action.extension" value="xhtml,,xml,json,action" />
+              value="org.apache.struts2.dispatcher.mapper.PrefixBasedActionMapper"/>
+    <constant name="struts.mapper.prefixMapping" value="/rest:rest,:struts"/>
+    <constant name="struts.action.extension" value="xhtml,,xml,json,action"/>
 
     <package name="sample" namespace="/sample" extends="struts-default">
         <interceptors>
             <interceptor name="timerInt"
-                class="com.skeleton.interceptors.MyTimerInterceptor">
+                         class="com.skeleton.interceptors.MyTimerInterceptor">
             </interceptor>
             <interceptor-stack name="timingStack">
-                <interceptor-ref name="timerInt" />
-                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="timerInt"/>
+                <interceptor-ref name="defaultStack"/>
             </interceptor-stack>
         </interceptors>
         <action name="GreetAction">
@@ -36,11 +36,11 @@
     <package name="form-io" namespace="/form" extends="struts-default">
         <interceptors>
             <interceptor name="timerInt"
-                class="com.skeleton.interceptors.MyTimerInterceptor">
+                         class="com.skeleton.interceptors.MyTimerInterceptor">
             </interceptor>
             <interceptor-stack name="timingStack">
-                <interceptor-ref name="timerInt" />
-                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="timerInt"/>
+                <interceptor-ref name="defaultStack"/>
             </interceptor-stack>
         </interceptors>
         <action name="GetInputFormAction">
@@ -62,15 +62,15 @@
     <package name="error" namespace="/errors" extends="struts-default">
         <interceptors>
             <interceptor name="timerInt"
-                class="com.skeleton.interceptors.MyTimerInterceptor">
+                         class="com.skeleton.interceptors.MyTimerInterceptor">
             </interceptor>
             <interceptor-stack name="timingStack">
-                <interceptor-ref name="timerInt" />
-                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="timerInt"/>
+                <interceptor-ref name="defaultStack"/>
             </interceptor-stack>
         </interceptors>
         <action name="ErrorAction" class="com.skeleton.actions.DefaultErrorAction"
-            method="getErrorMessage">
+                method="getErrorMessage">
             <interceptor-ref name="timingStack"></interceptor-ref>
             <result name="success">pages/error_page.jsp</result>
         </action>

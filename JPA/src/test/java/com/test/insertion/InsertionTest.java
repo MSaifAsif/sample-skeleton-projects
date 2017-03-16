@@ -58,7 +58,7 @@ public class InsertionTest {
             Transaction tx = session.beginTransaction();
             HumanDAO humanDAO = new HumanDAO();
 
-            for ( int i = 0; i < 15; i++ ){
+            for (int i = 0; i < 15; i++) {
                 humanDAO.setSession(session);
                 Human aPerson = new Human();
                 aPerson.setUserID(i);
@@ -67,7 +67,7 @@ public class InsertionTest {
                 aPerson.setAge(42);
                 aPerson.setGender("Male");
                 humanDAO.makePersistent(aPerson);
-                log.info("Inserted human into table ..... ");                
+                log.info("Inserted human into table ..... ");
             }
 
             // Now attempt to fetch this record with ID
@@ -83,7 +83,7 @@ public class InsertionTest {
 
     @Test
     public void testMultiInsertFetchUniqueTransaction() {
-        for ( int i = 0; i < 15; i++ ){
+        for (int i = 0; i < 15; i++) {
             try {
                 final Session session = HibernateUtil.getSessionFactory().openSession();
                 Transaction tx = session.beginTransaction();

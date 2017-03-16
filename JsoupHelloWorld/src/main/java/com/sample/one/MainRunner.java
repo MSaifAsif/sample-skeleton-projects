@@ -23,11 +23,11 @@ public class MainRunner {
             System.out.println("URL title: " + documentObject.title());
 
             Element domElement = documentObject.head().select(hrefLink).first();
-            if(domElement == null){
+            if (domElement == null) {
                 domElement = documentObject.head().select(imgMeta).first();
                 faviconImagePath = domElement.attr("content");
             }
-            System.out.println("Favicon img: " +faviconImagePath);
+            System.out.println("Favicon img: " + faviconImagePath);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -12,7 +12,6 @@ import com.sample.dynamic.CalculatorServlet;
 
 /**
  * Application Lifecycle Listener implementation class SessionListener
- *
  */
 @WebListener
 public class SessionListener implements ServletContextListener {
@@ -22,14 +21,14 @@ public class SessionListener implements ServletContextListener {
     /**
      * @see ServletContextListener#contextDestroyed(ServletContextEvent)
      */
-    public void contextDestroyed(ServletContextEvent sce)  {
+    public void contextDestroyed(ServletContextEvent sce) {
         log.info("Destroying context .... ");
     }
 
     /**
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
-    public void contextInitialized(ServletContextEvent sce)  {
+    public void contextInitialized(ServletContextEvent sce) {
         log.info("Initiating context ... ");
         ServletContext sc = sce.getServletContext();
         ServletRegistration registrar = sc.addServlet("calc", CalculatorServlet.class);

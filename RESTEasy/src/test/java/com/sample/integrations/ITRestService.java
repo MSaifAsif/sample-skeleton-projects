@@ -12,8 +12,8 @@ import com.sample.one.GreetRestService;
 
 /**
  * Integration tests for {@link GreetRestService}
- * @author saifasif
  *
+ * @author saifasif
  */
 public class ITRestService {
 
@@ -23,35 +23,35 @@ public class ITRestService {
     private static final String emptyEndPoint = "http://localhost2:8080/null";
 
     @Test
-    public void testEndpoint(){
+    public void testEndpoint() {
         Response response = RestAssured.get(greetEndPoint, "Tenka");
         log.info("Extracting response message ... ");
         assertNotNull(response.body().asString());
     }
 
-    @Test(expected=java.net.UnknownHostException.class)
-    public void testEndpoint2(){
+    @Test(expected = java.net.UnknownHostException.class)
+    public void testEndpoint2() {
         Response response = RestAssured.get(emptyEndPoint);
         log.info("Extracting response message ... ");
         assertNotNull(response.body().asString());
     }
 
     @Test
-    public void testGetService(){
+    public void testGetService() {
         Response response = RestAssured.get(greetEndPoint, "Tenka");
         log.info("Extracting response message ... ");
         assertEquals("Greetings Tenka to Rest service.", response.body().asString());
     }
 
     @Test
-    public void testGetJson(){
+    public void testGetJson() {
         Response response = RestAssured.get(jsonEndPoint, "Tenka");
         log.info("Extracting response message ... ");
         assertNotNull(response.body().asString());
     }
 
     @Test
-    public void testGetJson2(){
+    public void testGetJson2() {
         Response response = RestAssured.get(jsonEndPoint, "Tenka");
         log.info("Extracting response message ... ");
         String responseBody = response.body().asString();

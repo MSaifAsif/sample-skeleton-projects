@@ -3,10 +3,11 @@ package com.sample.beans;
 import java.util.List;
 
 import javax.ejb.Remote;
+
 /**
  * THe bean interface.
- * @author saifasif
  *
+ * @author saifasif
  */
 @Remote
 public interface SampleBean {

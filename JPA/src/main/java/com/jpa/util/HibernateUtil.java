@@ -19,13 +19,13 @@ public class HibernateUtil {
      * Since we will be using annotated classes, it is best to maintain a list
      * of such classes so we add them up easily
      */
-    @SuppressWarnings({ "unchecked", "rawtypes", "serial" })
-    private static final List<Class<?>> classList = new ArrayList(){{
+    @SuppressWarnings({"unchecked", "rawtypes", "serial"})
+    private static final List<Class<?>> classList = new ArrayList() {{
         add(com.jpa.model.Human.class);
     }};
     private static SessionFactory sessionFactory = buildSessionFactory();
 
-    private static SessionFactory buildSessionFactory(){
+    private static SessionFactory buildSessionFactory() {
         /*
          * Load up the configuration using the hibernate.cfg.xml
          */
@@ -62,10 +62,10 @@ public class HibernateUtil {
 
     /**
      * The main utility method to be used to retreive the transaction.
-     * 
+     *
      * @return {@link Transaction} The transaction of the current session
      */
-    public static Transaction getTransaction() throws Exception{
+    public static Transaction getTransaction() throws Exception {
         Session s = getSessionFactory().getCurrentSession();
         Transaction tx = s.beginTransaction();
         tx.setTimeout(10);

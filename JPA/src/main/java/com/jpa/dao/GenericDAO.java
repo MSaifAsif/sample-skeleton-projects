@@ -5,20 +5,20 @@ import java.util.List;
 
 /**
  * Generic DAO implmentation interface
- * @author MuhammadSaif
  *
  * @param <T>
  * @param <ID>
+ * @author MuhammadSaif
  */
-public interface GenericDAO<T, ID extends Serializable> {  
+public interface GenericDAO<T, ID extends Serializable> {
 
-    T findById(ID id, boolean lock);  
+    T findById(ID id, boolean lock);
 
-    List<T> findAll();  
+    List<T> findAll();
 
-    List<T> findByExample(T exampleInstance);  
+    List<T> findByExample(T exampleInstance);
 
-    T makePersistent(T entity);  
+    T makePersistent(T entity);
 
-    void makeTransient(T entity);  
+    void makeTransient(T entity);
 }  

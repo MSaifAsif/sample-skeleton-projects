@@ -5,8 +5,8 @@ import org.javalite.activejdbc.Base;
 
 /**
  * Set of utility functions to interact with the database
- * @author saifasif
  *
+ * @author saifasif
  */
 public class ConnectionUtils {
 
@@ -17,14 +17,14 @@ public class ConnectionUtils {
 
     private static final Logger log = Logger.getLogger(ConnectionUtils.class);
 
-    private ConnectionUtils(){
+    private ConnectionUtils() {
 
     }
 
     /**
      * Open a connection to the underlying database
      */
-    public static void openConnection(){
+    public static void openConnection() {
         log.debug("Attempting to get connection ... ");
         Base.open(driver, connString, userName, passWord);
         log.debug("Got connection ... ");
@@ -32,7 +32,7 @@ public class ConnectionUtils {
 
     /**
      * Create an entity and persist it into the database
-     * 
+     *
      * @param name
      * @param age
      * @param gender
@@ -49,7 +49,7 @@ public class ConnectionUtils {
 
     /**
      * Find by name
-     * 
+     *
      * @param name
      * @return {@link PersonModel} matching the criterea
      */

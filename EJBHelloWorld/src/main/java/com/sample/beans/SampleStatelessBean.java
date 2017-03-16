@@ -4,10 +4,11 @@ import java.util.List;
 import java.util.Vector;
 
 import javax.ejb.Stateless;
+
 /**
  * A sample stateless bean that will not maintain its values at all
- * @author saifasif
  *
+ * @author saifasif
  */
 @Stateless
 public class SampleStatelessBean implements SampleBean {

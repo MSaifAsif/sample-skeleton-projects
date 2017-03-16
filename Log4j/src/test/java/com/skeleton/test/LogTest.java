@@ -15,16 +15,16 @@ import org.junit.Test;
 public class LogTest {
 
     @Before
-    public void init(){
+    public void init() {
         _empty_file();
     }
 
     @After
-    public void destroy(){
+    public void destroy() {
         _empty_file();
     }
 
-    private void _empty_file(){
+    private void _empty_file() {
         PrintWriter pw = null;
         try {
             pw = new PrintWriter("./logs/myApp.log");

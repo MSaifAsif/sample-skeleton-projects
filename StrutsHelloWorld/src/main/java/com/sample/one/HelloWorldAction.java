@@ -12,14 +12,14 @@ import org.apache.struts.action.ActionMapping;
 /**
  * A sample action that simply forwars to the mapping file that is associated with it. In this case,
  * only the JSP will be displayed
- * @author saifasif
  *
+ * @author saifasif
  */
 public class HelloWorldAction extends Action {
 
     private static final Logger log = Logger.getLogger(HelloWorldAction.class);
 
-    public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception{
+    public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
         log.info("Loading action ... ");
         return mapping.findForward("success");
     }

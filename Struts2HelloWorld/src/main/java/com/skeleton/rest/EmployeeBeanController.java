@@ -11,21 +11,20 @@ import com.opensymphony.xwork2.ModelDriven;
  * <br><br>
  * Sample requests are <br>
  * <ul>
- *  <li><code>http://localhost:8080/Struts2HelloWorld/rest/employee.xml</code></li>
- *  <li><code>http://localhost:8080/Struts2HelloWorld/rest/employee/1.xml</code></li>
+ * <li><code>http://localhost:8080/Struts2HelloWorld/rest/employee.xml</code></li>
+ * <li><code>http://localhost:8080/Struts2HelloWorld/rest/employee/1.xml</code></li>
  * </ul>
- * @author saifasif
  *
+ * @author saifasif
  */
 public class EmployeeBeanController implements ModelDriven<Object> {
 
+    private static final Logger log = Logger.getLogger(EmployeeBeanController.class);
     /*
      * Model is kept as an object since we may be returning either a single entity
      * or a json of entities or even an xml
      */
     private Object model;
-    private static final Logger log = Logger.getLogger(EmployeeBeanController.class);
-
     /*
      * Keep it as wrapped object
      */
@@ -33,6 +32,7 @@ public class EmployeeBeanController implements ModelDriven<Object> {
 
     /**
      * The index method implementation to fetch all values
+     *
      * @return
      */
     public HttpHeaders index() {
@@ -42,6 +42,7 @@ public class EmployeeBeanController implements ModelDriven<Object> {
 
     /**
      * Attempt to fetch en employee via its id
+     *
      * @return
      */
     public HttpHeaders show() {

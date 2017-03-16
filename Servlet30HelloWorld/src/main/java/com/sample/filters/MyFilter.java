@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
 
-@WebFilter(urlPatterns="/*")
-public class MyFilter implements Filter{
+@WebFilter(urlPatterns = "/*")
+public class MyFilter implements Filter {
 
     private static final Logger log = Logger.getLogger(MyFilter.class);
 
@@ -25,8 +25,8 @@ public class MyFilter implements Filter{
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response,
-            FilterChain chain) throws IOException, ServletException {
-        if( ((HttpServletRequest) request).getRequestURL().toString().endsWith(".jsp") ) {
+                         FilterChain chain) throws IOException, ServletException {
+        if (((HttpServletRequest) request).getRequestURL().toString().endsWith(".jsp")) {
             // This was a direct JSP attempt, shut it down ! Don't let it pass
             log.info("Attempt for opening JSP directly stopped .... ");
         } else {

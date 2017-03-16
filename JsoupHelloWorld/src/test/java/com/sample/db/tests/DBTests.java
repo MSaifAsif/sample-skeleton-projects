@@ -11,7 +11,7 @@ import com.sample.crawler.ContentList;
 public class DBTests {
 
     @Test
-    public void testSingletonNature(){
+    public void testSingletonNature() {
         ContentList.insertKey("ONE", "1");
         assertNotNull(ContentList.getContentMap());
         assertEquals(ContentList.getContentMap().size(), 1);

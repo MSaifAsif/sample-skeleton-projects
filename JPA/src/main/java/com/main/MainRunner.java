@@ -1,7 +1,7 @@
 package com.main;
 
 /**
- *  refer to {@link HibernateJPATest} for sample test cases
+ * refer to {@link HibernateJPATest} for sample test cases
  */
 
 

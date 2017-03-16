@@ -11,22 +11,22 @@ import org.apache.log4j.Logger;
 
 /**
  * A dynamic servlet that will be loaded on runtime
- * @author saifasif
  *
+ * @author saifasif
  */
-public class CalculatorServlet extends HttpServlet{
+public class CalculatorServlet extends HttpServlet {
     private static final long serialVersionUID = -2237206745594453412L;
     private static final Logger log = Logger.getLogger(CalculatorServlet.class);
 
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] inputVals = request.getParameterValues("inputVals");
         double result = 0.0d;
         int index = 0;
-        for(index = 0; index < inputVals.length; index++){
-            try{
+        for (index = 0; index < inputVals.length; index++) {
+            try {
                 result += Double.valueOf(inputVals[index]);
-            } catch (NumberFormatException nfe){
+            } catch (NumberFormatException nfe) {
                 log.warn("Could not parse value:" + inputVals[index]);
             }
         }

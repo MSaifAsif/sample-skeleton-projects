@@ -6,12 +6,11 @@ import org.springframework.boot.SpringApplication;
 import com.sample.services.MyRestServicesController;
 
 /**
- * Standalone runner. Will be responsible for exposing the web services in an embedded jetty 
+ * Standalone runner. Will be responsible for exposing the web services in an embedded jetty
  * server. <br><br>This will serve as the entry point of the application when the command<br> <code>[~]$ mvn spring-boot:run</code>
  * will be executed
- * 
- * @author saifasif
  *
+ * @author saifasif
  */
 public class StandAloneClient {
 

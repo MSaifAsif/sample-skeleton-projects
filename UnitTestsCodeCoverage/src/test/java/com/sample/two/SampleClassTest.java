@@ -1,4 +1,5 @@
 package com.sample.two;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
@@ -17,32 +18,32 @@ public class SampleClassTest {
     private static final Logger log = Logger.getLogger(SampleClassTest.class);
 
     @BeforeClass
-    public static void init(){
+    public static void init() {
         BasicConfigurator.configure();
     }
 
     @Test
-    public void testContant(){
+    public void testContant() {
         assertNotNull(SampleClass.NUMBER_FOUR);
         assertEquals(4, SampleClass.NUMBER_FOUR);
         assertNotEquals(3, SampleClass.NUMBER_FOUR);
     }
 
     @Test
-    public void testRandomInt(){
+    public void testRandomInt() {
         SampleClass object = new SampleClass();
         double d = object.getRandomInt();
         assertNotNull(d);
     }
 
     @Test
-    public void testGreetMessage(){
+    public void testGreetMessage() {
         assertNotNull(SampleClass.getGreetMessage());
         assertEquals("Hello, world !", SampleClass.getGreetMessage());
     }
 
     @Test
-    public void testPrivateLargeIntegerNoArg(){
+    public void testPrivateLargeIntegerNoArg() {
         try {
             // Get the zero arg constructor
             Constructor<SampleClass> zeroArgCons = SampleClass.class.getConstructor();
@@ -60,14 +61,14 @@ public class SampleClassTest {
             result = intPrivateMethod.invoke(classRef, 3, 2);
             assertNotNull(result);
             assertEquals(result, 2);
-        } catch (NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException 
+        } catch (NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException
                 | IllegalArgumentException | InvocationTargetException e) {
             log.error(e.getMessage(), e);
         }
     }
 
     @Test
-    public void testPrivateLargeIntegerArg(){
+    public void testPrivateLargeIntegerArg() {
         try {
             // Get the argument constructor
             Constructor<SampleClass> zeroArgCons = SampleClass.class.getConstructor(int.class);
@@ -85,7 +86,7 @@ public class SampleClassTest {
             result = intPrivateMethod.invoke(classRef, 3, 2);
             assertNotNull(result);
             assertEquals(result, 2);
-        } catch (NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException 
+        } catch (NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException
                 | IllegalArgumentException | InvocationTargetException e) {
             log.error(e.getMessage(), e);
         }

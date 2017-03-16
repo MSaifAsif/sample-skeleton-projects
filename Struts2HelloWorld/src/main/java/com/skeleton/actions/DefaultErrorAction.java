@@ -11,7 +11,7 @@ public class DefaultErrorAction extends ActionSupport {
 
     private String theError;
 
-    public String getErrorMessage(){
+    public String getErrorMessage() {
         log.info(getTheError());
         return SUCCESS;
     }

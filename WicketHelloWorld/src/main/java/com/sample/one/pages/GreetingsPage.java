@@ -7,12 +7,12 @@ import org.apache.wicket.markup.html.basic.Label;
 
 /**
  * A sample page that will show a message on the page located at <code>com.sample.one.pages.GreetingsPage.html</code>
- * @author saifasif
  *
+ * @author saifasif
  */
 public class GreetingsPage extends WebPage {
 
-    public GreetingsPage(final PageParameters pageParameters){
+    public GreetingsPage(final PageParameters pageParameters) {
         /*
          * Renders an attribute named 'greetingmessage'
          */

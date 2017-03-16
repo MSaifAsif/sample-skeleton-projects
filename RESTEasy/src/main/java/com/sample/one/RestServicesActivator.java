@@ -7,8 +7,8 @@ import javax.ws.rs.core.Application;
 
 /**
  * Activator to register our rest service implementations
- * @author saifasif
  *
+ * @author saifasif
  */
 public class RestServicesActivator extends Application {
 
@@ -23,7 +23,7 @@ public class RestServicesActivator extends Application {
         return this.empty;
     }
 
-    public Set<Object> getSingletons(){
+    public Set<Object> getSingletons() {
         return this.singletons;
     }
 }

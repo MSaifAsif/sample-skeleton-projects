@@ -6,24 +6,25 @@ import java.util.List;
 import org.hibernate.criterion.Restrictions;
 
 import com.jpa.model.Human;
+
 /**
  * A DAO implementation for the {@link Human} class
- * @author saifasif
  *
+ * @author saifasif
  */
 public class HumanDAO extends GenericHibernateDAO<Human, Serializable> {
 
     //private Criteria criteria = HibernateUtil.getSession().createCriteria(Human.class); 
 
-    public Human getAUserByID(long userID){
-        List<Human> resultList = findByCriteria( Restrictions.eq("id", userID) );
-        if ( !resultList.isEmpty() ) {
-            return findByCriteria( Restrictions.eq("id", userID) ).get(0);
+    public Human getAUserByID(long userID) {
+        List<Human> resultList = findByCriteria(Restrictions.eq("id", userID));
+        if (!resultList.isEmpty()) {
+            return findByCriteria(Restrictions.eq("id", userID)).get(0);
         }
         return null;
     }
 
-    public List<Human> getAllusers(){
+    public List<Human> getAllusers() {
         return findAll();
     }
 

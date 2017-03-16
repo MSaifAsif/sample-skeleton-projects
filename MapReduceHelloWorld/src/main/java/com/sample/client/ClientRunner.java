@@ -15,6 +15,11 @@ import com.sample.one.reducers.WordCountReducer;
 
 public class ClientRunner extends Configured implements Tool {
 
+    public static void main(String[] args) throws Exception {
+        int rc = ToolRunner.run(new ClientRunner(), args);
+        System.exit(rc);
+    }
+
     @Override
     public int run(String[] args) throws Exception {
         Job job = new Job(getConf());
@@ -38,10 +43,5 @@ public class ClientRunner extends Configured implements Tool {
 
         // should we wait for job completion or not
         return job.waitForCompletion(true) ? 0 : 1;
-    }
-
-    public static void main(String[] args) throws Exception {
-        int rc = ToolRunner.run(new ClientRunner(), args);
-        System.exit(rc);
     }
 }

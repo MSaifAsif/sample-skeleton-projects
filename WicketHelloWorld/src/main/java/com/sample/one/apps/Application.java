@@ -7,8 +7,8 @@ import com.sample.one.pages.GreetingsPage;
 
 /**
  * Entry point of the application.
- * @author saifasif
  *
+ * @author saifasif
  */
 public class Application extends WebApplication {
 

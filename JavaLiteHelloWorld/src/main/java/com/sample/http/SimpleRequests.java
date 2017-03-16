@@ -7,9 +7,8 @@ import org.javalite.http.Post;
 
 /**
  * Helper class to call {@link Http} functions
- * 
- * @author saifasif
  *
+ * @author saifasif
  */
 public class SimpleRequests {
 
@@ -19,30 +18,31 @@ public class SimpleRequests {
 
     /**
      * Retrieve the page text.
+     *
      * @param url
      * @return
      */
-    public static String getPageText(String url){
+    public static String getPageText(String url) {
         String res = null;
         log.debug("Fetching page " + url);
-        try{
+        try {
             Get get = Http.get(url, connectionTimeout, readTimeout);
-            log.debug("Got response as: " + get.responseMessage() + "("+ get.responseCode() +")");
+            log.debug("Got response as: " + get.responseMessage() + "(" + get.responseCode() + ")");
             res = get.text();  // After this, the stream is closed. Any further calls will result in an exception
-        } catch( Exception e ){
+        } catch (Exception e) {
             log.warn(e.getMessage());
         }
         return res;
     }
 
-    public static String performPostOnPage(String url, byte[] postContent){
+    public static String performPostOnPage(String url, byte[] postContent) {
         String res = null;
         log.debug("Fetching page " + url);
-        try{
+        try {
             Post post = Http.post(url, postContent, connectionTimeout, readTimeout);
-            log.debug("Got response as: " + post.responseMessage() + "("+ post.responseCode() +")");
+            log.debug("Got response as: " + post.responseMessage() + "(" + post.responseCode() + ")");
             res = post.text();  // After this, the stream is closed. Any further calls will result in an exception
-        } catch( Exception e ){
+        } catch (Exception e) {
             log.warn(e.getMessage());
         }
         return res;

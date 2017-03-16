@@ -8,9 +8,9 @@ import org.apache.hadoop.mapreduce.Reducer;
 /**
  * The {@link Reducer} class based on the <code>KEY</code> type.
  * Will patch up the individual keys and sum up their values to get the sum
- * @author saifasif
  *
  * @param <KEY>
+ * @author saifasif
  */
 public class WordCountReducer<KEY> extends Reducer<KEY, LongWritable, KEY, LongWritable> {
 

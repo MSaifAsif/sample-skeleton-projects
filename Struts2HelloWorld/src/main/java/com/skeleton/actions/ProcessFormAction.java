@@ -15,7 +15,7 @@ public class ProcessFormAction extends ActionSupport {
     private Integer age;
     private String theErrorMessage;
 
-    public String execute(){
+    public String execute() {
         log.info(getFirstName());
         log.info(getGender());
         log.info(getAge());

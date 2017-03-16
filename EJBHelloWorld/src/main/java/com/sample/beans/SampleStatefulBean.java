@@ -4,10 +4,11 @@ import java.util.List;
 import java.util.Vector;
 
 import javax.ejb.Stateful;
+
 /**
  * A stateful bean that will maintain its values until the end of the application run
- * @author saifasif
  *
+ * @author saifasif
  */
 @Stateful
 public class SampleStatefulBean implements SampleBean {

@@ -10,7 +10,6 @@ import java.net.URL;
 import java.util.Base64;
 
 /**
- *
  * @author saifasif
  */
 public class MapImageUtils {

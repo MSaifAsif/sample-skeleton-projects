@@ -7,24 +7,24 @@ import javax.servlet.http.HttpServlet;
 import org.apache.log4j.Logger;
 
 import com.sample.utils.ServletConstants;
+
 /**
- * A startup servlet that will have its init method 
+ * A startup servlet that will have its init method
  * called as soon as the container attempts to load the application
- * 
- * The purpose of this servlet is to add a few params to the 
+ * <p>
+ * The purpose of this servlet is to add a few params to the
  * application context
- * 
- * @author saifasif
  *
+ * @author saifasif
  */
-@WebServlet(loadOnStartup=1, value="/startup")
+@WebServlet(loadOnStartup = 1, value = "/startup")
 public class StartupServlet extends HttpServlet {
 
     private static final long serialVersionUID = 114128950806179598L;
     private static final Logger log = Logger.getLogger(StartupServlet.class);
 
     @Override
-    public void init() throws ServletException{
+    public void init() throws ServletException {
         log.info("Initiating startup servlet");
         getServletConfig().getServletContext().setAttribute("applicationName", "Test-App");
         getServletConfig().getServletContext().setAttribute("applicationVersion", "1.0.0");

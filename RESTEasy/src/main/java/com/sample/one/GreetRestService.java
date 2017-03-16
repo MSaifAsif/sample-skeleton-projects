@@ -11,10 +11,11 @@ import org.apache.log4j.Logger;
 
 import com.sample.utilities.MyBean;
 import com.sample.utilities.TransformationUtils;
+
 /**
  * The actual rest service that will be exposed to the user with /greet in the URL
- * @author saifasif
  *
+ * @author saifasif
  */
 @Path("/greet")
 public class GreetRestService extends Application {
@@ -23,28 +24,28 @@ public class GreetRestService extends Application {
 
     /**
      * A sample rest method exposed at URL '/greet/hello/{insert_name_here}'
-     * 
+     *
      * @param name A sample String text
      * @return {@link String} text format string that will be displayed on the page
      */
     @GET
     @Path("/hello/{name}")
     @Produces(MediaType.TEXT_PLAIN)
-    public String getGreetings(@PathParam("name") String name){
+    public String getGreetings(@PathParam("name") String name) {
         log.info("Service requests... Getting response");
         return "Greetings " + name + " to Rest service.";
     }
 
     /**
      * A sample rest method exposed at URL '/greet/get_sample/{caller}'
-     * 
+     *
      * @param name A sample String text
      * @return {@link String} json format string that will be displayed on the page
      */
     @GET
     @Path("/get_sample/{caller}")
     @Produces(MediaType.APPLICATION_JSON)
-    public MyBean getJsonObj(@PathParam("caller") String caller){
+    public MyBean getJsonObj(@PathParam("caller") String caller) {
         log.info("Service requests... Getting response");
         return TransformationUtils.getObj(caller);
     }

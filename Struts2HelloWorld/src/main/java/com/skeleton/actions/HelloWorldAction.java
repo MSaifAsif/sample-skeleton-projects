@@ -6,8 +6,8 @@ import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * The HelloWorld action class that does nothing but logs and returns "success"
- * @author saifasif
  *
+ * @author saifasif
  */
 public class HelloWorldAction extends ActionSupport {
 
@@ -16,9 +16,10 @@ public class HelloWorldAction extends ActionSupport {
 
     /**
      * The overriden method. Should always return a string
+     *
      * @return {@link ActionSupport} SUCCESS constant
      */
-    public String execute(){
+    public String execute() {
         log.info("Sample log coming from the action class ...");
         return SUCCESS;
     }

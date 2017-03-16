@@ -6,20 +6,20 @@ import java.io.StringWriter;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
+
 /**
  * A simple tag class that just prints the hello message to the stream
- * @author saifasif
  *
+ * @author saifasif
  */
-public class GreetingsTag extends SimpleTagSupport{
-
-    // Will contain the 'username' attribute
-    private String username;
+public class GreetingsTag extends SimpleTagSupport {
 
     // This will contain what-ever we put in the tag body
     StringWriter sw = new StringWriter();
+    // Will contain the 'username' attribute
+    private String username;
 
-    public void doTag() throws JspException, IOException{
+    public void doTag() throws JspException, IOException {
 
         // invoke it on the StringWriter
         getJspBody().invoke(sw);
