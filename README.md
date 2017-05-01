@@ -25,25 +25,26 @@ curl -s -L https://raw.githubusercontent.com/MSaifAsif/sample-skeleton-projects/
 ```
 
 ## <a name="list-index">List of implementation</a>
-* [Struts(2.x) skeleton](#struts2skeleton)
-* [Struts(1.x) skeleton](#struts1skeleton)
+* [Struts(2.x)](#struts2skeleton)
+* [Struts(1.x)](#struts1skeleton)
 * [Jacoco Code coverage](#jacococoverage)
-* [JBOSS RESTEasy service](#jboss-rest-service)
-* [JSF skeleton](#jsf-skeleton)
+* [JBOSS REST-Easy service](#jboss-rest-service)
+* [JSF](#jsf-skeleton)
 * [Log4j logger](#log4j-logger)
 * [Play skeleton](#play-skeleton)
 * [Axis2 Webservice](#axis2-ws)
 * [EJBs](#ejb-hw)
-* [JPA using Hibernate](#jpa-hibernate)
+* [JPA (Hibernate)](#jpa-hibernate)
 * [JSoup](#jsoup-html)
 * [Spark](#spark-mvc)
-* [Servlet30HelloWorld](#servlet30-mvc)
-* [AppletHelloWorld](#applet-hw)
-* [MapReduceHelloWorld](#mr-hw)
-* [SpringBootHelloWorld](#springboot-hw)
-* [MongoDBHelloWorld](#mongo-hw)
+* [Servlet (3.x)](#servlet30-mvc)
+* [Applets](#applet-hw)
+* [MapReduce](#mr-hw)
+* [SpringBoot](#springboot-hw)
+* [MongoDB](#mongo-hw)
 * [JavaLite](#java-lite)
-* [Wickets skeleton](#wickets-mvc)
+* [Apache Wickets](#wickets-mvc)
+* [Dropwizard](#dropwizard-mvc)
 * [How to contribute](#how-to-contrib)
 
 ## <a name="struts2skeleton">Struts(2.x)</a> [&#8593;](#list-index)
@@ -130,7 +131,7 @@ curl -s -L https://raw.githubusercontent.com/MSaifAsif/sample-skeleton-projects/
 
 **How to run:** Checkout the project and execute the command `mvn clean test`. Then simply run the main method located at `com.sampl.main.MainRunner` and the server will load up at `localhost:4567`. Navigate to the URL `localhost:4567/helloWorld` and you will see the logs in the console as well as a sample text being returned from the exposed method
 
-## <a name="servlet30-mvc">Servlet/JSP</a> [&#8593;](#list-index)
+## <a name="servlet30-mvc">Servlet/JSP (3.x)</a> [&#8593;](#list-index)
 **Language:** Java
 
 **Description:** Basic implementation of an MVC architecture based on raw Servlets and JSPs. 
@@ -144,7 +145,7 @@ curl -s -L https://raw.githubusercontent.com/MSaifAsif/sample-skeleton-projects/
 
 **How to run:** Checkout the project compile the class at the root of the project using the command `javac MyFirstApplet.java`. Once compiled, execute the command `appletviewer myapplet.html` and the default applet viewer application shipped with the JDK will load up and execute the applet.
 
-## <a name="mr-hw">MapReduceHelloWorld</a> [&#8593;](#list-index)
+## <a name="mr-hw">MapReduce</a> [&#8593;](#list-index)
 **Language:** Java (JDK7)
 
 **Description:** A word count example of how MapReduce works. You need atleast a single node Hadoop cluster already setup before running this example.
@@ -158,26 +159,35 @@ curl -s -L https://raw.githubusercontent.com/MSaifAsif/sample-skeleton-projects/
 
 **How to run:** Checkout the project and run `mvn spring-boot:run` to run the main method. Once ready, open the browser and navigate to the page `http://localhost:8080` and the greeting message will be printed on the screen. For parameter based web service, hit the url `http://localhost:8080/hello?name=John` and the paramter will be passed to the controller and greeting message for John will be printed on the browser.
 
-## <a name="mongo-hw">MongoHelloWorld</a> [&#8593;](#list-index)
+## <a name="mongo-hw">MongoDB</a> [&#8593;](#list-index)
 **Language:** Java
 
 **Description:** Basic implementation crud operations on mongo via JAVA
 
 **How to run:** Checkout the project and run `mvn clean test` to run the test cases. Application uses an embedded mongo instance that is initialized on runtime on a random port. All test cases are run on this mongo instance.
 
-## <a name="java-lite">JavaLite Hello World</a> [&#8593;](#list-index)
+## <a name="java-lite">JavaLite</a> [&#8593;](#list-index)
 **Language:** Java
 
 **Description:** Basic implementation of the Javalite framework
 
 **How to run:** Checkout the project and run `mvn process-classs` to first execute the instrumentation plugin. Next run `mvn clean test` and the `http` library will run some test cases where basic get and post requests are tested. To execute the `orm` part, first execute the sql script located at `src/main/resources/person_modes.sql` to create the table in a Mysql database. Afterwards, run the class `com.sample.orm.MainRunner` and the ORM will perform basic crud operations.
 
-## <a name="wickets-mvc">Wickets Hello World</a> [&#8593;](#list-index)
+## <a name="wickets-mvc">Wickets</a> [&#8593;](#list-index)
 **Language:** Java
 
 **Description:** Basic implementation of the Apache Wickets framework
 
-**How to run:** Checkout the project and run `mvn clean install` create the war file. Next, deploy this war to any application server of your choice and navigate to the url `http://localhost:8080/WicketHelloWorld` and you will see the greetings page rendered.
+**How to run:** Checkout the project and run `mvn clean install` to create the war file. Next, deploy this war to any application server of your choice and navigate to the url `http://localhost:8080/WicketHelloWorld` and you will see the greetings page rendered.
+
+## <a name="dropwizard-mvc">Dropwizard</a> [&#8593;](#list-index)
+**Language:** Java
+
+**Description:** Ready to use implementation of the Dropwizard framework
+
+**How to run:** Checkout the project and run `mvn clean install` to create the jar file. To start the application
+ run the command `java -jar target/DropwizardHelloWorld-0.0.1.jar server src/main/resources/my-app.yml` and then 
+ navigate to the url `http://localhost:8080/greet` and you will see the greetings JSON returned from the API.
 
 ## <a name="how-to-contrib">How to contribute</a> [&#8593;](#list-index)
 
