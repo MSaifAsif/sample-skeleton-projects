@@ -5,6 +5,7 @@
 # usage : curl -s -L https://raw.githubusercontent.com/MSaifAsif/sample-skeleton-projects/master/detachers/detachme.sh | bash -s <module_name> <target_directory> 
 #    <module_name> : The name of the module to extract, this should exactly match the directory name of original modules in the code base
 #    <target_directory> : Destination directory where to place the extracted out module
+# version: 1.0.0
 # 
 # best to do it in tmp folder
 tmp='/tmp/sample-skeleton-projects'
