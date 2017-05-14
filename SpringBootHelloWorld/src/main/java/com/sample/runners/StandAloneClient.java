@@ -1,9 +1,8 @@
 package com.sample.runners;
 
-import org.apache.log4j.BasicConfigurator;
 import org.springframework.boot.SpringApplication;
-
-import com.sample.services.MyRestServicesController;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * Standalone runner. Will be responsible for exposing the web services in an embedded jetty
@@ -12,14 +11,14 @@ import com.sample.services.MyRestServicesController;
  *
  * @author saifasif
  */
+@SpringBootApplication
+@ComponentScan(basePackageClasses = com.sample.services.MyRestServicesController.class)
 public class StandAloneClient {
 
     public static void main(String[] args) {
-        // I need some logging here
-        BasicConfigurator.configure();
 
         // Fire the controller
-        SpringApplication.run(MyRestServicesController.class, args);
+        SpringApplication.run(StandAloneClient.class, args);
     }
 
 }
