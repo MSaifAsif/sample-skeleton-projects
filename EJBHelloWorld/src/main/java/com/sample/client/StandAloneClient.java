@@ -58,14 +58,14 @@ public class StandAloneClient {
         SampleBean statelessBean = (SampleBean) ctx.lookup("/EJBHelloWorld/SampleStatelessBean!com.sample.beans.SampleBean");
         statelessBean.addEntity("111");
         /*
-		 * since another operation is attempted, call to constructor will take place and previous object's state will be lost 
-		 * at this point
-		 */
+         * since another operation is attempted, call to constructor will take place and previous object's state will be lost 
+         * at this point
+         */
         statelessBean.addEntity("222");
-		/*
-		 * Since getEntity is also an operation, this will be another call to contructor and the size of list will always return
-		 * as 0
-		 */
+        /*
+         * Since getEntity is also an operation, this will be another call to contructor and the size of list will always return
+         * as 0
+         */
         statelessBean.getEntity();
 
         SampleBean statelessBean2 = (SampleBean) ctx.lookup("/EJBHelloWorld/SampleStatelessBean!com.sample.beans.SampleBean");
@@ -87,20 +87,20 @@ public class StandAloneClient {
         SampleBean statefulBean = (SampleBean) ctx.lookup("/EJBHelloWorld/SampleStatefulBean!com.sample.beans.SampleBean");
         statefulBean.addEntity("111");
         statefulBean.addEntity("222");
-		/*
-		 * Since this is a stateful bean, it will retain the object's state the following call return 2
-		 */
+        /*
+         * Since this is a stateful bean, it will retain the object's state the following call return 2
+         */
         statefulBean.getEntity();
 
-		/*
-		 * But now this is another lookup, so at this point a call to the constructor will be made
-		 */
+        /*
+         * But now this is another lookup, so at this point a call to the constructor will be made
+         */
         SampleBean statefulBean2 = (SampleBean) ctx.lookup("/EJBHelloWorld/SampleStatefulBean!com.sample.beans.SampleBean");
         statefulBean2.addEntity("333");
         statefulBean2.addEntity("444");
-		/*
-		 * and thus, this will again give size as 2
-		 */
+        /*
+         * and thus, this will again give size as 2
+         */
         statefulBean2.getEntity();
     }
 }
