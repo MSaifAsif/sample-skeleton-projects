@@ -1,10 +1,10 @@
-package com.nyc.events.utils;
+package com.sample.crawler;
 
-import java.io.BufferedReader;
+import org.apache.commons.io.IOUtils;
+
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Base64;
@@ -30,15 +30,10 @@ public class MapImageUtils {
         connection.setDoOutput(true);
         DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
         wr.close();
-        InputStream iSteamReader = connection.getInputStream();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(iSteamReader));
-        StringBuilder response = new StringBuilder();
-        String line;
-        while ((line = reader.readLine()) != null) {
-            response.append(line);
-            response.append('\r');
+
+        try (InputStream iSteamReader = connection.getInputStream()) {
+            byte[] bytes = IOUtils.toByteArray(iSteamReader);
+            return Base64.getEncoder().encodeToString(bytes);
         }
-        reader.close();
-        return Base64.getEncoder().encodeToString(response.toString().getBytes("utf-8"));
     }
 }
