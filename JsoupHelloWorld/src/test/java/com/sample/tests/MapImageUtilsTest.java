@@ -1,6 +1,7 @@
 package com.sample.tests;
 
 import com.sample.crawler.MapImageUtils;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.io.IOException;
  */
 public class MapImageUtilsTest {
 
-    @Test
+    @Ignore
     public void testMapper() throws IOException {
         MapImageUtils.getImageStream("48.1596382", "11.5776053");
     }
