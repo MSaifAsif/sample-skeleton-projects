@@ -13,5 +13,4 @@ Its always best to open a issue and discuss its possibility before writing up th
 
 # What to keep in mind
 The idea behind the repository is to have a basic project with a framework up and running without much hassle. So keep it simple and no need to implement everything. Just add basic functionalities of some of the major components of a framework, document it and test it enough to make sure that its working.
-
-
+For more details, visit http://msaifasif.github.io/sample-skeleton-projects/
