@@ -45,6 +45,7 @@ curl -s -L https://raw.githubusercontent.com/MSaifAsif/sample-skeleton-projects/
 * [JavaLite](#java-lite)
 * [Apache Wickets](#wickets-mvc)
 * [Dropwizard](#dropwizard-mvc)
+* [Ebean](#ebean)
 * [How to contribute](#how-to-contrib)
 
 ## <a name="struts2skeleton">Struts(2.x)</a> [&#8593;](#list-index)
@@ -115,7 +116,7 @@ curl -s -L https://raw.githubusercontent.com/MSaifAsif/sample-skeleton-projects/
 
 **Description:** Basic workflow of how to implement the Hibernate implementation of JPA. Hibernate is one of the powerfull, scalable, flexible and most used ORM framework used in the software industry. To understand the difference between JPA and Hibernate, the best possible description is the statement; "JPA is the dance and Hibernate is the dancer".
 
-**How to run:** Checkout the project and execute the MainRunner class that is located inside the package `com.main`. The application uses HSQLDB(http://hsqldb.org/) for carrying out CRUD operations so no DB is requiered to run the program, although you can direct it to your Database by simply changing the `hibernate.connection.url` in `hibernate.cfg.xml`. This is the configuration file used by hibernate to connect to your DB.  
+**How to run:** Checkout the project and execute the MainRunner class that is located inside the package `com.main`. The application uses HSQLDB(http://hsqldb.org/) for carrying out CRUD operations so no DB is required to run the program, although you can direct it to your Database by simply changing the `hibernate.connection.url` in `hibernate.cfg.xml`. This is the configuration file used by hibernate to connect to your DB.  
 
 ## <a name="jsoup-html">Jsoup HTML parser</a> [&#8593;](#list-index)
 **Language:** Java
@@ -188,6 +189,13 @@ curl -s -L https://raw.githubusercontent.com/MSaifAsif/sample-skeleton-projects/
 **How to run:** Checkout the project and run `mvn clean install` to create the jar file. To start the application
  run the command `java -jar target/DropwizardHelloWorld-0.0.1.jar server src/main/resources/my-app.yml` and then 
  navigate to the url `http://localhost:8080/greet` and you will see the greetings JSON returned from the API.
+
+## <a name="ebean">Ebean</a> [&#8593;](#list-index)
+**Language:** Java
+
+**Description:** Ready to use implementation of Ebeans
+
+**How to run:** Checkout the project and run `mvn clean install` to create the jar file. The application uses HSQLDB(http://hsqldb.org/) for carrying out CRUD operations so no DB is requiered to run the program. The test case `com.test.human.CrudTest` demonstrates basic usage.
 
 ## <a name="how-to-contrib">How to contribute</a> [&#8593;](#list-index)
 
