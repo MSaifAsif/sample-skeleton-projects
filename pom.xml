@@ -43,6 +43,7 @@
         <module>JavaLiteHelloWorld</module>
         <module>WicketHelloWorld</module>
          <module>Ebean</module>
+         <module>Pippo</module>
     </modules>
     <dependencies>
         <dependency>
