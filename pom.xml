@@ -42,8 +42,9 @@
         <module>PortletsHelloWorld</module> <!-- Debug mode -->
         <module>JavaLiteHelloWorld</module>
         <module>WicketHelloWorld</module>
-         <module>Ebean</module>
-         <module>Pippo</module>
+        <module>Ebean</module>
+        <module>Pippo</module>
+        <module>Firefly</module>
     </modules>
     <dependencies>
         <dependency>
