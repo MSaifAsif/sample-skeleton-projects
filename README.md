@@ -46,6 +46,7 @@ curl -s -L https://raw.githubusercontent.com/MSaifAsif/sample-skeleton-projects/
 * [Apache Wickets](#wickets-mvc)
 * [Dropwizard](#dropwizard-mvc)
 * [Ebean](#ebean)
+* [Pippo](#pippo)
 * [How to contribute](#how-to-contrib)
 
 ## <a name="struts2skeleton">Struts(2.x)</a> [&#8593;](#list-index)
@@ -196,6 +197,13 @@ curl -s -L https://raw.githubusercontent.com/MSaifAsif/sample-skeleton-projects/
 **Description:** Ready to use implementation of Ebeans
 
 **How to run:** Checkout the project and run `mvn clean install` to create the jar file. The application uses HSQLDB(http://hsqldb.org/) for carrying out CRUD operations so no DB is requiered to run the program. The test case `com.test.human.CrudTest` demonstrates basic usage.
+
+## <a name="pippo">Pippo</a> [&#8593;](#list-index)
+**Language:** Java
+
+**Description:** Ready to use implementation of the Pippo framework
+
+**How to run:** Checkout the project and run the class `com.sample.pippo.Init`. The application will serve a HelloWorl message at `localhost:8338/`. Alternatively the application can also be depolyed to your favourite application server. Run `mvn clean install` to create the war file and deploy to tomcat e.g. `http://localhost:8080/Pippo-0.0.1/` will serve the same class.
 
 ## <a name="how-to-contrib">How to contribute</a> [&#8593;](#list-index)
 
