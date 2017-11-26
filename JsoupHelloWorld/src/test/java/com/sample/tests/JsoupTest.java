@@ -11,9 +11,11 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+@Ignore
 public class JsoupTest {
 
     private static final Logger log = Logger.getLogger(JsoupTest.class);
