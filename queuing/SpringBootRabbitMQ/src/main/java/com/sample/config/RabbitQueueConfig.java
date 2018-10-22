@@ -12,47 +12,21 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitQueueConfig {
 
-    public static final String externalChannelExchange = "cmr-channel-exchange";
-    public static final String eventsExchange = "cmr-event-exchange";
+    private static final String exchange = "the-exchange";
 
-    @Bean(name = "queue-bnb")
-    Queue queueBnb() {
-        return new Queue("listener.bnb", true, false, false);
-    }
-
-    @Bean(name = "queue-com")
-    Queue queueCom() {
-        return new Queue("listener.com", true, false, false);
-    }
-
-    @Bean(name = "queue-events")
-    Queue queueEvents() {
-        return new Queue("listener.events", true, false, false);
+    @Bean(name = "my-queue-1")
+    Queue queue() {
+        return new Queue("my.queue.1", true, false, false);
     }
 
     @Bean
     TopicExchange channelExchange() {
-        return new TopicExchange(externalChannelExchange);
+        return new TopicExchange(exchange);
     }
 
     @Bean
-    TopicExchange eventsExchange() {
-        return new TopicExchange(eventsExchange);
-    }
-
-    @Bean
-    Binding bindingBnb() {
-        return BindingBuilder.bind(queueBnb()).to(channelExchange()).with("webhook.channel.bnb");
-    }
-
-    @Bean
-    Binding bindingCom() {
-        return BindingBuilder.bind(queueCom()).to(channelExchange()).with("webhook.channel.com");
-    }
-
-    @Bean
-    Binding bindingEvents() {
-        return BindingBuilder.bind(queueEvents()).to(eventsExchange()).with("webhook.push.events");
+    Binding binding() {
+        return BindingBuilder.bind(queue()).to(channelExchange()).with("my.routing.key");
     }
 
 }

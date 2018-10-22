@@ -10,14 +10,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
+public class MessageProducer implements CommandLineRunner {
 
-public class MessageProducerBnb implements CommandLineRunner {
-
-    private static final String externalChannelExchange = "cmr-channel-exchange";
+    private static final String externalChannelExchange = "the-exchange";
     private final RabbitTemplate rabbitTemplate;
 
     @Autowired
-    public MessageProducerBnb(RabbitTemplate rabbitTemplate) {
+    public MessageProducer(RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;
     }
 
@@ -33,7 +32,7 @@ public class MessageProducerBnb implements CommandLineRunner {
                 String s = "{hello + " + System.currentTimeMillis() + "}";
                 CorrelationData correlationData = new CorrelationData();
                 correlationData.setId(System.currentTimeMillis() + "");
-                rabbitTemplate.convertAndSend(externalChannelExchange, "webhook.channel.bnb", s, correlationData);
+                rabbitTemplate.convertAndSend(externalChannelExchange, "my.routing.key", s, correlationData);
                 System.out.println("sent " + s + " bnb");
             }
         }).start();

@@ -3,13 +3,30 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.skeleton</groupId>
     <version>0.0.1</version>
-    <artifactId>SpringBootHelloWorld</artifactId>
+    <artifactId>SpringBootRabitMQ</artifactId>
 
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.1.RELEASE</version>
+        <version>2.0.5.RELEASE</version>
     </parent>
     <dependencies>
         <dependency>
