@@ -22,3 +22,5 @@ target/
 .DS_STORE
 .classpath
 .settings
+
+node_modules/
