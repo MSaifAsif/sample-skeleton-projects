@@ -1,16 +1,15 @@
 package com.test.deletion;
 
-import static org.junit.Assert.fail;
-
+import com.jpa.dao.HumanDAO;
+import com.jpa.model.Human;
+import com.jpa.util.HibernateUtil;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.jpa.dao.HumanDAO;
-import com.jpa.model.Human;
-import com.jpa.util.HibernateUtil;
+import static org.junit.Assert.fail;
 
 public class DeletionTest {
 
@@ -54,6 +53,5 @@ public class DeletionTest {
             fail(e.getMessage());
         }
     }
-
 
 }

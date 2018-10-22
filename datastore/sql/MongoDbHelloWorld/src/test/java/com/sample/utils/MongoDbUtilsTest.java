@@ -1,11 +1,9 @@
 package com.sample.utils;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-
-import java.io.IOException;
-import java.util.Random;
-
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import de.flapdoodle.embed.mongo.distribution.Version;
+import de.flapdoodle.embed.mongo.tests.MongodForTestsFactory;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.bson.Document;
@@ -14,11 +12,11 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.mongodb.MongoClient;
-import com.mongodb.client.MongoCollection;
+import java.io.IOException;
+import java.util.Random;
 
-import de.flapdoodle.embed.mongo.distribution.Version;
-import de.flapdoodle.embed.mongo.tests.MongodForTestsFactory;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class MongoDbUtilsTest {
 
@@ -121,6 +119,5 @@ public class MongoDbUtilsTest {
         assertNotNull(m);
         assertEquals(15, m.count());
     }
-
 
 }

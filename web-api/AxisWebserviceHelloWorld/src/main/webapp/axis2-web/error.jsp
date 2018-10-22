@@ -17,16 +17,18 @@
   ~ under the License.
   --%>
 
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
-<%@page isErrorPage="true"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page isErrorPage="true" %>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 <table>
     <tr>
         <td align="center">An error has occured!. Please check the
-            details below</td>
+            details below
+        </td>
     </tr>
     <tr>
-        <td align="center"><%=exception.getMessage()%></td>
+        <td align="center"><%=exception.getMessage()%>
+        </td>
     </tr>
 </table>
 <jsp:include page="include/adminfooter.inc"></jsp:include>

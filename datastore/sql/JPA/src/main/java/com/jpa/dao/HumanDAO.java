@@ -1,11 +1,10 @@
 package com.jpa.dao;
 
-import java.io.Serializable;
-import java.util.List;
-
+import com.jpa.model.Human;
 import org.hibernate.criterion.Restrictions;
 
-import com.jpa.model.Human;
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * A DAO implementation for the {@link Human} class
@@ -31,6 +30,5 @@ public class HumanDAO extends GenericHibernateDAO<Human, Serializable> {
     public List<Human> findByExample(Human exampleInstance) {
         return null;
     }
-
 
 }

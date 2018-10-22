@@ -1,11 +1,10 @@
 package com.sample.tags;
 
-import java.io.IOException;
-import java.io.StringWriter;
-
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
+import java.io.IOException;
+import java.io.StringWriter;
 
 /**
  * A simple tag class that just prints the hello message to the stream

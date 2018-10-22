@@ -4,7 +4,6 @@ package com.main;
  * refer to {@link HibernateJPATest} for sample test cases
  */
 
-
 //
 //
 //import org.hibernate.HibernateException;

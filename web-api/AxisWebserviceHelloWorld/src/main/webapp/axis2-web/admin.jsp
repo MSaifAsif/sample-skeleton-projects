@@ -17,7 +17,7 @@
   ~ under the License.
   --%>
 
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 <h1>Welcome to Axis2 Web Admin Module !!</h1>
 <p>You are now logged into the Axis2 administration console from

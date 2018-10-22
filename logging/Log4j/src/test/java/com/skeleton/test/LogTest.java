@@ -1,16 +1,16 @@
 package com.skeleton.test;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import org.apache.log4j.Logger;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintWriter;
 
-import org.apache.log4j.Logger;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 public class LogTest {
 

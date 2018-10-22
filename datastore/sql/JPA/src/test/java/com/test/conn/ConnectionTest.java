@@ -1,13 +1,12 @@
 package com.test.conn;
 
-import static org.junit.Assert.fail;
-
+import com.jpa.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.jpa.util.HibernateUtil;
+import static org.junit.Assert.fail;
 
 public class ConnectionTest {
 

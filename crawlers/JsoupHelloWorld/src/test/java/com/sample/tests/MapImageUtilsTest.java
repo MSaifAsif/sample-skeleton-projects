@@ -2,7 +2,6 @@ package com.sample.tests;
 
 import com.sample.crawler.MapImageUtils;
 import org.junit.Ignore;
-import org.junit.Test;
 
 import java.io.IOException;
 

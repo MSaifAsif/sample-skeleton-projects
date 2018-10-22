@@ -1,8 +1,7 @@
 package com.skeleton.beans;
 
-import java.io.Serializable;
-
 import javax.faces.bean.ManagedBean;
+import java.io.Serializable;
 
 /**
  * A {@link ManagedBean} is a normal JavaBean that is contains fields and

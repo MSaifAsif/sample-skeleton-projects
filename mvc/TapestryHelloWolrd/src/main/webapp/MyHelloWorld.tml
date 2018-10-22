@@ -1,32 +1,41 @@
 <html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 <body style="font-family: Arial, Helvetica, sans-serif; font-size: 13px;">
 
-    <h1>"Hello, ${message}" Explained</h1> 
-    
-    A minimal, templated, Tapestry application needs only three files. For example:
-    
-    <ul>
-        <li><strong>HelloWorldExplained.tml</strong> An (X)HTML template for the /helloworldexplained page. Tapestry templates can contain any well-formed (X)HTML markup.</li>
-        <li><strong>HelloWorldExplained.java</strong> A page class associated with the template. Here it merely provides a <em>username</em> property that the template can access.</li>
-        <li><strong>web.xml</strong> A servlet application deployment descriptor which installs Tapestry as a servlet filter.</li>
-    </ul>
+<h1>"Hello, ${message}" Explained</h1>
 
-    In this page we also use two <em>components</em>:
-    
-    <ul>
-        <li><strong>PageLink</strong> which is a core Tapestry component that outputs an HTML link to another page.</li>
-        <li><strong>SourceCodeDisplay</strong> which is a custom component provided by JumpStart to output source files as HTML.</li>
-    </ul>
-    
-    References: 
-    <a href="http://en.wikipedia.org/wiki/Apache_Tapestry">Apache Tapestry in Wikipedia</a>, 
-    <a href="http://en.wikipedia.org/wiki/Java_servlet">servlet</a>,
-    <a href="http://en.wikipedia.org/wiki/Deployment_Descriptor">Deployment Descriptor</a>.<br/><br/>
-    
-    <t:pagelink page="Index">Home</t:pagelink><br/><br/>
+A minimal, templated, Tapestry application needs only three files. For example:
 
-    <t:sourcecodedisplay src="/web/src/main/java/jumpstart/web/pages/HelloWorldExplained.tml"/>
-    <t:sourcecodedisplay src="/web/src/main/java/jumpstart/web/pages/HelloWorldExplained.java"/>
-    <t:sourcecodedisplay src="/web/src/main/java/jumpstart/web/WEB-INF/web.xml"/>
+<ul>
+    <li><strong>HelloWorldExplained.tml</strong> An (X)HTML template for the /helloworldexplained page. Tapestry
+        templates can contain any well-formed (X)HTML markup.
+    </li>
+    <li><strong>HelloWorldExplained.java</strong> A page class associated with the template. Here it merely provides a
+        <em>username</em> property that the template can access.
+    </li>
+    <li><strong>web.xml</strong> A servlet application deployment descriptor which installs Tapestry as a servlet
+        filter.
+    </li>
+</ul>
+
+In this page we also use two <em>components</em>:
+
+<ul>
+    <li><strong>PageLink</strong> which is a core Tapestry component that outputs an HTML link to another page.</li>
+    <li><strong>SourceCodeDisplay</strong> which is a custom component provided by JumpStart to output source files as
+        HTML.
+    </li>
+</ul>
+
+References:
+<a href="http://en.wikipedia.org/wiki/Apache_Tapestry">Apache Tapestry in Wikipedia</a>,
+<a href="http://en.wikipedia.org/wiki/Java_servlet">servlet</a>,
+<a href="http://en.wikipedia.org/wiki/Deployment_Descriptor">Deployment Descriptor</a>.<br/><br/>
+
+<t:pagelink page="Index">Home</t:pagelink>
+<br/><br/>
+
+<t:sourcecodedisplay src="/web/src/main/java/jumpstart/web/pages/HelloWorldExplained.tml"/>
+<t:sourcecodedisplay src="/web/src/main/java/jumpstart/web/pages/HelloWorldExplained.java"/>
+<t:sourcecodedisplay src="/web/src/main/java/jumpstart/web/WEB-INF/web.xml"/>
 </body>
 </html>

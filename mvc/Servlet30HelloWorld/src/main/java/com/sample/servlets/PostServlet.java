@@ -1,11 +1,11 @@
 package com.sample.servlets;
 
+import org.apache.log4j.Logger;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.log4j.Logger;
 
 @WebServlet(urlPatterns = "/postServlet")
 public class PostServlet extends HttpServlet {
@@ -16,9 +16,9 @@ public class PostServlet extends HttpServlet {
     // Over-ridding service is not recommended. we should just implement any one of the HTTP methods
     protected void service(HttpServletRequest request, HttpServletResponse response) {
         log.info("Servicing request for" + PostServlet.class.getName());
-        /* 
+        /*
          * When the service method is implemented, the request will terminate at this point
-         * if we still want to call the post method, then we will need to call it 
+         * if we still want to call the post method, then we will need to call it
          * seprately before response is commited
          */
         doPost(request, response);

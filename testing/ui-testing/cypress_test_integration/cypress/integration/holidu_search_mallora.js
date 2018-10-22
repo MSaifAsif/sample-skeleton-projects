@@ -6,9 +6,9 @@ describe('Site smoke', function () {
             cy.get('input').type('Mallorca, Spanien')
         })
         cy.get('.AutocompleteWrapper').click()
-        cy.get('#main').click({ force: true })
+        cy.get('#main').click({force: true})
 
-        cy.get('.CTASearchButton').click({ force: true })
+        cy.get('.CTASearchButton').click({force: true})
     })
 
     it('Make sure Mallorca hits are more than zero', function () {

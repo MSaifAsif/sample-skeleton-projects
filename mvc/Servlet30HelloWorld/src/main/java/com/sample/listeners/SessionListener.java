@@ -1,14 +1,13 @@
 package com.sample.listeners;
 
+import com.sample.dynamic.CalculatorServlet;
+import org.apache.log4j.Logger;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.ServletRegistration;
 import javax.servlet.annotation.WebListener;
-
-import org.apache.log4j.Logger;
-
-import com.sample.dynamic.CalculatorServlet;
 
 /**
  * Application Lifecycle Listener implementation class SessionListener

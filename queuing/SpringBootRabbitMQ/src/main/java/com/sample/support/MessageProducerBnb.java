@@ -1,6 +1,5 @@
 package com.sample.support;
 
-
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.support.CorrelationData;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +13,13 @@ import org.springframework.stereotype.Component;
 
 public class MessageProducerBnb implements CommandLineRunner {
 
-    private final RabbitTemplate rabbitTemplate;
     private static final String externalChannelExchange = "cmr-channel-exchange";
+    private final RabbitTemplate rabbitTemplate;
 
     @Autowired
     public MessageProducerBnb(RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;
     }
-
 
     @Override
     public void run(String... args) {

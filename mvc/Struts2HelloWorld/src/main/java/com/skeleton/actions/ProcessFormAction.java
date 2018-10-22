@@ -1,8 +1,7 @@
 package com.skeleton.actions;
 
-import org.apache.log4j.Logger;
-
 import com.opensymphony.xwork2.ActionSupport;
+import org.apache.log4j.Logger;
 
 public class ProcessFormAction extends ActionSupport {
 
@@ -57,6 +56,5 @@ public class ProcessFormAction extends ActionSupport {
     public void setTheErrorMessage(String theErrorMessage) {
         this.theErrorMessage = theErrorMessage;
     }
-
 
 }

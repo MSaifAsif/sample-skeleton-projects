@@ -1,8 +1,7 @@
 package com.sample.one;
 
-import org.junit.Test;
-
 import com.sample.one.SampleOne.InnerSample;
+import org.junit.Test;
 
 /**
  * Test cases for the utility methods
@@ -44,6 +43,5 @@ public class SampleOneTest {
         InnerSample inner = new InnerSample(-1);
         inner.getSquare();
     }
-
 
 }

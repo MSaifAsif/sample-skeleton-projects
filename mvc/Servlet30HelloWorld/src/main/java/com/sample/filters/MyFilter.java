@@ -1,6 +1,6 @@
 package com.sample.filters;
 
-import java.io.IOException;
+import org.apache.log4j.Logger;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -10,8 +10,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
-
-import org.apache.log4j.Logger;
+import java.io.IOException;
 
 @WebFilter(urlPatterns = "/*")
 public class MyFilter implements Filter {

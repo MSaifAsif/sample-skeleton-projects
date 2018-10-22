@@ -1,9 +1,9 @@
 package com.sample.one.reducers;
 
-import java.io.IOException;
-
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.mapreduce.Reducer;
+
+import java.io.IOException;
 
 /**
  * The {@link Reducer} class based on the <code>KEY</code> type.

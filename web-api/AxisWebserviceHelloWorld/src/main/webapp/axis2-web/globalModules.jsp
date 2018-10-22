@@ -1,4 +1,3 @@
-
 <%--
   ~ Licensed to the Apache Software Foundation (ASF) under one
   ~ or more contributor license agreements. See the NOTICE file
@@ -18,44 +17,46 @@
   ~ under the License.
   --%>
 <%@ page
-    import="org.apache.axis2.Constants,
-                 org.apache.axis2.description.AxisModule,
-                 java.util.Collection,
-                 java.util.Iterator"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+        import="org.apache.axis2.Constants,
+                org.apache.axis2.description.AxisModule,
+                java.util.Collection,
+                java.util.Iterator" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 <h1>Globally Engaged Modules</h1>
 <%
-         boolean foundModules = false;
-         boolean wroteUL = false;
-         String modulename = "";
-         Collection moduleCol = (Collection) request.getSession().getAttribute(Constants.MODULE_MAP);
-         request.getSession().setAttribute(Constants.MODULE_MAP, null);
-         if (moduleCol != null && moduleCol.size() > 0) {
-             for (Iterator iterator = moduleCol.iterator(); iterator.hasNext();) {
-                 AxisModule axisOperation = (AxisModule) iterator.next();
-                 modulename = axisOperation.getName();
-                 if (!wroteUL) {
-                     wroteUL = true;
-     %>
+    boolean foundModules = false;
+    boolean wroteUL = false;
+    String modulename = "";
+    Collection moduleCol = (Collection) request.getSession().getAttribute(Constants.MODULE_MAP);
+    request.getSession().setAttribute(Constants.MODULE_MAP, null);
+    if (moduleCol != null && moduleCol.size() > 0) {
+        for (Iterator iterator = moduleCol.iterator(); iterator.hasNext(); ) {
+            AxisModule axisOperation = (AxisModule) iterator.next();
+            modulename = axisOperation.getName();
+            if (!wroteUL) {
+                wroteUL = true;
+%>
 <ul>
     <%
-		}
-     %><li><%=modulename%></li>
+        }
+    %>
+    <li><%=modulename%>
+    </li>
     <br>
     <%
-             }
-		if (wroteUL){
-%>
+        }
+        if (wroteUL) {
+    %>
 </ul>
 <%
-		}
-         } else{
-     %>
+    }
+} else {
+%>
 <h2>
     <font color="blue">There are no modules engaged globally</font>
 </h2>
 <%
-         }
-                 %>
+    }
+%>
 <jsp:include page="include/adminfooter.inc"></jsp:include>

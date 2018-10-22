@@ -1,9 +1,8 @@
 package com.skeleton.interceptors;
 
-import org.apache.log4j.Logger;
-
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.Interceptor;
+import org.apache.log4j.Logger;
 
 /**
  * A timer interceptro whose responsibility is to log the name of the action that was

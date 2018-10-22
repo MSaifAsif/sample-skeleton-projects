@@ -18,19 +18,19 @@
   --%>
 
 <%@ page
-    import="org.apache.axis2.Constants,
-                 org.apache.axis2.description.AxisOperation"%>
-<%@ page import="org.apache.axis2.description.AxisService"%>
-<%@ page import="org.apache.axis2.description.Parameter"%>
-<%@ page import="org.apache.axis2.engine.AxisConfiguration"%>
-<%@ page import="org.apache.axis2.util.JavaUtils"%>
-<%@ page import="java.util.Hashtable"%>
-<%@ page import="java.util.Iterator"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
-<jsp:include page="include/adminheader.jsp" />
+        import="org.apache.axis2.Constants,
+                org.apache.axis2.description.AxisOperation" %>
+<%@ page import="org.apache.axis2.description.AxisService" %>
+<%@ page import="org.apache.axis2.description.Parameter" %>
+<%@ page import="org.apache.axis2.engine.AxisConfiguration" %>
+<%@ page import="org.apache.axis2.util.JavaUtils" %>
+<%@ page import="java.util.Hashtable" %>
+<%@ page import="java.util.Iterator" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:include page="include/adminheader.jsp"/>
 <h1>List Single Service</h1>
 <%
-    String prefix = request.getAttribute("frontendHostUrl") + (String)request.getSession().getAttribute(Constants.SERVICE_PATH) + "/";
+    String prefix = request.getAttribute("frontendHostUrl") + (String) request.getSession().getAttribute(Constants.SERVICE_PATH) + "/";
 %>
 <%
     String isFault = (String) request.getSession().getAttribute(Constants.IS_FAULTY);
@@ -40,7 +40,8 @@
 %>
 <h3>This Axis service has deployment faults.</h3>
 <%
-%><font color="red"><%=(String) errornessservices.get(servicName) %></font>
+%><font color="red"><%=(String) errornessservices.get(servicName) %>
+</font>
 <%
 
 } else {
@@ -53,10 +54,12 @@
         String serviceName = axisService.getName();
 %><h2>
     <font color="blue"><a
-        href="<%=prefix + axisService.getName()%>?wsdl"><%=serviceName%></a></font>
+            href="<%=prefix + axisService.getName()%>?wsdl"><%=serviceName%>
+    </a></font>
 </h2>
 <font color="blue">Service EPR : </font>
-<font color="black"><%=prefix + axisService.getName()%></font>
+<font color="black"><%=prefix + axisService.getName()%>
+</font>
 <br>
 <%
     boolean disableREST = false;
@@ -69,11 +72,10 @@
     if (parameter != null) {
         disableREST = !JavaUtils.isFalseExplicitly(parameter.getValue());
     }
-    if (!disableREST ) {
+    if (!disableREST) {
 %>
 <%
     }
-
 
     String serviceDescription = axisService.getServiceDescription();
     if (serviceDescription == null || "".equals(serviceDescription)) {
@@ -81,10 +83,12 @@
     }
 %>
 <h4>
-    Service Description : <font color="black"><%=serviceDescription%></font>
+    Service Description : <font color="black"><%=serviceDescription%>
+</font>
 </h4>
 
-<i><font color="blue">Service Status : <%=axisService.isActive() ? "Active" : "InActive"%></font></i>
+<i><font color="blue">Service Status : <%=axisService.isActive() ? "Active" : "InActive"%>
+</font></i>
 <br>
 <%
     if (opItr.hasNext()) {
@@ -95,11 +99,14 @@
 <%
     }
     opItr = axisService.getOperations();
-%><ul>
+%>
+<ul>
     <%
-    while (opItr.hasNext()) {
-        AxisOperation axisOperation = (AxisOperation) opItr.next();
-%><li><%=axisOperation.getName().getLocalPart()%></li>
+        while (opItr.hasNext()) {
+            AxisOperation axisOperation = (AxisOperation) opItr.next();
+    %>
+    <li><%=axisOperation.getName().getLocalPart()%>
+    </li>
     <%--                <br>Operation EPR : <%=prifix + axisService.getName().getLocalPart() + "/"+ axisOperation.getName().getLocalPart()%>--%>
     <%
         }
@@ -116,4 +123,4 @@
 
     }
 %>
-<jsp:include page="include/adminfooter.inc" />
+<jsp:include page="include/adminfooter.inc"/>

@@ -1,8 +1,5 @@
 package com.jpa.util;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -10,6 +7,9 @@ import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HibernateUtil {
 
@@ -31,13 +31,13 @@ public class HibernateUtil {
          */
         Configuration configuration = new Configuration();
         configuration.configure("hibernate.cfg.xml");
-        
+
         /*
          * Build the registry using the properties in the configuration
          */
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(
                 configuration.getProperties()).build();
-        
+
         /*
          * Now load the classes
          */
@@ -45,7 +45,7 @@ public class HibernateUtil {
             log.info("Adding annotated class : " + pojoClass.getCanonicalName());
             configuration.addAnnotatedClass(pojoClass);
         }
-        
+
         /*
          * and finally buils the session factory
          */

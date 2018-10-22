@@ -1,12 +1,12 @@
 package com.sample.crawler;
 
-import java.io.IOException;
-import java.sql.SQLException;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+import java.io.IOException;
+import java.sql.SQLException;
 
 /**
  * A basic implementaion of a web crawler that uses in memory based map to

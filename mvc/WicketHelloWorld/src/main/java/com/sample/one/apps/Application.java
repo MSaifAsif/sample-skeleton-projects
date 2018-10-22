@@ -1,9 +1,8 @@
 package com.sample.one.apps;
 
+import com.sample.one.pages.GreetingsPage;
 import org.apache.wicket.Page;
 import org.apache.wicket.protocol.http.WebApplication;
-
-import com.sample.one.pages.GreetingsPage;
 
 /**
  * Entry point of the application.

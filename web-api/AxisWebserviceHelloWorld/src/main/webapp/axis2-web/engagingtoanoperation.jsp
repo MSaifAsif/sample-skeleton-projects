@@ -18,28 +18,29 @@
   --%>
 
 <%@ page contentType="text/html; charset=iso-8859-1" language="java"
-    import="org.apache.axis2.Constants,
-                                                                             org.apache.axis2.description.AxisModule,
-                                                                             org.apache.axis2.description.AxisOperation,
-                                                                             org.apache.axis2.util.Utils,
-                                                                             java.util.Collection,
-                                                                             java.util.HashMap,
-                                                                             java.util.Iterator"%>
+         import="org.apache.axis2.Constants,
+                 org.apache.axis2.description.AxisModule,
+                 org.apache.axis2.description.AxisOperation,
+                 org.apache.axis2.util.Utils,
+                 java.util.Collection,
+                 java.util.HashMap,
+                 java.util.Iterator" %>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 <%
-    String status = (String)request.getSession().getAttribute(Constants.ENGAGE_STATUS);
+    String status = (String) request.getSession().getAttribute(Constants.ENGAGE_STATUS);
 %>
 <h1>Engage Module for an Operation</h1>
 <p>To engage a module for an axis operation,</p>
 <ol>
     <li>select the module you want to engage</li>
     <li>select the axis operation you like the module to be
-        engaged.</li>
+        engaged.
+    </li>
     <li>click "Engage".</li>
 </ol>
 
 <form method="get" name="selectModuleForm"
-    action="axis2-admin/listOperations">
+      action="axis2-admin/listOperations">
     <table border="0" width="100%" cellspacing="1" cellpadding="1">
         <tr>
             <td>&nbsp; &nbsp;</td>
@@ -57,7 +58,8 @@
                     AxisModule axisOperation = (AxisModule) iterator.next();
                     String modulename = axisOperation.getName();
             %>
-                    <option align="left" value="<%=modulename%>"><%=modulename%></option>
+                <option align="left" value="<%=modulename%>"><%=modulename%>
+                </option>
                     <%
                 }
              %>
@@ -77,7 +79,8 @@
                     AxisOperation axisOperationtion = (AxisOperation)operations.next();
                     String opname = axisOperationtion.getName().getLocalPart();
             %>
-                    <option align="left" value="<%=opname%>"><%=opname%></option>
+                <option align="left" value="<%=opname%>"><%=opname%>
+                </option>
                     <%
                 }
                 request.getSession().setAttribute(Constants.OPERATION_MAP,null);
@@ -100,9 +103,9 @@
         <tr>
             <td><textarea cols="50"
                     <%
-                        if(status == null){
-                           %>
-                    style="display: none"
+                        if (status == null) {
+                    %>
+                          style="display: none"
                     <%
                         } %>><%=Utils.sanitizeWebOutput(status)%></textarea>
             </td>

@@ -18,13 +18,13 @@
   --%>
 
 <%@ page contentType="text/html; charset=iso-8859-1" language="java"
-    import="org.apache.axis2.Constants,
-                                                                             org.apache.axis2.description.AxisModule,
-                                                                             org.apache.axis2.description.AxisService,
-                                                                             java.util.Collection,
-                                                                             java.util.HashMap,
-                                                                             java.util.Iterator"%>
-<%@ page import="org.apache.axis2.util.Utils"%>
+         import="org.apache.axis2.Constants,
+                 org.apache.axis2.description.AxisModule,
+                 org.apache.axis2.description.AxisService,
+                 org.apache.axis2.util.Utils,
+                 java.util.Collection,
+                 java.util.HashMap" %>
+<%@ page import="java.util.Iterator" %>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 <%
     String status = (String) request.getSession().getAttribute(Constants.ENGAGE_STATUS);
@@ -40,7 +40,7 @@
 </ol>
 
 <form method="get" name="selectModuleForm"
-    action="axis2-admin/engageToService">
+      action="axis2-admin/engageToService">
     <table border="0" width="100%" cellspacing="1" cellpadding="1">
         <tr>
             <td>&nbsp; &nbsp;</td>
@@ -60,8 +60,8 @@
                             String modulename = axisOperation.getName();
 
                     %>
-                    <option align="left" value="<%=modulename%>"><%=modulename%>
-                    </option>
+                <option align="left" value="<%=modulename%>"><%=modulename%>
+                </option>
                     <%
 
                        }
@@ -86,8 +86,8 @@
                             String serviceName = axisService.getName();
 
                     %>
-                    <option align="left" value="<%=serviceName%>"><%=serviceName%>
-                    </option>
+                <option align="left" value="<%=serviceName%>"><%=serviceName%>
+                </option>
                     <%
 
                        }
@@ -112,11 +112,11 @@
         <tr>
             <td><textarea cols="50"
                     <%
-                    if (status == null) {
-                %>
-                    style="display: none"
+                        if (status == null) {
+                    %>
+                          style="display: none"
                     <%
-                            } %>><%=Utils.sanitizeWebOutput(status)%>
+                        } %>><%=Utils.sanitizeWebOutput(status)%>
                 </textarea></td>
         </tr>
     </table>

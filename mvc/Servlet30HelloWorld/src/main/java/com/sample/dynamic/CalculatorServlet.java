@@ -1,13 +1,12 @@
 package com.sample.dynamic;
 
-import java.io.IOException;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.log4j.Logger;
+import java.io.IOException;
 
 /**
  * A dynamic servlet that will be loaded on runtime

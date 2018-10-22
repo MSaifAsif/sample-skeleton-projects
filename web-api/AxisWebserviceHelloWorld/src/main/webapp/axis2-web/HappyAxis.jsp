@@ -19,43 +19,43 @@
 
 <html>
 <%@ page
-    import="org.apache.axis2.AxisFault,
-                 org.apache.axis2.Constants,
-                 org.apache.axis2.addressing.EndpointReference,
-                 org.apache.axis2.client.Options,
-                 org.apache.axis2.client.ServiceClient,
-                 org.apache.axis2.context.ConfigurationContext,
-                 org.apache.axis2.context.ConfigurationContextFactory,
-                 javax.xml.parsers.SAXParser,
-                 javax.xml.parsers.SAXParserFactory,
-                 java.io.IOException,
-                 java.io.InputStream,
-                 java.io.StringWriter,
-                 org.apache.axiom.om.OMElement,
-                 org.apache.axiom.om.OMFactory,
-                 org.apache.axiom.om.OMNamespace,
-                 org.apache.axiom.om.OMAbstractFactory,
-                 javax.xml.stream.XMLOutputFactory,
-                 javax.xml.stream.XMLStreamException"
-    session="false"%>
+        import="org.apache.axiom.om.OMAbstractFactory,
+                org.apache.axiom.om.OMElement,
+                org.apache.axiom.om.OMFactory,
+                org.apache.axiom.om.OMNamespace,
+                org.apache.axis2.AxisFault,
+                org.apache.axis2.Constants,
+                org.apache.axis2.addressing.EndpointReference,
+                org.apache.axis2.client.Options,
+                org.apache.axis2.client.ServiceClient,
+                org.apache.axis2.context.ConfigurationContext,
+                org.apache.axis2.context.ConfigurationContextFactory,
+                javax.xml.parsers.SAXParser,
+                javax.xml.parsers.SAXParserFactory,
+                javax.xml.stream.XMLOutputFactory,
+                javax.xml.stream.XMLStreamException,
+                java.io.IOException,
+                java.io.InputStream,
+                java.io.StringWriter"
+        session="false" %>
 <head>
-<jsp:include page="include/httpbase.jsp" />
-<title>Axis2 Happiness Page</title>
-<link href="axis2-web/css/axis-style.css" rel="stylesheet"
-    type="text/css">
+    <jsp:include page="include/httpbase.jsp"/>
+    <title>Axis2 Happiness Page</title>
+    <link href="axis2-web/css/axis-style.css" rel="stylesheet"
+          type="text/css">
 </head>
 
 <body>
-    <jsp:include page="include/header.inc" />
-    <jsp:include page="include/link-footer.jsp" />
-    <%IP = request.getRequestURL().toString();%>
-    <%!
+<jsp:include page="include/header.inc"/>
+<jsp:include page="include/link-footer.jsp"/>
+<%IP = request.getRequestURL().toString();%>
+<%!
     /*
-    * Happiness tests for axis2. These look at the classpath and warn if things
-    * are missing. Normally addng this much code in a JSP page is mad
-    * but here we want to validate JSP compilation too, and have a drop-in
-    * page for easy re-use
-    */
+     * Happiness tests for axis2. These look at the classpath and warn if things
+     * are missing. Normally addng this much code in a JSP page is mad
+     * but here we want to validate JSP compilation too, and have a drop-in
+     * page for easy re-use
+     */
     String IP;
 
     /**
@@ -258,7 +258,6 @@
         }
     }
 
-
     /**
      *  get servlet version string
      *
@@ -270,7 +269,6 @@
         int minor = context.getMinorVersion();
         return Integer.toString(major) + '.' + Integer.toString(minor);
     }
-
 
     /**
      * what parser are we using.
@@ -360,127 +358,130 @@
             return false;
         }
     }
-    
-    public String getFormatedSystemProperty(String systemProperty){
+
+    public String getFormatedSystemProperty(String systemProperty) {
         if (systemProperty == null)
             return "";
-    	return  systemProperty.replaceAll(":", ": ");
+        return systemProperty.replaceAll(":", ": ");
     }
 %>
 
-    <h1>Axis2 Happiness Page</h1>
+<h1>Axis2 Happiness Page</h1>
 
-    <h2>Examining webapp configuration</h2>
+<h2>Examining webapp configuration</h2>
 
-    <blockquote>
+<blockquote>
 
-        <h4>Essential Components</h4>
+    <h4>Essential Components</h4>
 
-        <%
-    int needed = 0,wanted = 0;
+    <%
+        int needed = 0, wanted = 0;
 
-    /**
-     * the essentials, without these Axis is not going to work
-     */
-    needed = needClass(out, "org.apache.axis2.transport.http.AxisServlet",
-            "axis2-1.0.jar",
-            "Apache-Axis",
-            "Axis2 will not work",
-            "http://xml.apache.org/axis2/");
-    needed += needClass(out, "org.apache.commons.logging.Log",
-            "commons-logging.jar",
-            "Jakarta-Commons Logging",
-            "Axis2 will not work",
-            "http://jakarta.apache.org/commons/logging.html");
-    needed += needClass(out, "javax.xml.stream.XMLStreamReader",
-            "stax-api-1.0.1.jar",
-            "Streaming API for XML",
-            "Axis2 will not work",
-            "http://dist.codehaus.org/stax/jars/");
-    needed += needClass(out, "org.codehaus.stax2.XMLStreamWriter2",
-            "wstx-asl-3.0.1.jar",
-            "Streaming API for XML implementation",
-            "Axis2 will not work",
-            "http://dist.codehaus.org/stax/jars/");
+        /**
+         * the essentials, without these Axis is not going to work
+         */
+        needed = needClass(out, "org.apache.axis2.transport.http.AxisServlet",
+                "axis2-1.0.jar",
+                "Apache-Axis",
+                "Axis2 will not work",
+                "http://xml.apache.org/axis2/");
+        needed += needClass(out, "org.apache.commons.logging.Log",
+                "commons-logging.jar",
+                "Jakarta-Commons Logging",
+                "Axis2 will not work",
+                "http://jakarta.apache.org/commons/logging.html");
+        needed += needClass(out, "javax.xml.stream.XMLStreamReader",
+                "stax-api-1.0.1.jar",
+                "Streaming API for XML",
+                "Axis2 will not work",
+                "http://dist.codehaus.org/stax/jars/");
+        needed += needClass(out, "org.codehaus.stax2.XMLStreamWriter2",
+                "wstx-asl-3.0.1.jar",
+                "Streaming API for XML implementation",
+                "Axis2 will not work",
+                "http://dist.codehaus.org/stax/jars/");
 
-%>
-        <%
-    /*
-    * resources on the classpath path
-    */
+    %>
+    <%
+        /*
+         * resources on the classpath path
+         */
     /* broken; this is a file, not a resource
     wantResource(out,"/server-config.wsdd",
     "There is no server configuration file;"
     +"run AdminClient to create one");
     */
-    /* add more libraries here */
+        /* add more libraries here */
 
-    //is everything we need here
-    if (needed == 0) {
-        //yes, be happy
-        out.write("<p><font color='green'><strong>The core axis2 libraries are present.</strong></font></p>");
-    } else {
-        //no, be very unhappy
-        response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-        out.write("<font color='red'><i>"
-                + needed
-                + " core axis2 librar"
-                + (needed == 1 ? "y is" : "ies are")
-                + " missing</i></font>");
-    }
-    //now look at wanted stuff
-%>
-        <p>
-            <B><I>Note:</I></B> Even if everything this page probes for
-            is present, there is no guarantee your Axis Service will
-            work, because there are many configuration options that we
-            do not check for. These tests are <i>necessary</i> but not <i>sufficient</i>
-        </p>
-    </blockquote>
-    <h2>Examining Version Service</h2>
-    <%
+        //is everything we need here
+        if (needed == 0) {
+            //yes, be happy
+            out.write("<p><font color='green'><strong>The core axis2 libraries are present.</strong></font></p>");
+        } else {
+            //no, be very unhappy
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            out.write("<font color='red'><i>"
+                    + needed
+                    + " core axis2 librar"
+                    + (needed == 1 ? "y is" : "ies are")
+                    + " missing</i></font>");
+        }
+        //now look at wanted stuff
+    %>
+    <p>
+        <B><I>Note:</I></B> Even if everything this page probes for
+        is present, there is no guarantee your Axis Service will
+        work, because there are many configuration options that we
+        do not check for. These tests are <i>necessary</i> but not <i>sufficient</i>
+    </p>
+</blockquote>
+<h2>Examining Version Service</h2>
+<%
     boolean serviceStatus = invokeTheService();
     if (serviceStatus) {
 %>
-    <blockquote>
-        <font color="green"><strong> Found Axis2 default
-                Version service and Axis2 is working properly.</strong></font>
-        <p>Now you can drop a service archive in
-            axis2/WEB-INF/services. Following output was produced while
-            invoking Axis2 version service</p>
-        <p><%= value%></p>
-    </blockquote>
+<blockquote>
+    <font color="green"><strong> Found Axis2 default
+        Version service and Axis2 is working properly.</strong></font>
+    <p>Now you can drop a service archive in
+        axis2/WEB-INF/services. Following output was produced while
+        invoking Axis2 version service</p>
+    <p><%= value%>
+    </p>
+</blockquote>
 
-    <%
+<%
 } else {
 %>
-    <p>
-        <font color="brown"> There was a problem in Axis2 version
-            service , may be the service not available or some thing has
-            gone wrong. But this does not mean system is not working !
-            Try to upload some other service and check to see whether it
-            is working. <br>
-        </font>
-    </p>
+<p>
+    <font color="brown"> There was a problem in Axis2 version
+        service , may be the service not available or some thing has
+        gone wrong. But this does not mean system is not working !
+        Try to upload some other service and check to see whether it
+        is working. <br>
+    </font>
+</p>
 
-    <%
+<%
     }
 %>
-    <h2>Examining Application Server</h2>
-    <blockquote>
-        <table>
-            <tr>
-                <td>Servlet version</td>
-                <td><%=getServletVersion()%></td>
-            </tr>
-            <tr>
-                <td>Platform</td>
-                <td><%=getServletConfig().getServletContext().getServerInfo()%></td>
-            </tr>
-        </table>
-    </blockquote>
-    <h2>Examining System Properties</h2>
-    <%
+<h2>Examining Application Server</h2>
+<blockquote>
+    <table>
+        <tr>
+            <td>Servlet version</td>
+            <td><%=getServletVersion()%>
+            </td>
+        </tr>
+        <tr>
+            <td>Platform</td>
+            <td><%=getServletConfig().getServletContext().getServerInfo()%>
+            </td>
+        </tr>
+    </table>
+</blockquote>
+<h2>Examining System Properties</h2>
+<%
     /**
      * Dump the system properties
      */
@@ -492,7 +493,7 @@
     if (e != null) {
         out.write("<pre>");
         out.write("<table cellpadding='5px' cellspacing='0px' style='border: .5px blue solid;'>");
-        for (; e.hasMoreElements();) {
+        for (; e.hasMoreElements(); ) {
             out.write("<tr>");
             String key = (String) e.nextElement();
             out.write("<th style='border: .5px #A3BBFF solid;'>" + key + "</th>");
@@ -506,7 +507,7 @@
     }
 %>
 
-    <jsp:include page="include/footer.inc" />
+<jsp:include page="include/footer.inc"/>
 </body>
 </html>
 

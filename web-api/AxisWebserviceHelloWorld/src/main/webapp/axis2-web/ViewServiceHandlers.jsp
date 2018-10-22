@@ -18,19 +18,19 @@
   --%>
 
 <%@ page
-    import="org.apache.axis2.Constants,
-                 org.apache.axis2.description.AxisOperation,
-                 org.apache.axis2.description.AxisService,
-                 org.apache.axis2.engine.Handler,
-                 org.apache.axis2.engine.Phase,
-                 java.util.ArrayList,
-                 java.util.List,
-                 java.util.Iterator"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+        import="org.apache.axis2.Constants,
+                org.apache.axis2.description.AxisOperation,
+                org.apache.axis2.description.AxisService,
+                org.apache.axis2.engine.Handler,
+                org.apache.axis2.engine.Phase,
+                java.util.ArrayList,
+                java.util.Iterator,
+                java.util.List" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 <h1>View Operation Specific Chains</h1>
-<%
+    <%
             AxisService axisService = (AxisService)request.getSession().
                     getAttribute(Constants.SERVICE_HANDLERS);
              if(axisService != null ){
@@ -40,109 +40,118 @@
                      AxisOperation axisOperationon = (AxisOperation) operations.next();
                      %><h2>
     Operation Name :
-    <%=axisOperationon.getName().getLocalPart()%></h2>
-<%
+    <%=axisOperationon.getName().getLocalPart()%>
+</h2>
+    <%
                      ArrayList phases = axisOperationon.getRemainingPhasesInFlow();
                  %>
 <h3>In Flow</h3>
 <ul>
     <%
-                 for (int i = 0; i < phases.size(); i++) {
-                     Phase phase = (Phase) phases.get(i);
-                     %>
-    <li>Phase Name : <%=phase.getPhaseName()%></li>
+        for (int i = 0; i < phases.size(); i++) {
+            Phase phase = (Phase) phases.get(i);
+    %>
+    <li>Phase Name : <%=phase.getPhaseName()%>
+    </li>
     <ul>
         <%
-                      handlers = phase.getHandlers();
-                      for (int j = 0; j < handlers.size(); j++) {
-                          Handler handler = (Handler) handlers.get(j);
-                          %>
-        <li>Handler Name : <%=handler.getHandlerDesc().getName()%></li>
+            handlers = phase.getHandlers();
+            for (int j = 0; j < handlers.size(); j++) {
+                Handler handler = (Handler) handlers.get(j);
+        %>
+        <li>Handler Name : <%=handler.getHandlerDesc().getName()%>
+        </li>
         <%
-                      }
-                     %>
+            }
+        %>
     </ul>
     <%
-                 }
-                 %>
+        }
+    %>
 </ul>
-<%
+    <%
                  phases = axisOperationon.getPhasesInFaultFlow();
                  %>
 <h3>In Fault Flow</h3>
 <ul>
     <%
-                 for (int i = 0; i < phases.size(); i++) {
-                     Phase phase = (Phase) phases.get(i);
-                     %>
-    <li>Phase Name : <%=phase.getPhaseName()%></li>
+        for (int i = 0; i < phases.size(); i++) {
+            Phase phase = (Phase) phases.get(i);
+    %>
+    <li>Phase Name : <%=phase.getPhaseName()%>
+    </li>
     <ul>
         <%
-                      handlers = phase.getHandlers();
-                      for (int j = 0; j < handlers.size(); j++) {
-                          Handler handler = (Handler) handlers.get(j);
-                          %>
-        <li>Handler Name : <%=handler.getHandlerDesc().getName()%></li>
+            handlers = phase.getHandlers();
+            for (int j = 0; j < handlers.size(); j++) {
+                Handler handler = (Handler) handlers.get(j);
+        %>
+        <li>Handler Name : <%=handler.getHandlerDesc().getName()%>
+        </li>
         <%
-                      }
-                     %>
+            }
+        %>
     </ul>
     <%
-                 }
-                 %>
+        }
+    %>
 </ul>
-<%
+    <%
 
                  phases = axisOperationon.getPhasesOutFlow();
                  %>
 <h3>Out Flow</h3>
 <ul>
     <%
-                 for (int i = 0; i < phases.size(); i++) {
-                     Phase phase = (Phase) phases.get(i);
-                     %>
-    <li>Phase Name : <%=phase.getPhaseName()%></li>
+        for (int i = 0; i < phases.size(); i++) {
+            Phase phase = (Phase) phases.get(i);
+    %>
+    <li>Phase Name : <%=phase.getPhaseName()%>
+    </li>
     <ul>
         <%
-                      handlers = phase.getHandlers();
-                      for (int j = 0; j < handlers.size(); j++) {
-                          Handler handler = (Handler) handlers.get(j);
-                          %>
-        <li>Handler Name : <%=handler.getHandlerDesc().getName()%></li>
+            handlers = phase.getHandlers();
+            for (int j = 0; j < handlers.size(); j++) {
+                Handler handler = (Handler) handlers.get(j);
+        %>
+        <li>Handler Name : <%=handler.getHandlerDesc().getName()%>
+        </li>
         <%
-                      }
-                     %>
+            }
+        %>
     </ul>
     <%
-                 }
-                 %>
+        }
+    %>
 </ul>
-<%
+    <%
                  phases = axisOperationon.getPhasesOutFaultFlow();
                  %>
 <h3>Out Fault Flow</h3>
 <ul>
     <%
-                 for (int i = 0; i < phases.size(); i++) {
-                     Phase phase = (Phase) phases.get(i);
-                     %>
-    <li>Phase Name : <%=phase.getPhaseName()%></li>
+        for (int i = 0; i < phases.size(); i++) {
+            Phase phase = (Phase) phases.get(i);
+    %>
+    <li>Phase Name : <%=phase.getPhaseName()%>
+    </li>
     <ul>
         <%
-                      handlers = phase.getHandlers();
-                      for (int j = 0; j < handlers.size(); j++) {
-                          Handler handler = (Handler) handlers.get(j);
-                          %>
-        <li>Handler Name : <%=handler.getHandlerDesc().getName()%></li>
+            handlers = phase.getHandlers();
+            for (int j = 0; j < handlers.size(); j++) {
+                Handler handler = (Handler) handlers.get(j);
+        %>
+        <li>Handler Name : <%=handler.getHandlerDesc().getName()%>
+        </li>
         <%
-                      }
-                     %>
+            }
+        %>
     </ul>
     <%
-                 }
-                 %>
+        }
+    %>
 </ul>
-<%
+    <%
 
              }
                  }

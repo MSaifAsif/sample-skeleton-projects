@@ -64,5 +64,4 @@ public class EmployeeBean implements Serializable {
         this.company = company;
     }
 
-
 }

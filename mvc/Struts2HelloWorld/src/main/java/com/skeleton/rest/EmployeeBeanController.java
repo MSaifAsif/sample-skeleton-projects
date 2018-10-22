@@ -1,10 +1,9 @@
 package com.skeleton.rest;
 
+import com.opensymphony.xwork2.ModelDriven;
 import org.apache.log4j.Logger;
 import org.apache.struts2.rest.DefaultHttpHeaders;
 import org.apache.struts2.rest.HttpHeaders;
-
-import com.opensymphony.xwork2.ModelDriven;
 
 /**
  * The REST api class. This will serve as entry point for all rest calls to the {@link EmployeeBean} resource

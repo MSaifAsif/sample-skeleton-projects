@@ -15,7 +15,6 @@ public class RabbitQueueConfig {
     public static final String externalChannelExchange = "cmr-channel-exchange";
     public static final String eventsExchange = "cmr-event-exchange";
 
-
     @Bean(name = "queue-bnb")
     Queue queueBnb() {
         return new Queue("listener.bnb", true, false, false);

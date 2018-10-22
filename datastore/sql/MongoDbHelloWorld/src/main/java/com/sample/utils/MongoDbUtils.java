@@ -1,18 +1,17 @@
 package com.sample.utils;
 
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.apache.log4j.Logger;
+import org.bson.Document;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-
-import org.apache.log4j.Logger;
-import org.bson.Document;
-
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 
 /**
  * A collection of utility function to create, insert, bulk insert documents
@@ -107,7 +106,6 @@ public class MongoDbUtils {
         log.debug("Document inserted:" + document.toJson().toString());
     }
 
-
     /**
      * Create a collection
      *
@@ -126,6 +124,5 @@ public class MongoDbUtils {
     public MongoCollection<Document> getCollectionConn(String collectionName) {
         return _getCurrentDB().getCollection(collectionName);
     }
-
 
 }

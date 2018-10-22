@@ -18,16 +18,16 @@
   --%>
 
 <%@ page
-    import="org.apache.axis2.Constants,
-                 org.apache.axis2.description.AxisService,
-                 java.util.Collection,
-                 java.util.HashMap,
-                 java.util.Iterator"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+        import="org.apache.axis2.Constants,
+                org.apache.axis2.description.AxisService,
+                java.util.Collection,
+                java.util.HashMap,
+                java.util.Iterator" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 <h1>Deactivate Service</h1>
 <form method="get" name="serviceInActivate"
-    action="axis2-admin/deactivateService">
+      action="axis2-admin/deactivateService">
     <table width="100%" border="0">
         <tr>
             <td colspan="2">
@@ -39,27 +39,27 @@
         </tr>
         <tr>
             <%
-HashMap services = (HashMap)request.getSession().getAttribute(Constants.SERVICE_MAP);
-Collection col = services.values();
-String html = "";
-int count = 0;
+                HashMap services = (HashMap) request.getSession().getAttribute(Constants.SERVICE_MAP);
+                Collection col = services.values();
+                String html = "";
+                int count = 0;
 
-for (Iterator iterator = col.iterator(); iterator.hasNext();) {
-	AxisService axisServices = (AxisService) iterator.next();
-	if(axisServices.isActive()){
-		count++;
-		html += "<option value='" + axisServices.getName() + "'>";
-		html += axisServices.getName() + "</option>";
-	}
-}
-request.getSession().setAttribute(Constants.SERVICE_MAP,null);
-if (count > 0) {
-%>
+                for (Iterator iterator = col.iterator(); iterator.hasNext(); ) {
+                    AxisService axisServices = (AxisService) iterator.next();
+                    if (axisServices.isActive()) {
+                        count++;
+                        html += "<option value='" + axisServices.getName() + "'>";
+                        html += axisServices.getName() + "</option>";
+                    }
+                }
+                request.getSession().setAttribute(Constants.SERVICE_MAP, null);
+                if (count > 0) {
+            %>
 
             <td width="20%">Select Service :</td>
             <td width="80%"><select name="axisService"
-                class="selectBoxes">
-                    <%=html%>
+                                    class="selectBoxes">
+                <%=html%>
             </select></td>
         </tr>
         <tr>
@@ -70,15 +70,15 @@ if (count > 0) {
         <tr>
             <td>&nbsp;</td>
             <td><input name="submit" type="submit"
-                value=" Deactivate "> <input name="reset"
-                type="reset" value=" Clear "></td>
+                       value=" Deactivate "> <input name="reset"
+                                                    type="reset" value=" Clear "></td>
             <%
-} else {
-	%>
+            } else {
+            %>
             <td colspan="2">No active services present.</td>
             <%
-}
-%>
+                }
+            %>
         </tr>
 
     </table>

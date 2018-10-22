@@ -1,4 +1,3 @@
-
 <%--
   ~ Licensed to the Apache Software Foundation (ASF) under one
   ~ or more contributor license agreements. See the NOTICE file
@@ -18,62 +17,62 @@
   ~ under the License.
   --%>
 <%@ page
-    import="org.apache.axis2.Constants,
-                 org.apache.axis2.deployment.util.PhasesInfo,
-                 org.apache.axis2.engine.Phase"%>
-<%@ page import="java.util.List"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+        import="org.apache.axis2.Constants,
+                org.apache.axis2.deployment.util.PhasesInfo,
+                org.apache.axis2.engine.Phase" %>
+<%@ page import="java.util.List" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 <h1>Available Phases</h1>
 <%
-         PhasesInfo phases = (PhasesInfo)request.getSession().getAttribute(Constants.PHASE_LIST);
-         request.getSession().setAttribute(Constants.PHASE_LIST,null);
-         List tempList = phases.getGlobalInflow();
-     %><h2>
+    PhasesInfo phases = (PhasesInfo) request.getSession().getAttribute(Constants.PHASE_LIST);
+    request.getSession().setAttribute(Constants.PHASE_LIST, null);
+    List tempList = phases.getGlobalInflow();
+%><h2>
     <font color="blue">System Pre-defined Phases</font>
 </h2>
 <b>InFlow Up to Dispatcher</b>
 <blockquote>
     <%
-             for (int i = 0; i < tempList.size(); i++) {
-                 Phase phase = (Phase) tempList.get(i);
-         %><%=phase.getPhaseName()%><br>
+        for (int i = 0; i < tempList.size(); i++) {
+            Phase phase = (Phase) tempList.get(i);
+    %><%=phase.getPhaseName()%><br>
     <%
-             }
-         %>
+        }
+    %>
 </blockquote>
 <b>InFaultFlow </b>
 <blockquote>
     <%
-             tempList = phases.getGlobalInFaultPhases();
-             for (int i = 0; i < tempList.size(); i++) {
-                 Phase phase = (Phase) tempList.get(i);
-         %><%=phase.getPhaseName()%><br>
+        tempList = phases.getGlobalInFaultPhases();
+        for (int i = 0; i < tempList.size(); i++) {
+            Phase phase = (Phase) tempList.get(i);
+    %><%=phase.getPhaseName()%><br>
     <%
-             }
-         %>
+        }
+    %>
 </blockquote>
 <b>OutFlow </b>
 <blockquote>
     <%
-             tempList = phases.getGlobalOutPhaseList();
-             for (int i = 0; i < tempList.size(); i++) {
-                 Phase phase = (Phase) tempList.get(i);
-         %><%=phase.getPhaseName()%><br>
+        tempList = phases.getGlobalOutPhaseList();
+        for (int i = 0; i < tempList.size(); i++) {
+            Phase phase = (Phase) tempList.get(i);
+    %><%=phase.getPhaseName()%><br>
     <%
-             }
-         %>
+        }
+    %>
 </blockquote>
 <b>OutFaultFlow </b>
 <blockquote>
     <%
-             tempList = phases.getOUT_FaultPhases();
-             for (int i = 0; i < tempList.size(); i++) {
-                 Phase phase = (Phase) tempList.get(i);
-         %><%=phase.getPhaseName()%><br>
+        tempList = phases.getOUT_FaultPhases();
+        for (int i = 0; i < tempList.size(); i++) {
+            Phase phase = (Phase) tempList.get(i);
+    %><%=phase.getPhaseName()%><br>
     <%
-             }
-         %>
+        }
+    %>
 </blockquote>
 <br>
 <h2>
@@ -82,45 +81,45 @@
 <b>Inflow after Dispatcher</b>
 <blockquote>
     <%
-             tempList = phases.getOperationInPhases();
-             for (int i = 0; i < tempList.size(); i++) {
-                 Phase phase = (Phase) tempList.get(i);
-         %><%=phase.getPhaseName()%><br>
+        tempList = phases.getOperationInPhases();
+        for (int i = 0; i < tempList.size(); i++) {
+            Phase phase = (Phase) tempList.get(i);
+    %><%=phase.getPhaseName()%><br>
     <%
-             }
-         %>
+        }
+    %>
 </blockquote>
 <b>InFaultFlow after Dispatcher</b>
 <blockquote>
     <%
-             tempList = phases.getOperationInFaultPhases();
-             for (int i = 0; i < tempList.size(); i++) {
-                 Phase phase = (Phase) tempList.get(i);
-         %><%=phase.getPhaseName()%><br>
+        tempList = phases.getOperationInFaultPhases();
+        for (int i = 0; i < tempList.size(); i++) {
+            Phase phase = (Phase) tempList.get(i);
+    %><%=phase.getPhaseName()%><br>
     <%
-             }
-         %>
+        }
+    %>
 </blockquote>
 <b>OutFlow </b>
 <blockquote>
     <%
-             tempList = phases.getOperationOutPhases();
-             for (int i = 0; i < tempList.size(); i++) {
-                 Phase phase = (Phase) tempList.get(i);
-         %><%=phase.getPhaseName()%><br>
+        tempList = phases.getOperationOutPhases();
+        for (int i = 0; i < tempList.size(); i++) {
+            Phase phase = (Phase) tempList.get(i);
+    %><%=phase.getPhaseName()%><br>
     <%
-             }
-         %>
+        }
+    %>
 </blockquote>
 <b>OutFaultFlow </b>
 <blockquote>
     <%
-             tempList = phases.getOperationOutFaultPhases();
-             for (int i = 0; i < tempList.size(); i++) {
-                 Phase phase = (Phase) tempList.get(i);
-         %><%=phase.getPhaseName()%><br>
+        tempList = phases.getOperationOutFaultPhases();
+        for (int i = 0; i < tempList.size(); i++) {
+            Phase phase = (Phase) tempList.get(i);
+    %><%=phase.getPhaseName()%><br>
     <%
-             }
-         %>
+        }
+    %>
 </blockquote>
 <jsp:include page="include/adminfooter.inc"></jsp:include>

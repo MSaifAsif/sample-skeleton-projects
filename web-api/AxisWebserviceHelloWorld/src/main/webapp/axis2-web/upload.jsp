@@ -17,20 +17,21 @@
   ~ under the License.
   --%>
 
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<jsp:include page="include/adminheader.jsp" />
+<jsp:include page="include/adminheader.jsp"/>
 <script type="text/javascript">
-<!--
-	function checkFileUpload(){
-		if (document.getElementById('serviceUpload').value == '') {
-			alert('Please select a file before clicking the upload button.');
-			return false;
-		} else {
-			document.Axis2upload.submit();
-		}
-	}
-//-->
+    <!--
+    function checkFileUpload() {
+        if (document.getElementById('serviceUpload').value == '') {
+            alert('Please select a file before clicking the upload button.');
+            return false;
+        } else {
+            document.Axis2upload.submit();
+        }
+    }
+
+    //-->
 </script>
 <h1>Upload an Axis Service Archive File</h1>
 
@@ -38,7 +39,8 @@
     small steps.</p>
 <ul>
     <li>Browse to the location and select the axis service archive
-        file you wish to upload</li>
+        file you wish to upload
+    </li>
     <li>Click "Upload" button</li>
 </ul>
 <p>Simple as that!</p>
@@ -47,36 +49,39 @@
 <font color="green">File <%= request.getAttribute("filename") %>
     successfully uploaded
 </font>
-<br />
-<br />
+<br/>
+<br/>
 <%
 } else if ("failure".equals(request.getAttribute("status"))) {
 %>
-<font color="red">The following error occurred <br /> <%= request.getAttribute("cause") %></font>
-<br />
+<font color="red">The following error occurred <br/> <%= request.getAttribute("cause") %>
+</font>
+<br/>
 <% } %>
 
 <form method="post" name="Axis2upload" id="Axis2upload"
-    action="axis2-admin/upload" enctype="multipart/form-data">
+      action="axis2-admin/upload" enctype="multipart/form-data">
     <table>
         <tr>
             <td>Service archive :</td>
             <td><input id="serviceUpload" type="file"
-                name="filename" size="50" /></td>
+                       name="filename" size="50"/></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td><input name="upload" type="button"
-                onclick="javascript:checkFileUpload();" value=" Upload " /></td>
+                       onclick="javascript:checkFileUpload();" value=" Upload "/></td>
         </tr>
     </table>
 </form>
 <blockquote>
     <p>
         Hot deployment of new service archives is
-        <%=request.getAttribute("hotDeployment") %></p>
+        <%=request.getAttribute("hotDeployment") %>
+    </p>
     <p>
         Hot update of existing service archives is
-        <%=request.getAttribute("hotUpdate") %></p>
+        <%=request.getAttribute("hotUpdate") %>
+    </p>
 </blockquote>
-<jsp:include page="include/adminfooter.inc" />
+<jsp:include page="include/adminfooter.inc"/>

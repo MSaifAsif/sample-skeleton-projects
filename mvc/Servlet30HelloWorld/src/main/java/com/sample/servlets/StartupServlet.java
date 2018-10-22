@@ -1,12 +1,11 @@
 package com.sample.servlets;
 
+import com.sample.utils.ServletConstants;
+import org.apache.log4j.Logger;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
-
-import org.apache.log4j.Logger;
-
-import com.sample.utils.ServletConstants;
 
 /**
  * A startup servlet that will have its init method

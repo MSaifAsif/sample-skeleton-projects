@@ -18,41 +18,43 @@
   --%>
 
 <%@ page
-    import="org.apache.axis2.Constants,
-                 org.apache.axis2.description.AxisService,
-                 java.util.Collection,
-                 java.util.HashMap,
-                 java.util.Iterator"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+        import="org.apache.axis2.Constants,
+                org.apache.axis2.description.AxisService,
+                java.util.Collection,
+                java.util.HashMap,
+                java.util.Iterator" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="include/adminheader.jsp"></jsp:include>
 
 <%
-      String action ="";
-      String buttonName="" ;
-      String status = (String)request.getSession().getAttribute(Constants.SELECT_SERVICE_TYPE);
-      String heading = "";
-      String disc = "";
-      if(status != null && status.equals("MODULE")) {
-          action = "listOperations";
-          buttonName = " View Operations";
-          heading = "Select a service to view operation specific chains";
-          disc = "Select an Axis service from the combo and click on the 'View Operations' button to view operation specific Chains.";
-      } else if(status != null && status.equals("VIEW")){
-          buttonName = " View ";
-          action = "viewServiceHandlers";
-          heading = "Select a service to view service handlers";
-          disc = "Select an Axis service from the combo and click on the 'View' button to view service handlers.";
-      } else if (status != null && status.equals("SERVICE_PARAMETER")){
-          buttonName = " Edit Parameters ";
-          action = "editServicePara"; // Constants.EDIR_SERVICE_PARA;
-          heading = "Select a Service to Edit Parameters";
-          disc = "Select an Axis service from the combo and click on the 'Edit Parameters' button to edit parameters.";
-      }
-  %>
-<h1><%=heading%></h1>
-<p><%=disc%></p>
+    String action = "";
+    String buttonName = "";
+    String status = (String) request.getSession().getAttribute(Constants.SELECT_SERVICE_TYPE);
+    String heading = "";
+    String disc = "";
+    if (status != null && status.equals("MODULE")) {
+        action = "listOperations";
+        buttonName = " View Operations";
+        heading = "Select a service to view operation specific chains";
+        disc = "Select an Axis service from the combo and click on the 'View Operations' button to view operation specific Chains.";
+    } else if (status != null && status.equals("VIEW")) {
+        buttonName = " View ";
+        action = "viewServiceHandlers";
+        heading = "Select a service to view service handlers";
+        disc = "Select an Axis service from the combo and click on the 'View' button to view service handlers.";
+    } else if (status != null && status.equals("SERVICE_PARAMETER")) {
+        buttonName = " Edit Parameters ";
+        action = "editServicePara"; // Constants.EDIR_SERVICE_PARA;
+        heading = "Select a Service to Edit Parameters";
+        disc = "Select an Axis service from the combo and click on the 'Edit Parameters' button to edit parameters.";
+    }
+%>
+<h1><%=heading%>
+</h1>
+<p><%=disc%>
+</p>
 <form method="get" name="selectServiceForm"
-    action="axis2-admin/<%=action%>">
+      action="axis2-admin/<%=action%>">
     <table border="0" width="50%" cellspacing="1" cellpadding="1">
         <tr>
             <td width="35%">Select a Service :</td>
@@ -64,7 +66,8 @@
                     AxisService axisService = (AxisService)iterator.next();
                     String serviceName = axisService.getName();
             %>
-                    <option align="left" value="<%=serviceName%>"><%=serviceName%></option>
+                <option align="left" value="<%=serviceName%>"><%=serviceName%>
+                </option>
                     <%
                 }
                 request.getSession().setAttribute(Constants.SERVICE_MAP,null);
@@ -77,7 +80,7 @@
         <tr>
             <td>&nbsp;</td>
             <td colspan="2" align="left"><input name="submit"
-                type="submit" value="<%=buttonName%>"></td>
+                                                type="submit" value="<%=buttonName%>"></td>
         </tr>
     </table>
 </form>

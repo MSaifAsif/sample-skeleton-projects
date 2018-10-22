@@ -18,15 +18,15 @@
   --%>
 
 <%@ page
-    import="org.apache.axis2.Constants,
-                 org.apache.axis2.description.AxisModule,
-                 java.util.Collection,
-                 java.util.HashMap,
-                 java.util.Iterator"%>
-<%@ page import="org.apache.axis2.util.Utils"%>
+        import="org.apache.axis2.Constants,
+                org.apache.axis2.description.AxisModule,
+                org.apache.axis2.util.Utils,
+                java.util.Collection,
+                java.util.HashMap" %>
+<%@ page import="java.util.Iterator" %>
 <html>
-<jsp:include page="include/adminheader.jsp" />
-<%
+<jsp:include page="include/adminheader.jsp"/>
+    <%
     String status = (String) request.getSession().getAttribute(Constants.ENGAGE_STATUS);
 %>
 <h1>Engage Module Globally</h1>
@@ -37,24 +37,24 @@
     needs to be engaged globally.</p>
 
 <form method="get" name="selectModuleForm"
-    action="axis2-admin/engagingglobally">
+      action="axis2-admin/engagingglobally">
     <table border="0" width="100%" cellspacing="1" cellpadding="1">
         <tr>
             <td width="15%">Select a Module :</td>
             <td width="75%" align="left"><select name="modules">
-                    <%
-                        HashMap modules = (HashMap) request.getSession().getAttribute(Constants.MODULE_MAP);
-                        request.getSession().setAttribute(Constants.MODULE_MAP,null);
-                        Collection moduleCol = modules.values();
-                        for (Iterator iterator = moduleCol.iterator(); iterator.hasNext();) {
-                            AxisModule axisOperation = (AxisModule) iterator.next();
-                            String modulename = axisOperation.getName();
-                    %>
-                    <option align="left" value="<%=modulename%>"><%=modulename%>
-                    </option>
-                    <%
-                        }
-                    %>
+                <%
+                    HashMap modules = (HashMap) request.getSession().getAttribute(Constants.MODULE_MAP);
+                    request.getSession().setAttribute(Constants.MODULE_MAP, null);
+                    Collection moduleCol = modules.values();
+                    for (Iterator iterator = moduleCol.iterator(); iterator.hasNext(); ) {
+                        AxisModule axisOperation = (AxisModule) iterator.next();
+                        String modulename = axisOperation.getName();
+                %>
+                <option align="left" value="<%=modulename%>"><%=modulename%>
+                </option>
+                <%
+                    }
+                %>
             </select></td>
         </tr>
         <tr>
@@ -64,10 +64,11 @@
         </tr>
     </table>
 </form>
-<%
+    <%
     if (status != null) {
 %>
-<p style="color: blue"><%=Utils.sanitizeWebOutput(status)%></p>
-<%
+<p style="color: blue"><%=Utils.sanitizeWebOutput(status)%>
+</p>
+    <%
     } %>
-<jsp:include page="include/adminfooter.inc" />
+<jsp:include page="include/adminfooter.inc"/>
