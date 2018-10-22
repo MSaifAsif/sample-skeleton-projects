@@ -1,10 +1,9 @@
 package com.sample.tests;
 
-import static org.junit.Assert.assertNotNull;
-
+import com.sample.utilities.TransformationUtils;
 import org.junit.Test;
 
-import com.sample.utilities.TransformationUtils;
+import static org.junit.Assert.assertNotNull;
 
 public class TestUtils {
 

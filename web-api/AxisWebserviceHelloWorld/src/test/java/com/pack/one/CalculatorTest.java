@@ -1,8 +1,8 @@
 package com.pack.one;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Junit cases for the {@link Calculator} web service
@@ -36,6 +36,5 @@ public class CalculatorTest {
         assertEquals(10, calculator.sub(15, 5), -1);
 
     }
-
 
 }

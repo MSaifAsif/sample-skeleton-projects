@@ -1,13 +1,13 @@
 package com.sample.portlet;
 
-import java.io.IOException;
-import javax.portlet.PortletConfig;
 import javax.portlet.GenericPortlet;
+import javax.portlet.PortletConfig;
 import javax.portlet.PortletException;
 import javax.portlet.PortletRequestDispatcher;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 import javax.portlet.WindowState;
+import java.io.IOException;
 
 public class MyPortlet extends GenericPortlet {
 

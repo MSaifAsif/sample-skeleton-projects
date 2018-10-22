@@ -35,9 +35,9 @@ public class ITRestService {
         server = new Server(8080);
         ServletContextHandler context = new ServletContextHandler();
         ServletHolder defaultServ = new ServletHolder("default", DefaultServlet.class);
-        defaultServ.setInitParameter("resourceBase",System.getProperty("user.dir"));
-        defaultServ.setInitParameter("dirAllowed","true");
-        context.addServlet(defaultServ,"/");
+        defaultServ.setInitParameter("resourceBase", System.getProperty("user.dir"));
+        defaultServ.setInitParameter("dirAllowed", "true");
+        context.addServlet(defaultServ, "/");
         server.setHandler(context);
         server.start();
     }

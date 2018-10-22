@@ -1,9 +1,8 @@
 package com.sample.one;
 
+import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
-
-import javax.ws.rs.core.Application;
 
 /**
  * Activator to register our rest service implementations

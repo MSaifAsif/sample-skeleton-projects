@@ -1,8 +1,7 @@
 package com.sample.beans;
 
-import java.util.List;
-
 import javax.ejb.Remote;
+import java.util.List;
 
 /**
  * THe bean interface.

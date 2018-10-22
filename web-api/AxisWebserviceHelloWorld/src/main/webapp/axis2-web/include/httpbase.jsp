@@ -20,8 +20,8 @@
 <%@ page import="org.apache.axis2.Constants" %>
 <%@ page import="org.apache.axis2.context.ConfigurationContext" %>
 <%@ page import="org.apache.axis2.description.Parameter" %>
-<%@ page import="org.apache.axis2.transport.http.AxisServlet" %>
 <%@ page import="org.apache.axis2.transport.TransportListener" %>
+<%@ page import="org.apache.axis2.transport.http.AxisServlet" %>
 <%!
     private String frontendHostUrl;
     private String hostname;

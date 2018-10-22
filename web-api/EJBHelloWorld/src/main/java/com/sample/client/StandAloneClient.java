@@ -1,17 +1,15 @@
 package com.sample.client;
 
-import java.util.Properties;
+import com.sample.beans.SampleBean;
+import com.sample.entity.IBeanOne;
+import org.apache.log4j.BasicConfigurator;
 
 import javax.ejb.EJB;
 import javax.ejb.Remote;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-
-import org.apache.log4j.BasicConfigurator;
-
-import com.sample.beans.SampleBean;
-import com.sample.entity.IBeanOne;
+import java.util.Properties;
 
 /**
  * StandALone client to fetch and call methods on the {@link Remote} {@link EJB} objects deployed in the container
@@ -58,7 +56,7 @@ public class StandAloneClient {
         SampleBean statelessBean = (SampleBean) ctx.lookup("/EJBHelloWorld/SampleStatelessBean!com.sample.beans.SampleBean");
         statelessBean.addEntity("111");
         /*
-         * since another operation is attempted, call to constructor will take place and previous object's state will be lost 
+         * since another operation is attempted, call to constructor will take place and previous object's state will be lost
          * at this point
          */
         statelessBean.addEntity("222");

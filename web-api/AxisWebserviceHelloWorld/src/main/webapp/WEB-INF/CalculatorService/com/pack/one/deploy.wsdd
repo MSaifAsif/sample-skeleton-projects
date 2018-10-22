@@ -3,26 +3,25 @@
     deploy.wsdd --><!-- after the axis server is running --><!-- or --><!-- java org.apache.axis.utils.Admin 
     client|server deploy.wsdd --><!-- from the same directory that the 
     Axis engine runs -->
-<deployment xmlns="http://xml.apache.org/axis/wsdd/"
-    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+<deployment xmlns:java="http://xml.apache.org/axis/wsdd/providers/java"
+            xmlns="http://xml.apache.org/axis/wsdd/">
 
     <!-- Services from CalculatorService WSDL service -->
 
     <service name="Calculator" provider="java:RPC" style="wrapped"
-        use="literal">
-        <parameter name="wsdlTargetNamespace" value="http://one.pack.com" />
-        <parameter name="wsdlServiceElement" value="CalculatorService" />
-        <parameter name="schemaQualified" value="http://one.pack.com" />
-        <parameter name="wsdlServicePort" value="Calculator" />
-        <parameter name="className" value="com.pack.one.Calculator" />
-        <parameter name="wsdlPortType" value="Calculator" />
-        <parameter name="typeMappingVersion" value="1.2" />
-        <operation xmlns:operNS="http://one.pack.com"
-            xmlns:retNS="http://one.pack.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema"
-            name="sum" qname="operNS:sum" returnQName="retNS:sumReturn"
-            returnType="rtns:int" soapAction="">
+             use="literal">
+        <parameter name="wsdlTargetNamespace" value="http://one.pack.com"/>
+        <parameter name="wsdlServiceElement" value="CalculatorService"/>
+        <parameter name="schemaQualified" value="http://one.pack.com"/>
+        <parameter name="wsdlServicePort" value="Calculator"/>
+        <parameter name="className" value="com.pack.one.Calculator"/>
+        <parameter name="wsdlPortType" value="Calculator"/>
+        <parameter name="typeMappingVersion" value="1.2"/>
+        <operation
+                name="sum" qname="operNS:sum" returnQName="retNS:sumReturn"
+                returnType="rtns:int" soapAction="">
         </operation>
-        <parameter name="allowedMethods" value="sum" />
+        <parameter name="allowedMethods" value="sum"/>
 
     </service>
 </deployment>

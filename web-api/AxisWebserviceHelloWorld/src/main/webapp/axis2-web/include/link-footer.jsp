@@ -17,28 +17,18 @@
   ~ under the License.
   --%>
 
-<%@ page import="org.apache.axis2.AxisFault"%>
-<%@ page import="org.apache.axis2.Constants"%>
-<%@ page import="org.apache.axis2.addressing.EndpointReference"%>
-<%@ page import="org.apache.axis2.client.Options"%>
-<%@ page import="org.apache.axis2.client.ServiceClient"%>
-<%@ page import="org.apache.axis2.context.ConfigurationContext"%>
-<%@ page import="org.apache.axis2.context.ConfigurationContextFactory"%>
-<%@ page import="org.apache.axis2.description.AxisOperation"%>
-<%@ page import="org.apache.axis2.description.AxisService"%>
-<%@ page import="org.apache.axis2.description.Parameter"%>
-<%@ page import="org.apache.axis2.engine.AxisConfiguration"%>
-<%@ page import="org.apache.axis2.util.JavaUtils"%>
-<%@ page import="javax.xml.parsers.SAXParser"%>
-<%@ page import="javax.xml.parsers.SAXParserFactory"%>
-<%@ page import="java.io.IOException"%>
-<%@ page import="java.io.InputStream"%>
-<%@ page import="java.io.StringWriter"%>
-<%@ page import="java.util.Collection"%>
-<%@ page import="java.util.Enumeration"%>
-<%@ page import="java.util.HashMap"%>
-<%@ page import="java.util.Hashtable"%>
-<%@ page import="java.util.Iterator"%>
+<%@ page import="org.apache.axis2.AxisFault" %>
+<%@ page import="org.apache.axis2.Constants" %>
+<%@ page import="org.apache.axis2.addressing.EndpointReference" %>
+<%@ page import="org.apache.axis2.client.Options" %>
+<%@ page import="org.apache.axis2.client.ServiceClient" %>
+<%@ page import="org.apache.axis2.context.ConfigurationContext" %>
+<%@ page import="org.apache.axis2.context.ConfigurationContextFactory" %>
+<%@ page import="org.apache.axis2.description.AxisOperation" %>
+<%@ page import="org.apache.axis2.description.AxisService" %>
+<%@ page import="org.apache.axis2.description.Parameter" %>
+<%@ page import="org.apache.axis2.engine.AxisConfiguration" %>
+<%@ page import="org.apache.axis2.util.JavaUtils" %>
 <%--
 ~ Licensed to the Apache Software Foundation (ASF) under one
 ~ or more contributor license agreements. See the NOTICE file
@@ -63,8 +53,9 @@
             <table width="950px">
                 <tr>
                     <td align="right"><a href="axis2-web/index.jsp">Back
-                            Home</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="#"
-                        onclick="javascript:window.location.reload(true);return false;">Refresh</a></td>
+                        Home</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="#"
+                                                             onclick="javascript:window.location.reload(true);return false;">Refresh</a>
+                    </td>
                 </tr>
             </table>
         </td>
