@@ -33,7 +33,7 @@ public class MessageProducer implements CommandLineRunner {
                 CorrelationData correlationData = new CorrelationData();
                 correlationData.setId(System.currentTimeMillis() + "");
                 rabbitTemplate.convertAndSend(externalChannelExchange, "my.routing.key", s, correlationData);
-                System.out.println("sent " + s + " bnb");
+                System.out.println("sent " + s);
             }
         }).start();
 
