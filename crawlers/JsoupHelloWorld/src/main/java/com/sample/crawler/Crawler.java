@@ -5,9 +5,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.IOException;
-import java.sql.SQLException;
-
 /**
  * A basic implementaion of a web crawler that uses in memory based map to
  * maintain list of crawled pages
@@ -16,18 +13,19 @@ import java.sql.SQLException;
  */
 public class Crawler {
 
-    public static void main(String[] args) throws SQLException, IOException {
+    public static void main(String[] args) {
         processPage("http://www.mit.edu");
     }
 
-    public static void processPage(String URL) throws SQLException, IOException {
+    private static void processPage(String URL) {
         /*
-         * check if the given URL is already in database. get useful information
+         * check if the given URL is already in database.
          */
         if (ContentList.isContentInMap(URL)) {
             return;
         }
-        Document doc = null;
+
+        Document doc;
         try {
             doc = Jsoup.connect(URL).timeout(5000).get();
             if (doc.text().contains("research")) {
