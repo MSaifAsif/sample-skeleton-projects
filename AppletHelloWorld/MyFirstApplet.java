@@ -3,7 +3,7 @@ import java.awt.Graphics;
 
 public class MyFirstApplet extends Applet {
 
-   private static final long serialVersionUID = -3783584337636720597L;
+    private static final long serialVersionUID = -3783584337636720597L;
   
     /**
      * The init method will be called when the applet is launched
@@ -24,10 +24,10 @@ public class MyFirstApplet extends Applet {
    }
   public void paint(Graphics g){
          str=str+"paint-";;
-g.drawString(str,40,100);
-g.drawString("Hello from the Applet.", 40,40);
-g.drawString("How are you doing?", 40, 60);
-g.drawString("We wish you a pleasant day today.", 40, 80);
+         g.drawString(str,40,100);
+         g.drawString("Hello from the Applet.", 40,40);
+         g.drawString("How are you doing?", 40, 60);
+         g.drawString("We wish you a pleasant day today.", 40, 80);
     }
 
 }
