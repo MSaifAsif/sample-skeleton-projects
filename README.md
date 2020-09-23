@@ -5,9 +5,6 @@ These projects are basic and easy to execute implementations of some of the popu
 
 **Note:** Projects not listed in the index table below are either in development phase or in debug mode and are not be relied on yet.
 
-
-## <a name="list-index">List of implementation</a>
-
 ```bash
 .
 ├── benchmarking
