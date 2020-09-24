@@ -1,7 +1,6 @@
 package com.sample.support;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.amqp.rabbit.support.CorrelationData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.Ordered;
@@ -30,9 +29,7 @@ public class MessageProducer implements CommandLineRunner {
                     e.printStackTrace();
                 }
                 String s = "{hello + " + System.currentTimeMillis() + "}";
-                CorrelationData correlationData = new CorrelationData();
-                correlationData.setId(System.currentTimeMillis() + "");
-                rabbitTemplate.convertAndSend(externalChannelExchange, "my.routing.key", s, correlationData);
+                rabbitTemplate.convertAndSend(externalChannelExchange, "my.routing.key", s);
                 System.out.println("sent " + s);
             }
         }).start();
