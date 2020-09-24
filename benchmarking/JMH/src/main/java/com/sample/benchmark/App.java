@@ -1,12 +1,10 @@
 package com.sample.benchmark;
 
-import org.openjdk.jmh.runner.RunnerException;
-
 import java.io.IOException;
 
 public class App {
 
-    public static void main(String[] args) throws IOException, RunnerException {
+    public static void main(String[] args) throws IOException {
         org.openjdk.jmh.Main.main(args);
     }
 }

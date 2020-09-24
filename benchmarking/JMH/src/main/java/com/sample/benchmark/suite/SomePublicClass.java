@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
+@SuppressWarnings("unused")
 public class SomePublicClass {
 
     @Benchmark
@@ -16,6 +17,10 @@ public class SomePublicClass {
     }
 
     private List<Double> getList() {
-        return DoubleStream.of(1.1231231231312, 2.12312312312, 1.1231213211111, 2.3231231213123).boxed().collect(Collectors.toList());
+        return DoubleStream.of(1.1231231231312,
+                2.12312312312,
+                1.1231213211111,
+                2.3231231213123).boxed()
+                .collect(Collectors.toList());
     }
 }
