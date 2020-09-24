@@ -1,4 +1,4 @@
-[![Join the chat at https://gitter.im/MSaifAsif/sample-skeleton-projects](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MSaifAsif/sample-skeleton-projects?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Score](https://www.code-inspector.com/project/13916/score/svg)](X) [![status](https://www.code-inspector.com/project/13916/status/svg)](X)
+[![Join the chat at https://gitter.im/MSaifAsif/sample-skeleton-projects](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MSaifAsif/sample-skeleton-projects?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Score](https://www.code-inspector.com/project/13916/score/svg)](https://frontend.code-inspector.com/public/project/13916/sample-skeleton-projects/dashboard) [![status](https://www.code-inspector.com/project/13916/status/svg)](https://frontend.code-inspector.com/public/project/13916/sample-skeleton-projects/dashboard)
 
 
 
