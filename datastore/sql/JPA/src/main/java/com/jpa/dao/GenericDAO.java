@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Generic DAO implmentation interface
+ * Generic DAO implementation interface
  *
  * @param <T>
  * @param <ID>

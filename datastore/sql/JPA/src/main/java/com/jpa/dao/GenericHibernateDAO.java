@@ -4,7 +4,7 @@ import com.jpa.util.HibernateUtil;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
-import org.hibernate.LockMode;
+import org.hibernate.LockOptions;
 import org.hibernate.Session;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Example;
@@ -20,14 +20,14 @@ import java.util.List;
  * @param <ID>
  * @author msaif
  */
+@SuppressWarnings({"unchecked", "unused"})
 public abstract class GenericHibernateDAO<T, ID extends Serializable>
         implements GenericDAO<T, ID> {
 
     private static final Logger log = Logger.getLogger(GenericHibernateDAO.class);
-    private Class<T> persistentClass;
+    private final Class<T> persistentClass;
     private Session session;
 
-    @SuppressWarnings("unchecked")
     public GenericHibernateDAO() {
         this.persistentClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
     }
@@ -53,11 +53,10 @@ public abstract class GenericHibernateDAO<T, ID extends Serializable>
         return persistentClass;
     }
 
-    @SuppressWarnings({"unchecked", "deprecation"})
     public T findById(ID id, boolean lock) {
         T entity;
         if (lock)
-            entity = (T) getSession().load(getPersistentClass(), id, LockMode.UPGRADE);
+            entity = (T) getSession().load(getPersistentClass(), id, LockOptions.UPGRADE);
         else
             entity = (T) getSession().load(getPersistentClass(), id);
 
@@ -68,7 +67,6 @@ public abstract class GenericHibernateDAO<T, ID extends Serializable>
         return findByCriteria();
     }
 
-    @SuppressWarnings("unchecked")
     public List<T> findByExample(T exampleInstance, String[] excludeProperty) {
         Criteria crit = getSession().createCriteria(getPersistentClass());
         Example example = Example.create(exampleInstance);
@@ -104,7 +102,6 @@ public abstract class GenericHibernateDAO<T, ID extends Serializable>
     /**
      * Use this inside subclasses as a convenience method.
      */
-    @SuppressWarnings("unchecked")
     protected List<T> findByCriteria(Criterion... criterion) {
         Criteria crit = getSession().createCriteria(getPersistentClass());
         for (Criterion c : criterion) {
@@ -115,9 +112,6 @@ public abstract class GenericHibernateDAO<T, ID extends Serializable>
 
     /**
      * Get only the first object that matches the criterea
-     *
-     * @param criterion
-     * @return
      */
     protected T getFirstObjectByCriteria(Criterion... criterion) {
         return findByCriteria(criterion).get(0);
@@ -126,12 +120,8 @@ public abstract class GenericHibernateDAO<T, ID extends Serializable>
     /**
      * Criteria method for pagination purpose
      *
-     * @param lowerBound
-     * @param upperBound
-     * @param criterion
      * @return A list of the result within the bounds defined
      */
-    @SuppressWarnings("unchecked")
     protected List<T> findByCriteriaPaginated(int lowerBound, int upperBound, Criterion... criterion) {
         Criteria criteria = getSession().createCriteria(getPersistentClass());
         criteria.setFirstResult(lowerBound);

@@ -1,6 +1,7 @@
 package com.test.conn;
 
 import com.jpa.util.HibernateUtil;
+import org.apache.log4j.BasicConfigurator;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.junit.BeforeClass;
@@ -13,7 +14,7 @@ public class ConnectionTest {
     @BeforeClass
     public static void init() {
         // For full DEBUG mode, uncomment the following line
-        // BasicConfigurator.configure();
+         BasicConfigurator.configure();
     }
 
     @Test

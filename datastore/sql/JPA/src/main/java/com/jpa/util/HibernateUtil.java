@@ -11,6 +11,7 @@ import org.hibernate.service.ServiceRegistry;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings({"unchecked", "rawtypes", "unused"})
 public class HibernateUtil {
 
     private static final Logger log = Logger.getLogger(HibernateUtil.class);
@@ -19,11 +20,10 @@ public class HibernateUtil {
      * Since we will be using annotated classes, it is best to maintain a list
      * of such classes so we add them up easily
      */
-    @SuppressWarnings({"unchecked", "rawtypes", "serial"})
     private static final List<Class<?>> classList = new ArrayList() {{
         add(com.jpa.model.Human.class);
     }};
-    private static SessionFactory sessionFactory = buildSessionFactory();
+    private static final SessionFactory sessionFactory = buildSessionFactory();
 
     private static SessionFactory buildSessionFactory() {
         /*
@@ -65,7 +65,7 @@ public class HibernateUtil {
      *
      * @return {@link Transaction} The transaction of the current session
      */
-    public static Transaction getTransaction() throws Exception {
+    public static Transaction getTransaction() {
         Session s = getSessionFactory().getCurrentSession();
         Transaction tx = s.beginTransaction();
         tx.setTimeout(10);
