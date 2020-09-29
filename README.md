@@ -14,7 +14,18 @@ The projects are simply basic and easy to execute implementations of some of the
 LOC, or simply Lines Of Code, is the approximate sum of the minimum lines of code and configurations that are absolutely essential to deploy the project
 
 ## Why do I need this ?
-These can be used to jump start your coding time by simply forking these projects or using them as reference and then building your application on top of them. 
+These can be used to jump start your coding time by simply forking these projects or using them as reference and then building your application on top of them. In theory you just need to do a few steps to have it up and running. The following is an example of how to run the `SpringBootHelloWorld` skeleton
+
+```bash
+$ cd web-api/SpringBootHelloWorld/
+$ mvn spring-boot:run
+....
+RequestHandler]
+2020-09-29 13:35:28.722  INFO 48888 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-09-29 13:35:28.784  INFO 48888 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-29 13:35:28.790  INFO 48888 --- [           main] com.sample.runners.StandAloneClient      : Started StandAloneClient in 2.763 seconds (JVM running for 8.289)
+...
+```
 
 ## What's included ?
 The implementations range from MVC frameworks like Struts to small testing libraries like JUnit.
