@@ -6,7 +6,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 /**
- * A basic implementaion of a web crawler that uses in memory based map to
+ * A basic implementation of a web crawler that uses in memory based map to
  * maintain list of crawled pages
  *
  * @author saifasif

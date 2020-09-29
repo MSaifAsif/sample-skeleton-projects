@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class ContentList {
 
-    private static Map<String, String> instanceMap = new HashMap<>();
+    private static final Map<String, String> instanceMap = new HashMap<>();
 
     private ContentList() {
 
