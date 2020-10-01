@@ -24,7 +24,6 @@ public class SampleClassTest {
 
     @Test
     public void testContant() {
-        assertNotNull(SampleClass.NUMBER_FOUR);
         assertEquals(4, SampleClass.NUMBER_FOUR);
         assertNotEquals(3, SampleClass.NUMBER_FOUR);
     }
