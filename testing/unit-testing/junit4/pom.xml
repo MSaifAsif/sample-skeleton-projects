@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <properties>
         <jacoco.version>0.8.6</jacoco.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
     <parent>
         <groupId>sample-skeleton-projects</groupId>
