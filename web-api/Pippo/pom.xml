@@ -10,7 +10,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <pippo.version>1.5.0</pippo.version>
+        <pippo.version>1.13.1</pippo.version>
     </properties>
 
     <dependencies>
