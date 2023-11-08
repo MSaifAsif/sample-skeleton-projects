@@ -19,7 +19,7 @@
     </build>
 
     <properties>
-        <jsoup.version>1.14.2</jsoup.version>
+        <jsoup.version>1.15.3</jsoup.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
