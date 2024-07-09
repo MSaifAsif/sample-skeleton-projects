@@ -1,6 +1,7 @@
 package com.skeleton.test;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -48,7 +49,7 @@ public class LogTest {
 
     @Test
     public void initiateLogger() {
-        Logger log = Logger.getLogger(LogTest.class);
+        Logger log = LogManager.getLogger(LogTest.class);
         log.debug("These are coming from the test class");
     }
 
